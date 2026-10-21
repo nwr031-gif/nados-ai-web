@@ -24,11 +24,14 @@ loadEnv();
 const CF_TOKEN = process.env.CF_API_TOKEN || "";
 const CF_ACCOUNT = process.env.CF_ACCOUNT_ID || "";
 const CF_MODEL = process.env.CF_AI_MODEL || "@cf/meta/llama-3.1-8b-instruct";
-const aiRunUrl = (model) => `https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT}/ai/run/${model}`;
+const aiRunUrl = (accountId, model) => `https://api.cloudflare.com/client/v4/accounts/${accountId}/ai/run/${model}`;
 
-// Teachers chain (research-backed): strongest first, failover on error. Zero local compute.
-// `active` = active parameters per token -> Workers AI "neurons" cost per generated token.
-const TEACHERS = [
+// ---------------- Backends: multi-account Cloudflare + optional OpenAI-compatible providers ----------------
+// CF free tier = 10,000 neurons/day PER ACCOUNT; a 120B model costs 120 neurons per generated token.
+const CF_ACCOUNTS = (process.env.CF_ACCOUNTS || "5533874b07aa30557520efb2e4608ca8,10f0506bad56e44d45f0e9a9341a590e")
+  .split(",").map((s) => s.trim()).filter(Boolean);
+
+const CF_MODELS = [
   { id: "@cf/openai/gpt-oss-120b", label: "gpt-oss-120B", style: "openai", active: 120 },
   { id: "@cf/nvidia/nemotron-3-120b-a12b", label: "nemotron-120B(A12B)", style: "openai", active: 12 },
   { id: "@cf/deepseek-ai/deepseek-r1-distill-qwen-32b", label: "deepseek-r1-32B", style: "llama", active: 32 },
@@ -36,43 +39,71 @@ const TEACHERS = [
   { id: "@cf/openai/gpt-oss-20b", label: "gpt-oss-20B", style: "openai", active: 20 },
   { id: "@cf/meta/llama-3.1-8b-instruct", label: "llama-3.1-8B", style: "llama", active: 8 },
 ];
-const PRIMARY_TEACHER = TEACHERS[0];
-const VERIFIER = TEACHERS[2];
 
-// ---------------- Neuron budget (Workers AI free tier = 10,000 neurons/day) ----------------
+// OpenAI-compatible providers (optional — activate by adding a key to .env)
+const EXT_PROVIDERS = [
+  process.env.GROQ_API_KEY ? {
+    kind: "ext", label: "groq", style: "openai", cost: 0,
+    baseUrl: "https://api.groq.com/openai/v1/chat/completions",
+    apiKey: process.env.GROQ_API_KEY, model: process.env.GROQ_MODEL || "llama-3.3-70b-versatile",
+  } : null,
+  process.env.NVIDIA_NIM_API_KEY ? {
+    kind: "ext", label: "nvidia-nim", style: "openai", cost: 0,
+    baseUrl: process.env.NVIDIA_NIM_BASE_URL || "https://integrate.api.nvidia.com/v1/chat/completions",
+    apiKey: process.env.NVIDIA_NIM_API_KEY, model: process.env.NVIDIA_NIM_MODEL || "meta/llama-3.1-70b-instruct",
+  } : null,
+  process.env.OPENROUTER_API_KEY ? {
+    kind: "ext", label: "openrouter", style: "openai", cost: 0,
+    baseUrl: "https://openrouter.ai/api/v1/chat/completions",
+    apiKey: process.env.OPENROUTER_API_KEY, model: process.env.OPENROUTER_MODEL || "meta-llama/llama-3.3-70b-instruct:free",
+  } : null,
+].filter(Boolean);
+
 const DAILY_NEURONS = Number(process.env.CF_DAILY_NEURONS || 10000);
 const BUDGET_FILE = path.join(__dirname, ".nados-budget.json");
+const CACHE_FILE = path.join(__dirname, ".nados-cache.json");
 
 function readBudget() {
   try {
     const b = JSON.parse(fs.readFileSync(BUDGET_FILE, "utf8"));
     const today = new Date().toISOString().slice(0, 10);
-    if (b.date === today) return b.neurons || 0;
+    if (b.date === today && b.accounts) return b.accounts;
   } catch {}
-  return 0;
+  return {};
 }
-function writeBudget(neurons) {
+function writeBudget(accounts) {
   const today = new Date().toISOString().slice(0, 10);
   try {
-    fs.writeFileSync(BUDGET_FILE, JSON.stringify({ date: today, neurons: Math.round(neurons) }), "utf8");
+    fs.writeFileSync(BUDGET_FILE, JSON.stringify({ date: today, accounts }), "utf8");
   } catch {}
 }
-let neuronsUsed = readBudget();
-function addNeurons(n) {
+let budgetState = readBudget();
+const neuronsOf = (accountId) => budgetState[accountId] || 0;
+function addNeurons(accountId, n) {
   if (!n || !isFinite(n)) return;
-  neuronsUsed += n;
-  writeBudget(neuronsUsed);
+  budgetState[accountId] = (budgetState[accountId] || 0) + n;
+  writeBudget(budgetState);
 }
-function neuronsRemaining() {
-  return Math.max(0, DAILY_NEURONS - neuronsUsed);
-}
-const isQuotaError = (e) => /daily free allocation|neurons|quota|insufficient/i.test(String(e?.message || e));
+const neuronsRemaining = (accountId) => Math.max(0, DAILY_NEURONS - neuronsOf(accountId));
+const isQuotaError = (e) => /daily free allocation|neurons|quota|insufficient|rate limit/i.test(String(e?.message || e));
 
-// Cost-aware selection: biggest model that still fits today's remaining budget.
+// Backends list: CF account × model, then external providers.
+function buildBackends() {
+  const list = [];
+  for (const acc of CF_ACCOUNTS) {
+    for (const m of CF_MODELS) {
+      list.push({ ...m, kind: "cf", accountId: acc, key: `cf:${acc}:${m.label}` });
+    }
+  }
+  for (const p of EXT_PROVIDERS) list.push({ ...p, key: `ext:${p.label}` });
+  return list;
+}
+const BACKENDS = buildBackends();
+const CF_PRIMARY = BACKENDS.find((b) => b.kind === "cf" && b.label === "gpt-oss-120B") || BACKENDS[0];
+
+// Cost-aware selection: best model whose expected neuron cost fits the remaining daily budget
+// of at least one Cloudflare account (external providers are free of neuron cost).
 function pickTeacher(tag, expectedTokens = 700) {
-  const remaining = neuronsRemaining();
-  const affordable = TEACHERS.filter((t) => t.active * expectedTokens <= remaining * 0.5);
-  const pool = affordable.length ? affordable : [TEACHERS[TEACHERS.length - 1]];
   const preferred = {
     math: ["gpt-oss-120B", "gpt-oss-20B", "nemotron-120B(A12B)", "qwen3-27B", "llama-3.1-8B"],
     code: ["gpt-oss-120B", "gpt-oss-20B", "qwen3-27B", "nemotron-120B(A12B)", "llama-3.1-8B"],
@@ -80,11 +111,48 @@ function pickTeacher(tag, expectedTokens = 700) {
     deep: ["gpt-oss-120B", "deepseek-r1-32B", "nemotron-120B(A12B)", "qwen3-27B", "llama-3.1-8B"],
     chat: ["gpt-oss-120B", "nemotron-120B(A12B)", "gpt-oss-20B", "llama-3.1-8B"],
   }[tag] || ["gpt-oss-120B", "gpt-oss-20B", "llama-3.1-8B"];
+
+  const affordable = (b) => {
+    if (b.kind === "ext") return true;
+    return neuronsRemaining(b.accountId) > b.active * expectedTokens * 0.6;
+  };
+  const ext = BACKENDS.filter((b) => b.kind === "ext");
   for (const label of preferred) {
-    const t = pool.find((x) => x.label === label);
-    if (t) return t;
+    const b = BACKENDS.find((x) => x.label === label && affordable(x));
+    if (b) return b;
   }
-  return pool[0];
+  if (ext.length) return ext[0];
+  return BACKENDS.filter(affordable)[0] || BACKENDS[BACKENDS.length - 1];
+}
+
+// Simple disk cache so repeated questions don't burn the daily quota
+const cacheState = (() => {
+  try {
+    const c = JSON.parse(fs.readFileSync(CACHE_FILE, "utf8"));
+    const today = new Date().toISOString().slice(0, 10);
+    return c.date === today && c.items ? c.items : {};
+  } catch {
+    return {};
+  }
+})();
+function cacheKey(messages, tag) {
+  return crypto.createHash("sha1").update(tag + "|" + JSON.stringify(messages)).digest("hex");
+}
+function cacheGet(k) {
+  const e = cacheState[k];
+  if (!e) return null;
+  const text = e.text ?? e.value;
+  if (!text) return null;
+  return { text, teacher: e.teacher || "cloud" };
+}
+function cacheSet(k, value) {
+  cacheState[k] = { text: value.text, teacher: value.teacher, at: Date.now() };
+  const keys = Object.keys(cacheState);
+  if (keys.length > 120) for (const old of keys.slice(0, keys.length - 120)) delete cacheState[old];
+  try {
+    const today = new Date().toISOString().slice(0, 10);
+    fs.writeFileSync(CACHE_FILE, JSON.stringify({ date: today, items: cacheState }), "utf8");
+  } catch {}
 }
 
 // Smart router: task-aware model + reasoning effort (research-backed selection)
@@ -94,11 +162,11 @@ function routeTask(message, mode) {
     (/(اكتب|أنشئ|صمم|صنع|بناء)/.test(message) && /(صفحة|موقع|تطبيق|برنامج|كود|دالة|html|css|واجهة)/i.test(message));
   const isCreative = mode === "create" || /(باللهجة|عراقي|قصيدة|هايكو|قصة|رسالة|تهنئة|شعر|أغنية)/i.test(message);
   const isDeep = mode === "research" || mode === "academic" || /(قارن|حلل|فسر|لماذا|استنتج|أثر)/i.test(message);
-  if (isMath) return { tag: "math", teacher: PRIMARY_TEACHER, reasoning: "medium", verify: true };
-  if (wantsCode) return { tag: "code", teacher: PRIMARY_TEACHER, reasoning: "medium", verify: false };
-  if (isCreative) return { tag: "creative", teacher: TEACHERS[1], reasoning: null, verify: false, temperature: 0.85, maxTokens: 4096 };
-  if (isDeep) return { tag: "deep", teacher: PRIMARY_TEACHER, reasoning: "medium", verify: false };
-  return { tag: "chat", teacher: PRIMARY_TEACHER, reasoning: "low", verify: false };
+  if (isMath) return { tag: "math", reasoning: "medium", verify: true, maxTokens: 2048 };
+  if (wantsCode) return { tag: "code", reasoning: "medium", verify: false, maxTokens: 2048 };
+  if (isCreative) return { tag: "creative", reasoning: null, verify: false, temperature: 0.85, maxTokens: 2048 };
+  if (isDeep) return { tag: "deep", reasoning: "medium", verify: false, maxTokens: 2048 };
+  return { tag: "chat", reasoning: "low", verify: false, maxTokens: 1536 };
 }
 
 function stripThinkTags(t) {
@@ -353,48 +421,58 @@ function buildMessages({ message, mode, history, systemPrompt, temperature }) {
   msgs.push({ role: "user", content: String(message).slice(0, 8000) });
   return msgs;
 }
-
-async function callTeacher(teacher, messages, temperature, stream, extra = {}) {
+async function callTeacher(backend, messages, temperature, stream, extra = {}) {
   const body = { messages, max_tokens: extra.max_tokens || 3072 };
   if (typeof temperature === "number" && temperature >= 0 && temperature <= 2) body.temperature = temperature;
   if (stream) body.stream = true;
-  if (teacher.style === "openai" && extra.reasoning) body.reasoning = extra.reasoning;
+  if (backend.style === "openai" && extra.reasoning) body.reasoning = extra.reasoning;
   usageStats.totalCalls++;
   const started = Date.now();
-  const r = await fetch(aiRunUrl(teacher.id), {
-    method: "POST",
-    headers: { Authorization: `Bearer ${CF_TOKEN}`, "Content-Type": "application/json" },
-    body: JSON.stringify(body),
-  });
+
+  let url, headers;
+  if (backend.kind === "ext") {
+    url = backend.baseUrl;
+    headers = { Authorization: `Bearer ${backend.apiKey}`, "Content-Type": "application/json" };
+  } else {
+    url = aiRunUrl(backend.accountId, backend.id);
+    headers = { Authorization: `Bearer ${CF_TOKEN}`, "Content-Type": "application/json" };
+  }
+
+  const r = await fetch(url, { method: "POST", headers, body: JSON.stringify(body) });
   if (!r.ok) {
     usageStats.failedCalls++;
     let msg = `HTTP ${r.status}`;
     try {
       const j = await r.json();
-      msg = j.errors?.[0]?.message || msg;
+      msg = j.errors?.[0]?.message || j.error?.message || msg;
     } catch {}
-    throw new Error(`${teacher.label}: ${msg}`);
+    throw new Error(`${backend.label}: ${msg}`);
   }
   usageStats.successCalls++;
   usageStats.totalLatencyMs += Date.now() - started;
-  if (!stream) {
-    // neurons are reported in the payload for non-stream calls
+  if (!stream && backend.kind === "cf") {
     try {
-      const clone = r.clone();
-      clone.json().then((j) => addNeurons(j?.result?.usage?.neurons)).catch(() => {});
+      r.clone().json().then((j) => addNeurons(backend.accountId, j?.result?.usage?.neurons)).catch(() => {});
     } catch {}
   }
   return r;
 }
-async function runTeacher(messages, opts = {}, startIdx = 0) {
+
+async function runTeacher(messages, opts = {}, backends = BACKENDS) {
   let lastErr;
-  for (let i = startIdx; i < TEACHERS.length; i++) {
+  for (const b of backends) {
+    if (b.kind === "cf" && neuronsRemaining(b.accountId) <= 0) continue; // account quota spent
     try {
-      const res = await callTeacher(TEACHERS[i], messages, opts.temperature, opts.stream || false, opts);
-      return { teacher: TEACHERS[i], res, teacherIndex: i };
+      const res = await callTeacher(b, messages, opts.temperature, opts.stream || false, opts);
+      return { teacher: b, res, teacherIndex: 0 };
     } catch (e) {
       lastErr = e;
-      console.error(`[teacher-fallback] ${TEACHERS[i].label} failed: ${e.message}`);
+      if (isQuotaError(e) && b.kind === "cf") {
+        // burn this account's remaining budget locally so we stop hitting it
+        budgetState[b.accountId] = DAILY_NEURONS;
+        writeBudget(budgetState);
+      }
+      console.error(`[teacher-fallback] ${b.label}@${b.accountId ? b.accountId.slice(0, 8) : b.kind} failed: ${e.message}`);
     }
   }
   throw lastErr || new Error("all teachers failed");
@@ -415,7 +493,8 @@ async function* iterateSSE(body) {
   const emit = function* (obj) {
     // normalize llama-style {response} and openai-style {choices[].delta}
     if (typeof obj.response === "string" && obj.response) yield { content: obj.response };
-    if (obj.usage && typeof obj.usage.neurons === "number") addNeurons(obj.usage.neurons);
+    // NOTE: streamed `usage.neurons` may be cumulative per stream -> never sum it here
+    // (streaming cost is estimated from output size after the response completes).
     const d = obj.choices?.[0]?.delta;
     if (d) {
       const c = d.content;
@@ -548,7 +627,7 @@ async function handleChatStream(req, res) {
       sseWrite(res, {
         type: "meta",
         provider: "nados-v1.1",
-        model: `Nados v1.1 · ${PRIMARY_TEACHER.label} + مُرتّب مدرّب (${NADOS_ENGINE.info().params} معامل)`,
+        model: `Nados v1.1 · مُرتّب مدرّب (${NADOS_ENGINE.info().params} معامل) + معلم سحابي`,
       });
 
       // REAL inference with the trained 245-parameter network (sub-ms, zero cloud)
@@ -587,6 +666,32 @@ async function handleChatStream(req, res) {
     if (isMath && sysIdx >= 0) messages[sysIdx].content += "\nفي المسائل الحسابية: اكتب كل رقم صراحةً بالأرقام، حل خطوة بخطوة، ثم تحقق من الناتج النهائي بجملة واضحة.";
     if (routeTask(message, mode).tag === "creative" && sysIdx >= 0) messages[sysIdx].content += "\nممنوع منعاً باتاً ذكر أي كود أو مثال برمجي أو علامات كود (```). أعطِ النص المطلوب فقط (جملة أو رسالة أو قصيدة) وبسطرين كحد أقصى إن لم يُطلب غير ذلك.";
 
+    const route = routeTask(message, mode);
+    const ck = cacheKey(messages, route.tag);
+    const cached = cacheGet(ck);
+    if (cached) {
+      // serve identical previous answers without spending any quota
+      sseWrite(res, { type: "meta", provider: "nados-v1.1", model: `Nados v1.1 · ${cached.teacher} (من الكاش)` });
+      for (let i = 0; i < cached.text.length && !aborted; i += 48) {
+        sseWrite(res, { type: "delta", delta: cached.text.slice(i, i + 48) });
+      }
+      sseWrite(res, {
+        type: "done",
+        reply: {
+          answer: [cached.text],
+          bullets: [],
+          sources: [],
+          provider: "nados-v1.1",
+          model: `Nados v1.1 · ${cached.teacher} (كاش)`,
+          variant: "v1.1",
+          nados: nadosDecision,
+          teacher: cached.teacher,
+          cached: true,
+        },
+      });
+      return close();
+    }
+
     let full = "";
     let teacherUsed = null;
 
@@ -599,12 +704,9 @@ async function handleChatStream(req, res) {
       try {
         attempt = { teacher: t0, res: await callTeacher(t0, messages, genTemperature ?? 0.3, false, { reasoning: route.reasoning, max_tokens: route.maxTokens }) };
       } catch (e) {
-        if (isQuotaError(e)) {
-          neuronsUsed = DAILY_NEURONS;
-          writeBudget(neuronsUsed);
-          if (sendLocalFallback(res, message, mode)) return close();
-          sseWrite(res, { type: "error", message: quotaMessage() });
-          return close();
+        if (isQuotaError(e) && t0.kind === "cf") {
+          budgetState[t0.accountId] = DAILY_NEURONS;
+          writeBudget(budgetState);
         }
         attempt = await runTeacher(messages, { temperature: genTemperature ?? 0.3, reasoning: "low" });
       }
@@ -665,12 +767,9 @@ async function handleChatStream(req, res) {
         teacher = chosen;
         upstream = r;
       } catch (e) {
-        if (isQuotaError(e)) {
-          neuronsUsed = DAILY_NEURONS;
-          writeBudget(neuronsUsed);
-          if (sendLocalFallback(res, message, mode)) return close();
-          sseWrite(res, { type: "error", message: quotaMessage() });
-          return close();
+        if (isQuotaError(e) && chosen.kind === "cf") {
+          budgetState[chosen.accountId] = DAILY_NEURONS;
+          writeBudget(budgetState);
         }
         console.error(`[teacher] ${chosen.label} failed: ${e.message}`);
         const fb = await runTeacher(messages, { temperature: genTemperature, stream: true, reasoning: thinking ? "medium" : "low", max_tokens: 4096 });
@@ -725,18 +824,28 @@ async function handleChatStream(req, res) {
         bullets: [],
         sources: [],
         provider: useV11 ? "nados-v1.1" : "cloudflare",
-        model: useV11 ? `Nados v1.1 · ${teacherUsed?.label || PRIMARY_TEACHER.label} + مُرتّب مدرّب` : CF_MODEL,
+        model: useV11 ? `Nados v1.1 · ${teacherUsed?.label || CF_PRIMARY.label} + مُرتّب مدرّب` : CF_MODEL,
         variant: variant === "v1.0" ? "v1.0" : "v1.1",
         nados: finalNados,
         teacher: teacherUsed?.label,
       },
     });
+    if (full && !aborted) {
+      // streamed responses don't always report neurons -> estimate from output size
+      if (teacherUsed?.kind === "cf" && teacherUsed.active) {
+        const est = (full.length / 3.5) * teacherUsed.active;
+        addNeurons(teacherUsed.accountId, est);
+      }
+      cacheSet(ck, { text: full, teacher: teacherUsed?.label || "cloud" });
+    }
   } catch (e) {
     if (!aborted) {
       if (isQuotaError(e)) {
-        // account quota exhausted → serve the locally trained model instead of failing
-        neuronsUsed = DAILY_NEURONS;
-        writeBudget(neuronsUsed);
+        // all cloud capacity exhausted → serve the locally trained model instead of failing
+        for (const acc of CF_ACCOUNTS) {
+          budgetState[acc] = DAILY_NEURONS;
+        }
+        writeBudget(budgetState);
         if (sendLocalFallback(res, message, mode)) return close();
         sseWrite(res, { type: "error", message: quotaMessage() });
         return close();
@@ -771,9 +880,15 @@ const server = http.createServer(async (req, res) => {
         orchestration: {
           name: "cloudflare-workers-ai",
           mode: "sequential-failover",
-          activeProviders: TEACHERS.length,
-          chain: TEACHERS.map((t) => t.label),
-          neurons: { used: Math.round(neuronsUsed), daily: DAILY_NEURONS, remaining: Math.round(neuronsRemaining()) },
+          activeProviders: BACKENDS.length,
+          chain: [...new Set(BACKENDS.map((t) => t.label))],
+          accounts: CF_ACCOUNTS.map((a) => ({
+            id: a,
+            used: Math.round(neuronsOf(a)),
+            remaining: Math.round(neuronsRemaining(a)),
+            daily: DAILY_NEURONS,
+          })),
+          externalProviders: EXT_PROVIDERS.map((p) => p.label),
         },
         providers: [{ id: PROVIDER.id, name: PROVIDER.name, configured: PROVIDER.configured }],
         features: {
@@ -795,10 +910,10 @@ const server = http.createServer(async (req, res) => {
         models: [
           {
             id: "nados-v1.1",
-            label: `Nados v1.1 · ${PRIMARY_TEACHER.label} + مُرتّب مدرّب (${TRAIN_MODEL.params || 245} معامل)`,
+            label: `Nados v1.1 · مُرتّب مدرّب (${TRAIN_MODEL.params || 245} معامل) + أفضل معلم متاح`,
             providerId: PROVIDER.id,
             provider: PROVIDER.name,
-            model: `${TEACHERS.map((t) => t.label).join(" → ")}`,
+            model: [...new Set(BACKENDS.map((t) => t.label))].join(" → "),
             webSearch: false,
             vision: false,
             files: false,
