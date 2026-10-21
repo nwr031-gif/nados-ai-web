@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nwr031-gif.github.io/nados/ai/nados-v1/schema.json",
+  "title": "Nados V1.0 Training Example",
+  "type": "object",
+  "required": ["features", "targets"],
+  "additionalProperties": false,
+  "properties": {
+    "features": {
+      "type": "object",
+      "required": ["affinity", "quality", "freshness", "engagement", "completion", "originality", "local", "safety", "negative"],
+      "additionalProperties": false,
+      "properties": {
+        "affinity": {"type":"number","minimum":0,"maximum":1},
+        "quality": {"type":"number","minimum":0,"maximum":1},
+        "freshness": {"type":"number","minimum":0,"maximum":1},
+        "engagement": {"type":"number","minimum":0,"maximum":1},
+        "completion": {"type":"number","minimum":0,"maximum":1},
+        "originality": {"type":"number","minimum":0,"maximum":1},
+        "local": {"type":"number","minimum":0,"maximum":1},
+        "safety": {"type":"number","minimum":0,"maximum":1},
+        "negative": {"type":"number","minimum":0,"maximum":1}
+      }
+    },
+    "targets": {
+      "type": "object",
+      "required": ["like", "save", "share", "comment", "completion"],
+      "additionalProperties": false,
+      "properties": {
+        "like": {"type":"number","minimum":0,"maximum":1},
+        "save": {"type":"number","minimum":0,"maximum":1},
+        "share": {"type":"number","minimum":0,"maximum":1},
+        "comment": {"type":"number","minimum":0,"maximum":1},
+        "completion": {"type":"number","minimum":0,"maximum":1}
+      }
+    }
+  }
+}

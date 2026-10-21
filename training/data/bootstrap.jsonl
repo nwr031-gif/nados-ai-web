@@ -1,0 +1,10 @@
+{"features":{"affinity":0.9,"quality":0.8,"freshness":0.9,"engagement":0.8,"completion":0.9,"originality":0.7,"local":0.9,"safety":1.0,"negative":0.0},"targets":{"like":1,"save":1,"share":1,"comment":1,"completion":1}}
+{"features":{"affinity":0.1,"quality":0.3,"freshness":0.8,"engagement":0.2,"completion":0.2,"originality":0.2,"local":0.1,"safety":1.0,"negative":0.8},"targets":{"like":0,"save":0,"share":0,"comment":0,"completion":0}}
+{"features":{"affinity":0.8,"quality":0.7,"freshness":0.6,"engagement":0.6,"completion":0.7,"originality":0.8,"local":0.8,"safety":1.0,"negative":0.0},"targets":{"like":1,"save":1,"share":0,"comment":1,"completion":1}}
+{"features":{"affinity":0.3,"quality":0.4,"freshness":0.3,"engagement":0.2,"completion":0.2,"originality":0.5,"local":0.2,"safety":0.7,"negative":0.4},"targets":{"like":0,"save":0,"share":0,"comment":0,"completion":0}}
+{"features":{"affinity":0.7,"quality":0.9,"freshness":0.8,"engagement":0.7,"completion":0.8,"originality":0.9,"local":0.6,"safety":1.0,"negative":0.0},"targets":{"like":1,"save":1,"share":1,"comment":1,"completion":1}}
+{"features":{"affinity":0.2,"quality":0.2,"freshness":0.2,"engagement":0.1,"completion":0.1,"originality":0.2,"local":0.1,"safety":0.9,"negative":0.7},"targets":{"like":0,"save":0,"share":0,"comment":0,"completion":0}}
+
+{"features":{"affinity":0.3,"quality":0.8,"freshness":0.1,"engagement":0.6,"completion":0.9,"originality":0.4,"local":0.7,"safety":0.2,"negative":0.5},"targets":{"like":0.7,"save":0.9,"share":0.4,"comment":0.1,"completion":0.6}}
+{"features":{"affinity":0.9,"quality":0.5,"freshness":0.8,"engagement":0.1,"completion":0.7,"originality":0.3,"local":0.4,"safety":0.6,"negative":0.2},"targets":{"like":0.1,"save":0.7,"share":0.8,"comment":0.6,"completion":0.9}}
+{"features":{"affinity":0.5,"quality":0.9,"freshness":0.2,"engagement":0.8,"completion":0.4,"originality":0.7,"local":0.9,"safety":0.3,"negative":0.6},"targets":{"like":0.6,"save":0.1,"share":0.2,"comment":0.9,"completion":0.3}}
