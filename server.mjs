@@ -27,13 +27,83 @@ const CF_MODEL = process.env.CF_AI_MODEL || "@cf/meta/llama-3.1-8b-instruct";
 const aiRunUrl = (model) => `https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT}/ai/run/${model}`;
 
 // Teachers chain (research-backed): strongest first, failover on error. Zero local compute.
+// `active` = active parameters per token -> Workers AI "neurons" cost per generated token.
 const TEACHERS = [
-  { id: "@cf/openai/gpt-oss-120b", label: "gpt-oss-120B", style: "openai" },
-  { id: "@cf/nvidia/nemotron-3-120b-a12b", label: "nemotron-120B", style: "llama" },
-  { id: "@cf/qwen/qwen3.8-27b", label: "qwen3-27B", style: "llama" },
-  { id: "@cf/meta/llama-3.1-8b-instruct", label: "llama-3.1-8B", style: "llama" },
+  { id: "@cf/openai/gpt-oss-120b", label: "gpt-oss-120B", style: "openai", active: 120 },
+  { id: "@cf/nvidia/nemotron-3-120b-a12b", label: "nemotron-120B(A12B)", style: "openai", active: 12 },
+  { id: "@cf/deepseek-ai/deepseek-r1-distill-qwen-32b", label: "deepseek-r1-32B", style: "llama", active: 32 },
+  { id: "@cf/qwen/qwen3.8-27b", label: "qwen3-27B", style: "llama", active: 27 },
+  { id: "@cf/openai/gpt-oss-20b", label: "gpt-oss-20B", style: "openai", active: 20 },
+  { id: "@cf/meta/llama-3.1-8b-instruct", label: "llama-3.1-8B", style: "llama", active: 8 },
 ];
 const PRIMARY_TEACHER = TEACHERS[0];
+const VERIFIER = TEACHERS[2];
+
+// ---------------- Neuron budget (Workers AI free tier = 10,000 neurons/day) ----------------
+const DAILY_NEURONS = Number(process.env.CF_DAILY_NEURONS || 10000);
+const BUDGET_FILE = path.join(__dirname, ".nados-budget.json");
+
+function readBudget() {
+  try {
+    const b = JSON.parse(fs.readFileSync(BUDGET_FILE, "utf8"));
+    const today = new Date().toISOString().slice(0, 10);
+    if (b.date === today) return b.neurons || 0;
+  } catch {}
+  return 0;
+}
+function writeBudget(neurons) {
+  const today = new Date().toISOString().slice(0, 10);
+  try {
+    fs.writeFileSync(BUDGET_FILE, JSON.stringify({ date: today, neurons: Math.round(neurons) }), "utf8");
+  } catch {}
+}
+let neuronsUsed = readBudget();
+function addNeurons(n) {
+  if (!n || !isFinite(n)) return;
+  neuronsUsed += n;
+  writeBudget(neuronsUsed);
+}
+function neuronsRemaining() {
+  return Math.max(0, DAILY_NEURONS - neuronsUsed);
+}
+const isQuotaError = (e) => /daily free allocation|neurons|quota|insufficient/i.test(String(e?.message || e));
+
+// Cost-aware selection: biggest model that still fits today's remaining budget.
+function pickTeacher(tag, expectedTokens = 700) {
+  const remaining = neuronsRemaining();
+  const affordable = TEACHERS.filter((t) => t.active * expectedTokens <= remaining * 0.5);
+  const pool = affordable.length ? affordable : [TEACHERS[TEACHERS.length - 1]];
+  const preferred = {
+    math: ["gpt-oss-120B", "gpt-oss-20B", "nemotron-120B(A12B)", "qwen3-27B", "llama-3.1-8B"],
+    code: ["gpt-oss-120B", "gpt-oss-20B", "qwen3-27B", "nemotron-120B(A12B)", "llama-3.1-8B"],
+    creative: ["nemotron-120B(A12B)", "qwen3-27B", "gpt-oss-20B", "llama-3.1-8B"],
+    deep: ["gpt-oss-120B", "deepseek-r1-32B", "nemotron-120B(A12B)", "qwen3-27B", "llama-3.1-8B"],
+    chat: ["gpt-oss-120B", "nemotron-120B(A12B)", "gpt-oss-20B", "llama-3.1-8B"],
+  }[tag] || ["gpt-oss-120B", "gpt-oss-20B", "llama-3.1-8B"];
+  for (const label of preferred) {
+    const t = pool.find((x) => x.label === label);
+    if (t) return t;
+  }
+  return pool[0];
+}
+
+// Smart router: task-aware model + reasoning effort (research-backed selection)
+function routeTask(message, mode) {
+  const isMath = /(احسب|كم يساوي|معادلة|مجموع|ناتج|عمر|ضعف|نسبة|محيط|مساحة|نسبة مئوية)/i.test(message) || /[\d٠-٩]\s*[+\-*/×÷]\s*[\d٠-٩]/.test(message);
+  const wantsCode = /(دالة|كود|برمج|سكربت|function|class\s|def\s|python|javascript|typescript|\bsql\b|react|html|\bcss\b|بايثون|جافاسكريبت)/i.test(message) ||
+    (/(اكتب|أنشئ|صمم|صنع|بناء)/.test(message) && /(صفحة|موقع|تطبيق|برنامج|كود|دالة|html|css|واجهة)/i.test(message));
+  const isCreative = mode === "create" || /(باللهجة|عراقي|قصيدة|هايكو|قصة|رسالة|تهنئة|شعر|أغنية)/i.test(message);
+  const isDeep = mode === "research" || mode === "academic" || /(قارن|حلل|فسر|لماذا|استنتج|أثر)/i.test(message);
+  if (isMath) return { tag: "math", teacher: PRIMARY_TEACHER, reasoning: "medium", verify: true };
+  if (wantsCode) return { tag: "code", teacher: PRIMARY_TEACHER, reasoning: "medium", verify: false };
+  if (isCreative) return { tag: "creative", teacher: TEACHERS[1], reasoning: null, verify: false, temperature: 0.85, maxTokens: 4096 };
+  if (isDeep) return { tag: "deep", teacher: PRIMARY_TEACHER, reasoning: "medium", verify: false };
+  return { tag: "chat", teacher: PRIMARY_TEACHER, reasoning: "low", verify: false };
+}
+
+function stripThinkTags(t) {
+  return String(t || "").replace(/<\/?think>/gi, "").replace(/<\/?thinking>/gi, "").trim();
+}
 
 const PROVIDER = {
   id: "cloudflare",
@@ -192,11 +262,51 @@ const MODE_HINTS = {
   research: "قدّم إجابة تحليلية معمقة منظمة بعناوين ونقاط مع استنتاجات واضحة.",
   academic: "قدّم إجابة أكاديمية دقيقة بأسلوب رسمي مع شروح للمصطلحات.",
   files: "حلّل المحتوى المرفق إن وُجد وأجب بناءً عليه بدقة.",
-  create: "أنت مساعد إبداعي، أنتج محتوى أصلياً متميزاً حسب الطلب.",
+  create: "أنت مساعد إبداعي، أنتج محتوى أصلياً متميزاً حسب الطلب. أعطِ النص المطلوب فقط (جملة/رسالة/قصيدة) بلا أمثلة برمجية وبلا شروح مطوّلة.",
 };
 
+function stripCodeFences(t) {
+  // a plain-text creative answer wrongly wrapped in ``` → unwrap it
+  const s = String(t || "").trim();
+  const m = s.match(/^```[a-zA-Z]*\n?([\s\S]*?)\n?```$/);
+  if (!m) return s;
+  const inner = m[1].trim();
+  const looksLikeCode = /[{};]|<[a-z!]/i.test(inner) || /\b(def|function|const|let|var|import|print)\b/.test(inner);
+  return looksLikeCode ? s : inner;
+}
+
+// Sends an answer produced ONLY by the locally trained model (zero cloud calls).
+function sendLocalFallback(res, message, mode, abortedRef) {
+  if (!NADOS_ENGINE) return false;
+  const features = extractFeaturesLocal(message, message, 0);
+  const prediction = nadosPredict(features);
+  const local = synthesizeLocal(message, prediction, mode);
+  const notice = `> ⚠️ انتهت حصة Workers AI اليومية — أُجيب الآن بالنموذج المدرّب المحلي (${NADOS_ENGINE.info().params} معامل) بدون سحابة.\n\n`;
+  sseWrite(res, { type: "delta", delta: notice });
+  for (let i = 0; i < local.length; i += 48) {
+    sseWrite(res, { type: "delta", delta: local.slice(i, i + 48) });
+  }
+  sseWrite(res, {
+    type: "done",
+    reply: {
+      answer: [notice + local],
+      bullets: [],
+      sources: [],
+      provider: "nados-local",
+      model: `Nados v1.1 Local (${NADOS_ENGINE.info().params} معامل)`,
+      variant: "local-fallback",
+      nados: { params: NADOS_ENGINE.info().params, probabilities: prediction.probabilities, ranking_score: prediction.ranking_score, cloudCalls: 0 },
+    },
+  });
+  return true;
+}
+
+function quotaMessage() {
+  return `انتهت حصة Workers AI المجانية اليومية (${DAILY_NEURONS.toLocaleString("en-US")} neuron). الخيارات: (1) ترقية حساب Cloudflare إلى خطة Workers المدفوعة لرفع الحصة، (2) انتظار تجديد الحصة غداً، (3) استخدام الوضع المحلي الحصري (variant=local) الذي يعمل بالنموذج المدرّب بلا سحابة.`;
+}
+
 const SYSTEM_BASE =
-  "أنت «نادوس» (Nados)، مساعد ذكاء اصطناعي عربي ذكي ومفيد. أجب بالعربية الفصحى المبسطة إلا إذا طلب المستخدم لغة أخرى. كن دقيقاً ومنظماً ومباشراً، واستخدم تنسيق Markdown عند الحاجة.";
+  "أنت «نادوس» (Nados)، مساعد ذكاء اصطناعي عربي ذكي ومفيد. أجب بالعربية الفصحى المبسطة إلا إذا طلب المستخدم لغة أخرى. كن دقيقاً ومنظماً ومباشراً، واستخدم تنسيق Markdown عند الحاجة. لا تضف أمثلة برمجية أو أكواد إلا إذا طُلبت صراحةً.";
 
 function json(res, status, obj) {
   const body = JSON.stringify(obj);
@@ -267,17 +377,24 @@ async function callTeacher(teacher, messages, temperature, stream, extra = {}) {
   }
   usageStats.successCalls++;
   usageStats.totalLatencyMs += Date.now() - started;
+  if (!stream) {
+    // neurons are reported in the payload for non-stream calls
+    try {
+      const clone = r.clone();
+      clone.json().then((j) => addNeurons(j?.result?.usage?.neurons)).catch(() => {});
+    } catch {}
+  }
   return r;
 }
-
-async function runTeacher(messages, opts = {}) {
+async function runTeacher(messages, opts = {}, startIdx = 0) {
   let lastErr;
-  for (let i = 0; i < TEACHERS.length; i++) {
+  for (let i = startIdx; i < TEACHERS.length; i++) {
     try {
       const res = await callTeacher(TEACHERS[i], messages, opts.temperature, opts.stream || false, opts);
       return { teacher: TEACHERS[i], res, teacherIndex: i };
     } catch (e) {
       lastErr = e;
+      console.error(`[teacher-fallback] ${TEACHERS[i].label} failed: ${e.message}`);
     }
   }
   throw lastErr || new Error("all teachers failed");
@@ -298,6 +415,7 @@ async function* iterateSSE(body) {
   const emit = function* (obj) {
     // normalize llama-style {response} and openai-style {choices[].delta}
     if (typeof obj.response === "string" && obj.response) yield { content: obj.response };
+    if (obj.usage && typeof obj.usage.neurons === "number") addNeurons(obj.usage.neurons);
     const d = obj.choices?.[0]?.delta;
     if (d) {
       const c = d.content;
@@ -467,32 +585,98 @@ async function handleChatStream(req, res) {
     if (useV11 && styleHint && sysIdx >= 0) messages[sysIdx].content += "\n" + styleHint;
     if (wantsCode && sysIdx >= 0) messages[sysIdx].content += "\nضع أي كود داخل كتلة ``` كاملة وقابلة للتشغيل دائماً، مع شرح سطر واحد بعدها.";
     if (isMath && sysIdx >= 0) messages[sysIdx].content += "\nفي المسائل الحسابية: اكتب كل رقم صراحةً بالأرقام، حل خطوة بخطوة، ثم تحقق من الناتج النهائي بجملة واضحة.";
+    if (routeTask(message, mode).tag === "creative" && sysIdx >= 0) messages[sysIdx].content += "\nممنوع منعاً باتاً ذكر أي كود أو مثال برمجي أو علامات كود (```). أعطِ النص المطلوب فقط (جملة أو رسالة أو قصيدة) وبسطرين كحد أقصى إن لم يُطلب غير ذلك.";
 
     let full = "";
     let teacherUsed = null;
 
     const hardMode = isMath || wantsCode;
     if (hardMode) {
-      // generate → validate → retry once if invalid → stream the final text
-      let attempt = await runTeacher(messages, { temperature: genTemperature ?? 0.3, reasoning: "low" });
+      // smart-routed generation → validate → cross-verify (math) → retry if invalid → stream
+      const route = routeTask(message, mode);
+      const t0 = pickTeacher(route.tag, route.tag === "creative" ? 400 : 1200);
+      let attempt;
+      try {
+        attempt = { teacher: t0, res: await callTeacher(t0, messages, genTemperature ?? 0.3, false, { reasoning: route.reasoning, max_tokens: route.maxTokens }) };
+      } catch (e) {
+        if (isQuotaError(e)) {
+          neuronsUsed = DAILY_NEURONS;
+          writeBudget(neuronsUsed);
+          if (sendLocalFallback(res, message, mode)) return close();
+          sseWrite(res, { type: "error", message: quotaMessage() });
+          return close();
+        }
+        attempt = await runTeacher(messages, { temperature: genTemperature ?? 0.3, reasoning: "low" });
+      }
       let parsed = parseTeacherJSON((await attempt.res.json()).result);
-      let text = parsed.content || "";
+      let text = stripThinkTags(parsed.content || "");
       const invalid = (isMath && !/\d/.test(text)) || (wantsCode && !text.includes("```"));
       if (invalid) {
         messages[sysIdx >= 0 ? sysIdx : 0].content += isMath
           ? "\nمطلوب إلزامي: أرقام صريحة في كل خطوة. أعد كتابة الحل كاملاً."
           : "\nمطلوب إلزامي: كتلة كود ``` كاملة. أعد كتابة الإجابة كاملة.";
-        attempt = await runTeacher(messages, { temperature: 0.3, reasoning: "low" });
-        parsed = parseTeacherJSON((await attempt.res.json()).result);
-        text = parsed.content || text;
+        const retry = await runTeacher(messages, { temperature: 0.3, reasoning: "low" });
+        parsed = parseTeacherJSON((await retry.res.json()).result);
+        text = stripThinkTags(parsed.content || text);
+        teacherUsed = retry.teacher;
+      } else {
+        teacherUsed = attempt.teacher;
       }
-      teacherUsed = attempt.teacher;
+
+      // cross-verification for math: independent check (budget-aware model)
+      if (route.verify && /\d/.test(text) && neuronsRemaining() > 3000) {
+        try {
+          const vTeacher = pickTeacher("deep", 400);
+          const v = await callTeacher(vTeacher, [
+            { role: "system", content: "أنت مدقق حسابي دقيق. تحقق من الحل المقترح خطوة بخطوة.\n- إن كان الحل صحيحاً تماماً: أعد كلمة «صحيح» فقط ولا شيء غيرها.\n- إن كان فيه خطأ: أعد الحل المصحح **بالعربية** مع الأرقام الصريحة في كل خطوة، بدون مقدمات وبدون أي تفكير بالإنجليزية." },
+            { role: "user", content: `السؤال: ${message}\n\nالحل المقترح:\n${text}` },
+          ], 0.2, false, { max_tokens: 2048, reasoning: vTeacher.style === "openai" ? "low" : undefined });
+          const vj = await v.json();
+          const vp = parseTeacherJSON(vj.result);
+          let vt = stripThinkTags(vp.content || "");
+          // keep only a genuinely Arabic solution (drop any English reasoning preamble)
+          const arabicChars = (vt.match(/[\u0600-\u06FF]/g) || []).length;
+          const latinChars = (vt.match(/[A-Za-z]/g) || []).length;
+          const arabicRatio = latinChars ? arabicChars / (arabicChars + latinChars) : 1;
+          const firstArabic = vt.search(/[\u0600-\u06FF]/);
+          if (firstArabic > 0) vt = vt.slice(firstArabic);
+          const hasArabic = /[\u0600-\u06FF]/.test(vt);
+          const looksLikeSolution = /\d/.test(vt) && /(=|سنة|يساوي|الناتج|النتيجة)/.test(vt);
+          if (vt && !/^صحيح\.?$/.test(vt.trim()) && hasArabic && arabicRatio > 0.5 && looksLikeSolution && vt.length > 50) {
+            text = vt;
+            teacherUsed = vTeacher;
+          }
+        } catch (e) {
+          if (isQuotaError(e)) console.error("[verifier] quota reached, keeping original answer");
+        }
+      }
+
+      teacherUsed = teacherUsed || t0;
       full = text;
       for (let i = 0; i < full.length && !aborted; i += 48) {
         sseWrite(res, { type: "delta", delta: full.slice(i, i + 48) });
       }
     } else {
-      const { teacher, res: upstream } = await runTeacher(messages, { temperature: genTemperature, stream: true, reasoning: thinking ? "medium" : "low" });
+      const route = routeTask(message, mode);
+      const chosen = pickTeacher(route.tag, route.tag === "creative" ? 400 : 800);
+      let teacher, upstream;
+      try {
+        const r = await callTeacher(chosen, messages, route.temperature ?? genTemperature, true, { reasoning: route.reasoning, max_tokens: route.maxTokens });
+        teacher = chosen;
+        upstream = r;
+      } catch (e) {
+        if (isQuotaError(e)) {
+          neuronsUsed = DAILY_NEURONS;
+          writeBudget(neuronsUsed);
+          if (sendLocalFallback(res, message, mode)) return close();
+          sseWrite(res, { type: "error", message: quotaMessage() });
+          return close();
+        }
+        console.error(`[teacher] ${chosen.label} failed: ${e.message}`);
+        const fb = await runTeacher(messages, { temperature: genTemperature, stream: true, reasoning: thinking ? "medium" : "low", max_tokens: 4096 });
+        teacher = fb.teacher;
+        upstream = fb.res;
+      }
       teacherUsed = teacher;
       let reasoningBudget = 600;
       for await (const evt of iterateSSE(upstream.body)) {
@@ -506,6 +690,20 @@ async function handleChatStream(req, res) {
           sseWrite(res, { type: "delta", delta: evt.content });
         }
       }
+      // reasoning-heavy teacher burned all tokens on thinking with no content → fallback
+      if (!full.trim()) {
+        console.error(`[teacher] ${teacher.label} produced empty content → failover`);
+        const fb = await runTeacher(messages, { temperature: genTemperature, stream: true, reasoning: "low", max_tokens: 4096 });
+        teacherUsed = fb.teacher;
+        for await (const evt of iterateSSE(fb.res.body)) {
+          if (aborted) break;
+          if (evt.content) {
+            full += evt.content;
+            sseWrite(res, { type: "delta", delta: evt.content });
+          }
+        }
+      }
+      if (routeTask(message, mode).tag === "creative") full = stripCodeFences(full);
     }
 
     // ranker verification on the final answer (trained net, real pass)
@@ -535,6 +733,14 @@ async function handleChatStream(req, res) {
     });
   } catch (e) {
     if (!aborted) {
+      if (isQuotaError(e)) {
+        // account quota exhausted → serve the locally trained model instead of failing
+        neuronsUsed = DAILY_NEURONS;
+        writeBudget(neuronsUsed);
+        if (sendLocalFallback(res, message, mode)) return close();
+        sseWrite(res, { type: "error", message: quotaMessage() });
+        return close();
+      }
       sseWrite(res, { type: "error", message: String(e.message || e) });
     }
   }
@@ -567,6 +773,7 @@ const server = http.createServer(async (req, res) => {
           mode: "sequential-failover",
           activeProviders: TEACHERS.length,
           chain: TEACHERS.map((t) => t.label),
+          neurons: { used: Math.round(neuronsUsed), daily: DAILY_NEURONS, remaining: Math.round(neuronsRemaining()) },
         },
         providers: [{ id: PROVIDER.id, name: PROVIDER.name, configured: PROVIDER.configured }],
         features: {

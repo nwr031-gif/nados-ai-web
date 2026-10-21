@@ -3,3 +3,4 @@ node_modules/
 *.log
 chat-body.txt
 worker-page.html
+.nados-budget.json

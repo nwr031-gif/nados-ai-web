@@ -1,20 +1,4 @@
 data: {"type":"meta","provider":"nados-v1.1","model":"Nados v1.1 · gpt-oss-120B + مُرتّب مدرّب (245 معامل)"}
 
-data: {"type":"delta","delta":"## جملة تهنئة باللهجة العراقية\n\n- **مبروك يا خوي"}
-
-data: {"type":"delta","delta":"، تخرجت ورفعت راسنا!**  \n- **يا بطل، ألف مبروك ا"}
-
-data: {"type":"delta","delta":"لتخرج، الله يوفقك بالمستقبل!**  \n- **يا غالي، فر"}
-
-data: {"type":"delta","delta":"حتنا بيك ما توصف، تخرجت وبالتوفيق!**  \n\n### مثال"}
-
-data: {"type":"delta","delta":" عملي (كود بايثون) لطباعة الجملة\n\n```python\n# طب"}
-
-data: {"type":"delta","delta":"اعة جملة تهنئة باللهجة العراقية\nprint(\"مبروك يا "}
-
-data: {"type":"delta","delta":"خوي، تخرجت ورفعت راسنا!\")\n```\n\n*السطر الأول يوضح"}
-
-data: {"type":"delta","delta":" أن البرنامج سيطبع جملة التهنئة على الشاشة.*"}
-
-data: {"type":"done","reply":{"answer":["## جملة تهنئة باللهجة العراقية\n\n- **مبروك يا خوي، تخرجت ورفعت راسنا!**  \n- **يا بطل، ألف مبروك التخرج، الله يوفقك بالمستقبل!**  \n- **يا غالي، فرحتنا بيك ما توصف، تخرجت وبالتوفيق!**  \n\n### مثال عملي (كود بايثون) لطباعة الجملة\n\n```python\n# طباعة جملة تهنئة باللهجة العراقية\nprint(\"مبروك يا خوي، تخرجت ورفعت راسنا!\")\n```\n\n*السطر الأول يوضح أن البرنامج سيطبع جملة التهنئة على الشاشة.*"],"bullets":[],"sources":[],"provider":"nados-v1.1","model":"Nados v1.1 · gpt-oss-120B + مُرتّب مدرّب","variant":"v1.1","nados":{"model":"Nados v1.1","params":245,"features":{"affinity":1,"quality":0.25,"freshness":0.6,"engagement":0.35,"completion":1,"originality":0.8,"local":1,"safety":1,"negative":0.6},"probabilities":{"like":0.4159,"save":0.677,"share":0.7705,"comment":0.8511,"completion":0.8785},"ranking_score":0.7012,"decision":"أجب بإجابة وافية منظمة بعناوين أو نقاط مع مثال عملي قصير.","temperature":0.84,"final_score":0.9913,"final_probabilities":{"like":0.9855,"save":0.9857,"share":0.9928,"comment":0.9985,"completion":0.9966}},"teacher":"gpt-oss-120B"}}
+data: {"type":"error","message":"llama-3.1-8B: AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (6c7d71b1-26bc-4689-9798-551218821404)"}
 

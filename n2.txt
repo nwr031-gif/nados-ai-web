@@ -1,44 +1,4 @@
 data: {"type":"meta","provider":"nados-v1.1","model":"Nados v1.1 · gpt-oss-120B + مُرتّب مدرّب (245 معامل)"}
 
-data: {"type":"delta","delta":"## حل المسألة خطوةً بخطوة  \n\n| المتغيّر | المعنى"}
-
-data: {"type":"delta","delta":" |\n|---------|--------|\n| \\(A\\)   | عمر أحمد |\n|"}
-
-data: {"type":"delta","delta":" \\(S\\)   | عمر سارة |\n\n### 1‑ صياغة المعادلات\n1."}
-
-data: {"type":"delta","delta":" **العلاقة بين العمرين**  \n   \\[\n   A = 2S \\qqua"}
-
-data: {"type":"delta","delta":"d (\\text{عمر أحمد ضعف عمر سارة})\n   \\]\n\n2. **مجم"}
-
-data: {"type":"delta","delta":"وع العمرين**  \n   \\[\n   A + S = 36 \\qquad (\\text"}
-
-data: {"type":"delta","delta":"{المجموع 36 سنة})\n   \\]\n\n### 2‑ التعويض والحل\nنس"}
-
-data: {"type":"delta","delta":"تبدل \\(A\\) من المعادلة الأولى في المعادلة الثاني"}
-
-data: {"type":"delta","delta":"ة:\n\n\\[\n2S + S = 36\n\\]\n\n\\[\n3S = 36\n\\]\n\n\\[\nS = \\fr"}
-
-data: {"type":"delta","delta":"ac{36}{3}=12\n\\]\n\nوبما أن \\(A = 2S\\):\n\n\\[\nA = 2 \\"}
-
-data: {"type":"delta","delta":"times 12 = 24\n\\]\n\n### 3‑ التحقق\n\\[\nA + S = 24 + "}
-
-data: {"type":"delta","delta":"12 = 36 \\quad \\text{✓}\n\\]\n\n\\[\nA = 2S \\; \\Rightar"}
-
-data: {"type":"delta","delta":"row\\; 24 = 2 \\times 12 \\quad \\text{✓}\n\\]\n\n**النا"}
-
-data: {"type":"delta","delta":"تج النهائي:**  \n- عمر سارة = **12 سنة**  \n- عمر "}
-
-data: {"type":"delta","delta":"أحمد = **24 سنة**  \n\n---\n\n### مثال عملي مشابه\n> "}
-
-data: {"type":"delta","delta":"إذا كان عمر محمد ثلاث أضعاف عمر علي ومجموع عمرهم"}
-
-data: {"type":"delta","delta":"ا 48 سنة، فكم عمر كل منهما؟\n\n**الحل**  \n\\[\nM = 3"}
-
-data: {"type":"delta","delta":"A,\\;\\; M+A = 48 \\Rightarrow 3A + A = 48 \\Rightar"}
-
-data: {"type":"delta","delta":"row 4A = 48 \\Rightarrow A = 12,\\; M = 36\n\\]\n\n**ا"}
-
-data: {"type":"delta","delta":"لنتيجة:** عمر علي 12 سنة، وعمر محمد 36 سنة."}
-
-data: {"type":"done","reply":{"answer":["## حل المسألة خطوةً بخطوة  \n\n| المتغيّر | المعنى |\n|---------|--------|\n| \\(A\\)   | عمر أحمد |\n| \\(S\\)   | عمر سارة |\n\n### 1‑ صياغة المعادلات\n1. **العلاقة بين العمرين**  \n   \\[\n   A = 2S \\qquad (\\text{عمر أحمد ضعف عمر سارة})\n   \\]\n\n2. **مجموع العمرين**  \n   \\[\n   A + S = 36 \\qquad (\\text{المجموع 36 سنة})\n   \\]\n\n### 2‑ التعويض والحل\nنستبدل \\(A\\) من المعادلة الأولى في المعادلة الثانية:\n\n\\[\n2S + S = 36\n\\]\n\n\\[\n3S = 36\n\\]\n\n\\[\nS = \\frac{36}{3}=12\n\\]\n\nوبما أن \\(A = 2S\\):\n\n\\[\nA = 2 \\times 12 = 24\n\\]\n\n### 3‑ التحقق\n\\[\nA + S = 24 + 12 = 36 \\quad \\text{✓}\n\\]\n\n\\[\nA = 2S \\; \\Rightarrow\\; 24 = 2 \\times 12 \\quad \\text{✓}\n\\]\n\n**الناتج النهائي:**  \n- عمر سارة = **12 سنة**  \n- عمر أحمد = **24 سنة**  \n\n---\n\n### مثال عملي مشابه\n> إذا كان عمر محمد ثلاث أضعاف عمر علي ومجموع عمرهما 48 سنة، فكم عمر كل منهما؟\n\n**الحل**  \n\\[\nM = 3A,\\;\\; M+A = 48 \\Rightarrow 3A + A = 48 \\Rightarrow 4A = 48 \\Rightarrow A = 12,\\; M = 36\n\\]\n\n**النتيجة:** عمر علي 12 سنة، وعمر محمد 36 سنة."],"bullets":[],"sources":[],"provider":"nados-v1.1","model":"Nados v1.1 · gpt-oss-120B + مُرتّب مدرّب","variant":"v1.1","nados":{"model":"Nados v1.1","params":245,"features":{"affinity":1,"quality":0.25,"freshness":0.6,"engagement":0.6,"completion":1,"originality":0.655,"local":0.985,"safety":1,"negative":0},"probabilities":{"like":0.9941,"save":0.9981,"share":0.9976,"comment":0.9978,"completion":0.999},"ranking_score":0.9972,"decision":"أجب بإجابة وافية منظمة بعناوين أو نقاط مع مثال عملي قصير.","temperature":0.95,"final_score":0.9059,"final_probabilities":{"like":0.7813,"save":0.946,"share":0.9382,"comment":0.9194,"completion":0.972}},"teacher":"gpt-oss-120B"}}
+data: {"type":"error","message":"llama-3.1-8B: AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (35473760-d357-4f84-8349-d49000d678f3)"}
 
