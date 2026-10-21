@@ -13,3 +13,9 @@ cookies.txt
 *_out.txt
 raw-*.txt
 *.tmp
+
+# ad-hoc scratch
+probe-*.txt
+p*.txt
+!README.md
+!package.json
