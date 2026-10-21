@@ -1,8 +1,0 @@
---B
-Content-Disposition: form-data; name="message"
-
-مرحبا
-Content-Disposition: form-data; name="model"
-
-nados-local
---B--

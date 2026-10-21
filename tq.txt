@@ -1,5 +1,0 @@
---B
-Content-Disposition: form-data; name="message"
-
-ما هي أهم 3 فوائد للذكاء الاصطناعي؟
---B--

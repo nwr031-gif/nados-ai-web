@@ -1,8 +1,0 @@
---B
-Content-Disposition: form-data; name="message"
-
-ما هي عاصمة كندا؟
-Content-Disposition: form-data; name="mode"
-
-web
---B--

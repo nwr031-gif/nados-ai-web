@@ -1,5 +1,0 @@
---B
-Content-Disposition: form-data; name="message"
-
-كم عدد عوامل العدد 36؟ اشرح بالتفصيل مع التحقق
---B--

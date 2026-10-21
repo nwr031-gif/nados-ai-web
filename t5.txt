@@ -1,5 +1,0 @@
---B
-Content-Disposition: form-data; name="message"
-
-اكتب جملة تهنئة قصيرة باللهجة العراقية لصديق متخرج
---B--

@@ -1,5 +1,0 @@
---B
-Content-Disposition: form-data; name="message"
-
-اعطني فكرة مشروع ذكاء اصطناعي للعراق
---B--

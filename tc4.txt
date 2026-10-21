@@ -1,5 +1,0 @@
---B
-Content-Disposition: form-data; name="message"
-
-اكتب دالة جافاسكربت تُرجع عدد الكلمات في نص مع تجاهل علامات الترقيم
---B--

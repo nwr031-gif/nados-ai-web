@@ -1,9 +1,0 @@
---B
-Content-Disposition: form-data; name="message"
-
-ما هو الذكاء الاصطناعي؟
---B
-Content-Disposition: form-data; name="variant"
-
-local
---B--

@@ -1,5 +1,0 @@
---B
-Content-Disposition: form-data; name="message"
-
-اكتب دالة بايثون تعكس نصاً بدون استخدام [::-1] مع شرح سطر واحد
---B--

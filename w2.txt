@@ -1,5 +1,0 @@
---B
-Content-Disposition: form-data; name="message"
-
-اعمل لي دالة جافاسكربت تعكس الكلمات في كل جملة
---B--
