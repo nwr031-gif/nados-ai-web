@@ -1,0 +1,1 @@
+{"messages":[{"role":"system","content":"You are Nados, answer in Arabic always. In math, ALWAYS write every number explicitly as digits."},{"role":"user","content":"عمر أحمد ضعف عمر سارة ومجموع أعمارهما 36 سنة. ما عمر كل منهما؟"}],"max_tokens":400,"temperature":0.3}

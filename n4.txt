@@ -1,0 +1,1700 @@
+data: {"type":"meta","provider":"nados-v1.1","model":"Nados v1.1 · gpt-oss-120B + مُرتّب مدرّب (245 معامل)"}
+
+data: {"type":"delta","delta":"##"}
+
+data: {"type":"delta","delta":" لماذا"}
+
+data: {"type":"delta","delta":" يصبح"}
+
+data: {"type":"delta","delta":" الجو"}
+
+data: {"type":"delta","delta":" بار"}
+
+data: {"type":"delta","delta":"داً"}
+
+data: {"type":"delta","delta":" لي"}
+
+data: {"type":"delta","delta":"لاً"}
+
+data: {"type":"delta","delta":" في"}
+
+data: {"type":"delta","delta":" الص"}
+
+data: {"type":"delta","delta":"حر"}
+
+data: {"type":"delta","delta":"اء"}
+
+data: {"type":"delta","delta":"؟\n\n"}
+
+data: {"type":"delta","delta":"ت"}
+
+data: {"type":"delta","delta":"ت"}
+
+data: {"type":"delta","delta":"فاوت"}
+
+data: {"type":"delta","delta":" درجات"}
+
+data: {"type":"delta","delta":" الحرارة"}
+
+data: {"type":"delta","delta":" في"}
+
+data: {"type":"delta","delta":" الص"}
+
+data: {"type":"delta","delta":"حر"}
+
+data: {"type":"delta","delta":"اء"}
+
+data: {"type":"delta","delta":" بين"}
+
+data: {"type":"delta","delta":" النه"}
+
+data: {"type":"delta","delta":"ار"}
+
+data: {"type":"delta","delta":" وال"}
+
+data: {"type":"delta","delta":"ليل"}
+
+data: {"type":"delta","delta":" بشكل"}
+
+data: {"type":"delta","delta":" كبير"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":" يحدث"}
+
+data: {"type":"delta","delta":" ذلك"}
+
+data: {"type":"delta","delta":" نتيجة"}
+
+data: {"type":"delta","delta":" مجموعة"}
+
+data: {"type":"delta","delta":" من"}
+
+data: {"type":"delta","delta":" الع"}
+
+data: {"type":"delta","delta":"وامل"}
+
+data: {"type":"delta","delta":" الفي"}
+
+data: {"type":"delta","delta":"زي"}
+
+data: {"type":"delta","delta":"ائية"}
+
+data: {"type":"delta","delta":" والم"}
+
+data: {"type":"delta","delta":"نا"}
+
+data: {"type":"delta","delta":"خ"}
+
+data: {"type":"delta","delta":"ية"}
+
+data: {"type":"delta","delta":" التي"}
+
+data: {"type":"delta","delta":" تت"}
+
+data: {"type":"delta","delta":"فاعل"}
+
+data: {"type":"delta","delta":" مع"}
+
+data: {"type":"delta","delta":" بعضها"}
+
+data: {"type":"delta","delta":" البعض"}
+
+data: {"type":"delta","delta":".\n\n---\n\n"}
+
+data: {"type":"delta","delta":"###"}
+
+data: {"type":"delta","delta":" "}
+
+data: {"type":"delta","delta":"1"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":" انخفاض"}
+
+data: {"type":"delta","delta":" الر"}
+
+data: {"type":"delta","delta":"ط"}
+
+data: {"type":"delta","delta":"وبة"}
+
+data: {"type":"delta","delta":" الجوية"}
+
+data: {"type":"delta","delta":"\n"}
+
+data: {"type":"delta","delta":"-"}
+
+data: {"type":"delta","delta":" **"}
+
+data: {"type":"delta","delta":"ق"}
+
+data: {"type":"delta","delta":"لة"}
+
+data: {"type":"delta","delta":" بخ"}
+
+data: {"type":"delta","delta":"ار"}
+
+data: {"type":"delta","delta":" الماء"}
+
+data: {"type":"delta","delta":"**"}
+
+data: {"type":"delta","delta":" في"}
+
+data: {"type":"delta","delta":" الهواء"}
+
+data: {"type":"delta","delta":" تجعل"}
+
+data: {"type":"delta","delta":" الهواء"}
+
+data: {"type":"delta","delta":" ي"}
+
+data: {"type":"delta","delta":"فس"}
+
+data: {"type":"delta","delta":"ر"}
+
+data: {"type":"delta","delta":" الحرارة"}
+
+data: {"type":"delta","delta":" بسرعة أكبر"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":"  \n"}
+
+data: {"type":"delta","delta":"-"}
+
+data: {"type":"delta","delta":" بخ"}
+
+data: {"type":"delta","delta":"ار"}
+
+data: {"type":"delta","delta":" الماء"}
+
+data: {"type":"delta","delta":" يعمل"}
+
+data: {"type":"delta","delta":" ك"}
+
+data: {"type":"delta","delta":"ع"}
+
+data: {"type":"delta","delta":"ازل"}
+
+data: {"type":"delta","delta":" ("}
+
+data: {"type":"delta","delta":"ن"}
+
+data: {"type":"delta","delta":"ظام"}
+
+data: {"type":"delta","delta":" “"}
+
+data: {"type":"delta","delta":"ال"}
+
+data: {"type":"delta","delta":"بيت"}
+
+data: {"type":"delta","delta":"ز"}
+
+data: {"type":"delta","delta":"”"}
+
+data: {"type":"delta","delta":" في"}
+
+data: {"type":"delta","delta":" الغ"}
+
+data: {"type":"delta","delta":"لاف"}
+
+data: {"type":"delta","delta":" الج"}
+
+data: {"type":"delta","delta":"وي"}
+
+data: {"type":"delta","delta":")"}
+
+data: {"type":"delta","delta":"؛"}
+
+data: {"type":"delta","delta":" عندما"}
+
+data: {"type":"delta","delta":" يكون"}
+
+data: {"type":"delta","delta":" قليل"}
+
+data: {"type":"delta","delta":"ًا"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" لا"}
+
+data: {"type":"delta","delta":" يب"}
+
+data: {"type":"delta","delta":"قى"}
+
+data: {"type":"delta","delta":" الحرارة"}
+
+data: {"type":"delta","delta":" مح"}
+
+data: {"type":"delta","delta":"ب"}
+
+data: {"type":"delta","delta":"وس"}
+
+data: {"type":"delta","delta":"ة"}
+
+data: {"type":"delta","delta":" بل"}
+
+data: {"type":"delta","delta":" تُ"}
+
+data: {"type":"delta","delta":"ف"}
+
+data: {"type":"delta","delta":"قد"}
+
+data: {"type":"delta","delta":" إلى"}
+
+data: {"type":"delta","delta":" الف"}
+
+data: {"type":"delta","delta":"ضاء"}
+
+data: {"type":"delta","delta":" بسهولة"}
+
+data: {"type":"delta","delta":".\n\n"}
+
+data: {"type":"delta","delta":"###"}
+
+data: {"type":"delta","delta":" "}
+
+data: {"type":"delta","delta":"2"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":" نقص"}
+
+data: {"type":"delta","delta":" الس"}
+
+data: {"type":"delta","delta":"حب"}
+
+data: {"type":"delta","delta":" و"}
+
+data: {"type":"delta","delta":"غط"}
+
+data: {"type":"delta","delta":"اء"}
+
+data: {"type":"delta","delta":" السم"}
+
+data: {"type":"delta","delta":"اء"}
+
+data: {"type":"delta","delta":" الص"}
+
+data: {"type":"delta","delta":"افي"}
+
+data: {"type":"delta","delta":"\n"}
+
+data: {"type":"delta","delta":"-"}
+
+data: {"type":"delta","delta":" الص"}
+
+data: {"type":"delta","delta":"حر"}
+
+data: {"type":"delta","delta":"اء"}
+
+data: {"type":"delta","delta":" غالب"}
+
+data: {"type":"delta","delta":"ًا"}
+
+data: {"type":"delta","delta":" ما"}
+
+data: {"type":"delta","delta":" تكون"}
+
+data: {"type":"delta","delta":" **"}
+
+data: {"type":"delta","delta":"ص"}
+
+data: {"type":"delta","delta":"افية"}
+
+data: {"type":"delta","delta":" طوال"}
+
+data: {"type":"delta","delta":" اليوم"}
+
+data: {"type":"delta","delta":"**"}
+
+data: {"type":"delta","delta":"؛"}
+
+data: {"type":"delta","delta":" لا"}
+
+data: {"type":"delta","delta":" توجد"}
+
+data: {"type":"delta","delta":" س"}
+
+data: {"type":"delta","delta":"حب"}
+
+data: {"type":"delta","delta":" تع"}
+
+data: {"type":"delta","delta":"كس"}
+
+data: {"type":"delta","delta":" الإ"}
+
+data: {"type":"delta","delta":"ش"}
+
+data: {"type":"delta","delta":"ع"}
+
+data: {"type":"delta","delta":"اع"}
+
+data: {"type":"delta","delta":" الش"}
+
+data: {"type":"delta","delta":"م"}
+
+data: {"type":"delta","delta":"سي"}
+
+data: {"type":"delta","delta":" إلى"}
+
+data: {"type":"delta","delta":" الأرض"}
+
+data: {"type":"delta","delta":" في"}
+
+data: {"type":"delta","delta":" الليل"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":"  \n"}
+
+data: {"type":"delta","delta":"-"}
+
+data: {"type":"delta","delta":" الس"}
+
+data: {"type":"delta","delta":"حب"}
+
+data: {"type":"delta","delta":" تعمل"}
+
+data: {"type":"delta","delta":" ك"}
+
+data: {"type":"delta","delta":"غط"}
+
+data: {"type":"delta","delta":"اء"}
+
+data: {"type":"delta","delta":" شبه"}
+
+data: {"type":"delta","delta":" ش"}
+
+data: {"type":"delta","delta":"فاف"}
+
+data: {"type":"delta","delta":" ي"}
+
+data: {"type":"delta","delta":"عي"}
+
+data: {"type":"delta","delta":"ق"}
+
+data: {"type":"delta","delta":" فقد"}
+
+data: {"type":"delta","delta":"ان"}
+
+data: {"type":"delta","delta":" الحرارة"}
+
+data: {"type":"delta","delta":" إلى"}
+
+data: {"type":"delta","delta":" الف"}
+
+data: {"type":"delta","delta":"ضاء"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" ف"}
+
+data: {"type":"delta","delta":"غي"}
+
+data: {"type":"delta","delta":"اب"}
+
+data: {"type":"delta","delta":"ها"}
+
+data: {"type":"delta","delta":" يزيد"}
+
+data: {"type":"delta","delta":" من"}
+
+data: {"type":"delta","delta":" الف"}
+
+data: {"type":"delta","delta":"قد"}
+
+data: {"type":"delta","delta":"ان"}
+
+data: {"type":"delta","delta":" الإ"}
+
+data: {"type":"delta","delta":"ش"}
+
+data: {"type":"delta","delta":"ع"}
+
+data: {"type":"delta","delta":"اعي"}
+
+data: {"type":"delta","delta":".\n\n"}
+
+data: {"type":"delta","delta":"###"}
+
+data: {"type":"delta","delta":" "}
+
+data: {"type":"delta","delta":"3"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":" الخ"}
+
+data: {"type":"delta","delta":"وا"}
+
+data: {"type":"delta","delta":"ص"}
+
+data: {"type":"delta","delta":" الحر"}
+
+data: {"type":"delta","delta":"ارية"}
+
+data: {"type":"delta","delta":" لل"}
+
+data: {"type":"delta","delta":"سط"}
+
+data: {"type":"delta","delta":"وح"}
+
+data: {"type":"delta","delta":" الصح"}
+
+data: {"type":"delta","delta":"را"}
+
+data: {"type":"delta","delta":"وية"}
+
+data: {"type":"delta","delta":"\n"}
+
+data: {"type":"delta","delta":"|"}
+
+data: {"type":"delta","delta":" خاص"}
+
+data: {"type":"delta","delta":"ية"}
+
+data: {"type":"delta","delta":" |"}
+
+data: {"type":"delta","delta":" تأثير"}
+
+data: {"type":"delta","delta":"ها"}
+
+data: {"type":"delta","delta":" |\n"}
+
+data: {"type":"delta","delta":"|"}
+
+data: {"type":"delta","delta":"------"}
+
+data: {"type":"delta","delta":"|"}
+
+data: {"type":"delta","delta":"----------"}
+
+data: {"type":"delta","delta":"|\n"}
+
+data: {"type":"delta","delta":"|"}
+
+data: {"type":"delta","delta":" **"}
+
+data: {"type":"delta","delta":"الم"}
+
+data: {"type":"delta","delta":"سام"}
+
+data: {"type":"delta","delta":"ية"}
+
+data: {"type":"delta","delta":" الحر"}
+
+data: {"type":"delta","delta":"ارية"}
+
+data: {"type":"delta","delta":" ("}
+
+data: {"type":"delta","delta":"ال"}
+
+data: {"type":"delta","delta":"قد"}
+
+data: {"type":"delta","delta":"رة على"}
+
+data: {"type":"delta","delta":" التس"}
+
+data: {"type":"delta","delta":"خ"}
+
+data: {"type":"delta","delta":"ين"}
+
+data: {"type":"delta","delta":")**"}
+
+data: {"type":"delta","delta":" |"}
+
+data: {"type":"delta","delta":" الرمال"}
+
+data: {"type":"delta","delta":" والص"}
+
+data: {"type":"delta","delta":"خور"}
+
+data: {"type":"delta","delta":" تم"}
+
+data: {"type":"delta","delta":"تص"}
+
+data: {"type":"delta","delta":" الحرارة"}
+
+data: {"type":"delta","delta":" بسرعة"}
+
+data: {"type":"delta","delta":" خلال"}
+
+data: {"type":"delta","delta":" النه"}
+
+data: {"type":"delta","delta":"ار"}
+
+data: {"type":"delta","delta":" بسبب"}
+
+data: {"type":"delta","delta":" سطح"}
+
+data: {"type":"delta","delta":"ها"}
+
+data: {"type":"delta","delta":" الدا"}
+
+data: {"type":"delta","delta":"كن"}
+
+data: {"type":"delta","delta":" وال"}
+
+data: {"type":"delta","delta":"امت"}
+
+data: {"type":"delta","delta":"زاز"}
+
+data: {"type":"delta","delta":" الس"}
+
+data: {"type":"delta","delta":"ريع"}
+
+data: {"type":"delta","delta":" للط"}
+
+data: {"type":"delta","delta":"اقة"}
+
+data: {"type":"delta","delta":" الشمس"}
+
+data: {"type":"delta","delta":"ية"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":" |\n"}
+
+data: {"type":"delta","delta":"|"}
+
+data: {"type":"delta","delta":" **"}
+
+data: {"type":"delta","delta":"الس"}
+
+data: {"type":"delta","delta":"عة"}
+
+data: {"type":"delta","delta":" الحر"}
+
+data: {"type":"delta","delta":"ارية"}
+
+data: {"type":"delta","delta":" المن"}
+
+data: {"type":"delta","delta":"خفض"}
+
+data: {"type":"delta","delta":"ة"}
+
+data: {"type":"delta","delta":"**"}
+
+data: {"type":"delta","delta":" |"}
+
+data: {"type":"delta","delta":" تخ"}
+
+data: {"type":"delta","delta":"زن"}
+
+data: {"type":"delta","delta":" كمية"}
+
+data: {"type":"delta","delta":" قليلة"}
+
+data: {"type":"delta","delta":" من"}
+
+data: {"type":"delta","delta":" الطاقة"}
+
+data: {"type":"delta","delta":" مقارنة"}
+
+data: {"type":"delta","delta":"ً"}
+
+data: {"type":"delta","delta":" بم"}
+
+data: {"type":"delta","delta":"سطحات"}
+
+data: {"type":"delta","delta":" أخرى"}
+
+data: {"type":"delta","delta":" ("}
+
+data: {"type":"delta","delta":"مثل المياه"}
+
+data: {"type":"delta","delta":" أو"}
+
+data: {"type":"delta","delta":" الغ"}
+
+data: {"type":"delta","delta":"ابات"}
+
+data: {"type":"delta","delta":")."}
+
+data: {"type":"delta","delta":" لذا"}
+
+data: {"type":"delta","delta":" عندما"}
+
+data: {"type":"delta","delta":" تن"}
+
+data: {"type":"delta","delta":"تهي"}
+
+data: {"type":"delta","delta":" مدة"}
+
+data: {"type":"delta","delta":" الشمس"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" تُ"}
+
+data: {"type":"delta","delta":"ف"}
+
+data: {"type":"delta","delta":"قد"}
+
+data: {"type":"delta","delta":" الحرارة"}
+
+data: {"type":"delta","delta":" المخ"}
+
+data: {"type":"delta","delta":"ز"}
+
+data: {"type":"delta","delta":"نة"}
+
+data: {"type":"delta","delta":" بسرعة"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":" |\n"}
+
+data: {"type":"delta","delta":"|"}
+
+data: {"type":"delta","delta":" **"}
+
+data: {"type":"delta","delta":"الت"}
+
+data: {"type":"delta","delta":"وص"}
+
+data: {"type":"delta","delta":"يل"}
+
+data: {"type":"delta","delta":" الحر"}
+
+data: {"type":"delta","delta":"اري"}
+
+data: {"type":"delta","delta":" الس"}
+
+data: {"type":"delta","delta":"ط"}
+
+data: {"type":"delta","delta":"حي"}
+
+data: {"type":"delta","delta":"**"}
+
+data: {"type":"delta","delta":" |"}
+
+data: {"type":"delta","delta":" سطح"}
+
+data: {"type":"delta","delta":" الرمل"}
+
+data: {"type":"delta","delta":" ي"}
+
+data: {"type":"delta","delta":"برد"}
+
+data: {"type":"delta","delta":" بسرعة لأن"}
+
+data: {"type":"delta","delta":" الحرارة"}
+
+data: {"type":"delta","delta":" تنت"}
+
+data: {"type":"delta","delta":"قل"}
+
+data: {"type":"delta","delta":" بسهولة"}
+
+data: {"type":"delta","delta":" إلى"}
+
+data: {"type":"delta","delta":" الهواء"}
+
+data: {"type":"delta","delta":" المح"}
+
+data: {"type":"delta","delta":"يط"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":" |\n\n"}
+
+data: {"type":"delta","delta":"###"}
+
+data: {"type":"delta","delta":" "}
+
+data: {"type":"delta","delta":"4"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":" الإ"}
+
+data: {"type":"delta","delta":"ش"}
+
+data: {"type":"delta","delta":"ع"}
+
+data: {"type":"delta","delta":"اع"}
+
+data: {"type":"delta","delta":" الحر"}
+
+data: {"type":"delta","delta":"اري"}
+
+data: {"type":"delta","delta":" ("}
+
+data: {"type":"delta","delta":"Radi"}
+
+data: {"type":"delta","delta":"ative"}
+
+data: {"type":"delta","delta":" Cooling"}
+
+data: {"type":"delta","delta":")\n"}
+
+data: {"type":"delta","delta":"-"}
+
+data: {"type":"delta","delta":" بعد"}
+
+data: {"type":"delta","delta":" غ"}
+
+data: {"type":"delta","delta":"روب"}
+
+data: {"type":"delta","delta":" الشمس"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" **"}
+
+data: {"type":"delta","delta":"ت"}
+
+data: {"type":"delta","delta":"طلق"}
+
+data: {"type":"delta","delta":" الأرض"}
+
+data: {"type":"delta","delta":" ("}
+
+data: {"type":"delta","delta":"وال"}
+
+data: {"type":"delta","delta":"ر"}
+
+data: {"type":"delta","delta":"مال"}
+
+data: {"type":"delta","delta":")"}
+
+data: {"type":"delta","delta":" إش"}
+
+data: {"type":"delta","delta":"ع"}
+
+data: {"type":"delta","delta":"اع"}
+
+data: {"type":"delta","delta":"ًا"}
+
+data: {"type":"delta","delta":" تحت"}
+
+data: {"type":"delta","delta":" الأحمر"}
+
+data: {"type":"delta","delta":"**"}
+
+data: {"type":"delta","delta":" إلى"}
+
+data: {"type":"delta","delta":" الف"}
+
+data: {"type":"delta","delta":"ضاء"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":"  \n"}
+
+data: {"type":"delta","delta":"-"}
+
+data: {"type":"delta","delta":" في"}
+
+data: {"type":"delta","delta":" الص"}
+
+data: {"type":"delta","delta":"حر"}
+
+data: {"type":"delta","delta":"اء"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" لا"}
+
+data: {"type":"delta","delta":" يوجد"}
+
+data: {"type":"delta","delta":" ما"}
+
+data: {"type":"delta","delta":" ي"}
+
+data: {"type":"delta","delta":"عي"}
+
+data: {"type":"delta","delta":"ق"}
+
+data: {"type":"delta","delta":" هذا"}
+
+data: {"type":"delta","delta":" الإ"}
+
+data: {"type":"delta","delta":"ش"}
+
+data: {"type":"delta","delta":"ع"}
+
+data: {"type":"delta","delta":"اع"}
+
+data: {"type":"delta","delta":" ("}
+
+data: {"type":"delta","delta":"لا"}
+
+data: {"type":"delta","delta":" غ"}
+
+data: {"type":"delta","delta":"ي"}
+
+data: {"type":"delta","delta":"وم"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" لا"}
+
+data: {"type":"delta","delta":" ر"}
+
+data: {"type":"delta","delta":"ط"}
+
+data: {"type":"delta","delta":"وبة"}
+
+data: {"type":"delta","delta":")،"}
+
+data: {"type":"delta","delta":" لذا"}
+
+data: {"type":"delta","delta":" يُ"}
+
+data: {"type":"delta","delta":"ف"}
+
+data: {"type":"delta","delta":"قد"}
+
+data: {"type":"delta","delta":" حرارة"}
+
+data: {"type":"delta","delta":" الس"}
+
+data: {"type":"delta","delta":"طح"}
+
+data: {"type":"delta","delta":" بسرعة"}
+
+data: {"type":"delta","delta":" كبيرة"}
+
+data: {"type":"delta","delta":".\n\n"}
+
+data: {"type":"delta","delta":"###"}
+
+data: {"type":"delta","delta":" "}
+
+data: {"type":"delta","delta":"5"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":" انخفاض"}
+
+data: {"type":"delta","delta":" الضغط"}
+
+data: {"type":"delta","delta":" الج"}
+
+data: {"type":"delta","delta":"وي"}
+
+data: {"type":"delta","delta":" وال"}
+
+data: {"type":"delta","delta":"ري"}
+
+data: {"type":"delta","delta":"اح"}
+
+data: {"type":"delta","delta":" ال"}
+
+data: {"type":"delta","delta":"هاد"}
+
+data: {"type":"delta","delta":"ئة"}
+
+data: {"type":"delta","delta":"\n"}
+
+data: {"type":"delta","delta":"-"}
+
+data: {"type":"delta","delta":" كثير"}
+
+data: {"type":"delta","delta":" من"}
+
+data: {"type":"delta","delta":" الصح"}
+
+data: {"type":"delta","delta":"اري"}
+
+data: {"type":"delta","delta":" تقع"}
+
+data: {"type":"delta","delta":" على"}
+
+data: {"type":"delta","delta":" ارتفاع"}
+
+data: {"type":"delta","delta":"ات"}
+
+data: {"type":"delta","delta":" عالية"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" حيث"}
+
+data: {"type":"delta","delta":" **"}
+
+data: {"type":"delta","delta":"ال"}
+
+data: {"type":"delta","delta":"ضغط"}
+
+data: {"type":"delta","delta":" الج"}
+
+data: {"type":"delta","delta":"وي"}
+
+data: {"type":"delta","delta":" أقل"}
+
+data: {"type":"delta","delta":"**"}
+
+data: {"type":"delta","delta":"؛"}
+
+data: {"type":"delta","delta":" وهذا"}
+
+data: {"type":"delta","delta":" يجعل"}
+
+data: {"type":"delta","delta":" الهواء"}
+
+data: {"type":"delta","delta":" أخ"}
+
+data: {"type":"delta","delta":"ف"}
+
+data: {"type":"delta","delta":" وي"}
+
+data: {"type":"delta","delta":"ف"}
+
+data: {"type":"delta","delta":"قد"}
+
+data: {"type":"delta","delta":" الحرارة"}
+
+data: {"type":"delta","delta":" أسر"}
+
+data: {"type":"delta","delta":"ع"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":"  \n"}
+
+data: {"type":"delta","delta":"-"}
+
+data: {"type":"delta","delta":" الري"}
+
+data: {"type":"delta","delta":"اح"}
+
+data: {"type":"delta","delta":" الهاد"}
+
+data: {"type":"delta","delta":"ئة"}
+
+data: {"type":"delta","delta":" في"}
+
+data: {"type":"delta","delta":" الليل"}
+
+data: {"type":"delta","delta":" لا"}
+
+data: {"type":"delta","delta":" تُعيد"}
+
+data: {"type":"delta","delta":" توزيع"}
+
+data: {"type":"delta","delta":" الحرارة"}
+
+data: {"type":"delta","delta":" من الس"}
+
+data: {"type":"delta","delta":"طح"}
+
+data: {"type":"delta","delta":" إلى"}
+
+data: {"type":"delta","delta":" الطب"}
+
+data: {"type":"delta","delta":"قات"}
+
+data: {"type":"delta","delta":" العليا"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" فت"}
+
+data: {"type":"delta","delta":"ظل"}
+
+data: {"type":"delta","delta":" الس"}
+
+data: {"type":"delta","delta":"طح"}
+
+data: {"type":"delta","delta":" ب"}
+
+data: {"type":"delta","delta":"ارد"}
+
+data: {"type":"delta","delta":"ًا"}
+
+data: {"type":"delta","delta":".\n\n"}
+
+data: {"type":"delta","delta":"---\n\n"}
+
+data: {"type":"delta","delta":"##"}
+
+data: {"type":"delta","delta":" مثال"}
+
+data: {"type":"delta","delta":" عملي"}
+
+data: {"type":"delta","delta":" بسي"}
+
+data: {"type":"delta","delta":"ط"}
+
+data: {"type":"delta","delta":"\n\n"}
+
+data: {"type":"delta","delta":"**"}
+
+data: {"type":"delta","delta":"تج"}
+
+data: {"type":"delta","delta":"ربة"}
+
+data: {"type":"delta","delta":" ي"}
+
+data: {"type":"delta","delta":"دوية"}
+
+data: {"type":"delta","delta":" لت"}
+
+data: {"type":"delta","delta":"ق"}
+
+data: {"type":"delta","delta":"ريب"}
+
+data: {"type":"delta","delta":" الف"}
+
+data: {"type":"delta","delta":"كرة"}
+
+data: {"type":"delta","delta":"**"}
+
+data: {"type":"delta","delta":"  \n\n"}
+
+data: {"type":"delta","delta":"1"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":" **"}
+
+data: {"type":"delta","delta":"الأ"}
+
+data: {"type":"delta","delta":"د"}
+
+data: {"type":"delta","delta":"وات"}
+
+data: {"type":"delta","delta":"**"}
+
+data: {"type":"delta","delta":":"}
+
+data: {"type":"delta","delta":" ص"}
+
+data: {"type":"delta","delta":"حن"}
+
+data: {"type":"delta","delta":" معد"}
+
+data: {"type":"delta","delta":"ني"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" ص"}
+
+data: {"type":"delta","delta":"حن"}
+
+data: {"type":"delta","delta":" ز"}
+
+data: {"type":"delta","delta":"جاج"}
+
+data: {"type":"delta","delta":"ي"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" ماء"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" ساعة"}
+
+data: {"type":"delta","delta":" توق"}
+
+data: {"type":"delta","delta":"يت"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":"  \n"}
+
+data: {"type":"delta","delta":"2"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":" **"}
+
+data: {"type":"delta","delta":"ال"}
+
+data: {"type":"delta","delta":"خط"}
+
+data: {"type":"delta","delta":"وات"}
+
+data: {"type":"delta","delta":"**"}
+
+data: {"type":"delta","delta":":"}
+
+data: {"type":"delta","delta":"  \n"}
+
+data: {"type":"delta","delta":"  "}
+
+data: {"type":"delta","delta":" -"}
+
+data: {"type":"delta","delta":" ضع"}
+
+data: {"type":"delta","delta":" ص"}
+
+data: {"type":"delta","delta":"حن"}
+
+data: {"type":"delta","delta":"ًا"}
+
+data: {"type":"delta","delta":" معد"}
+
+data: {"type":"delta","delta":"ني"}
+
+data: {"type":"delta","delta":"ًا"}
+
+data: {"type":"delta","delta":" على"}
+
+data: {"type":"delta","delta":" الشمس"}
+
+data: {"type":"delta","delta":" لس"}
+
+data: {"type":"delta","delta":"اعت"}
+
+data: {"type":"delta","delta":"ين"}
+
+data: {"type":"delta","delta":" ("}
+
+data: {"type":"delta","delta":"ي"}
+
+data: {"type":"delta","delta":"ُم"}
+
+data: {"type":"delta","delta":"تص"}
+
+data: {"type":"delta","delta":" حرارة"}
+
+data: {"type":"delta","delta":" الشمس"}
+
+data: {"type":"delta","delta":" بسرعة"}
+
+data: {"type":"delta","delta":")."}
+
+data: {"type":"delta","delta":"  \n"}
+
+data: {"type":"delta","delta":"  "}
+
+data: {"type":"delta","delta":" -"}
+
+data: {"type":"delta","delta":" ضع"}
+
+data: {"type":"delta","delta":" ص"}
+
+data: {"type":"delta","delta":"حن"}
+
+data: {"type":"delta","delta":"ًا"}
+
+data: {"type":"delta","delta":" ز"}
+
+data: {"type":"delta","delta":"جاج"}
+
+data: {"type":"delta","delta":"يًا"}
+
+data: {"type":"delta","delta":" مع"}
+
+data: {"type":"delta","delta":" ماء"}
+
+data: {"type":"delta","delta":" في"}
+
+data: {"type":"delta","delta":" الظ"}
+
+data: {"type":"delta","delta":"ل"}
+
+data: {"type":"delta","delta":" ("}
+
+data: {"type":"delta","delta":"الم"}
+
+data: {"type":"delta","delta":"اء"}
+
+data: {"type":"delta","delta":" لديه"}
+
+data: {"type":"delta","delta":" س"}
+
+data: {"type":"delta","delta":"عة"}
+
+data: {"type":"delta","delta":" حر"}
+
+data: {"type":"delta","delta":"ارية"}
+
+data: {"type":"delta","delta":" عالية"}
+
+data: {"type":"delta","delta":")."}
+
+data: {"type":"delta","delta":"  \n"}
+
+data: {"type":"delta","delta":"3"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":" **"}
+
+data: {"type":"delta","delta":"الم"}
+
+data: {"type":"delta","delta":"لاح"}
+
+data: {"type":"delta","delta":"ظة"}
+
+data: {"type":"delta","delta":"**"}
+
+data: {"type":"delta","delta":":"}
+
+data: {"type":"delta","delta":"  \n"}
+
+data: {"type":"delta","delta":"  "}
+
+data: {"type":"delta","delta":" -"}
+
+data: {"type":"delta","delta":" بعد"}
+
+data: {"type":"delta","delta":" غ"}
+
+data: {"type":"delta","delta":"روب"}
+
+data: {"type":"delta","delta":" الشمس"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" س"}
+
+data: {"type":"delta","delta":"يت"}
+
+data: {"type":"delta","delta":"برد"}
+
+data: {"type":"delta","delta":" الص"}
+
+data: {"type":"delta","delta":"حن"}
+
+data: {"type":"delta","delta":" المعد"}
+
+data: {"type":"delta","delta":"ني"}
+
+data: {"type":"delta","delta":" بسرعة"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" بينما"}
+
+data: {"type":"delta","delta":" سي"}
+
+data: {"type":"delta","delta":"ظل"}
+
+data: {"type":"delta","delta":" الماء"}
+
+data: {"type":"delta","delta":" في"}
+
+data: {"type":"delta","delta":" الص"}
+
+data: {"type":"delta","delta":"حن"}
+
+data: {"type":"delta","delta":" الز"}
+
+data: {"type":"delta","delta":"جاج"}
+
+data: {"type":"delta","delta":"ي"}
+
+data: {"type":"delta","delta":" د"}
+
+data: {"type":"delta","delta":"اف"}
+
+data: {"type":"delta","delta":"ئ"}
+
+data: {"type":"delta","delta":"ًا"}
+
+data: {"type":"delta","delta":" لف"}
+
+data: {"type":"delta","delta":"ترة"}
+
+data: {"type":"delta","delta":" أط"}
+
+data: {"type":"delta","delta":"ول"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":"  \n"}
+
+data: {"type":"delta","delta":"  "}
+
+data: {"type":"delta","delta":" -"}
+
+data: {"type":"delta","delta":" هذا"}
+
+data: {"type":"delta","delta":" ي"}
+
+data: {"type":"delta","delta":"وضح"}
+
+data: {"type":"delta","delta":" كيف"}
+
+data: {"type":"delta","delta":" أن"}
+
+data: {"type":"delta","delta":" الس"}
+
+data: {"type":"delta","delta":"طح"}
+
+data: {"type":"delta","delta":" ذو"}
+
+data: {"type":"delta","delta":" الس"}
+
+data: {"type":"delta","delta":"عة"}
+
+data: {"type":"delta","delta":" الحر"}
+
+data: {"type":"delta","delta":"ارية"}
+
+data: {"type":"delta","delta":" المن"}
+
+data: {"type":"delta","delta":"خفض"}
+
+data: {"type":"delta","delta":"ة"}
+
+data: {"type":"delta","delta":" ("}
+
+data: {"type":"delta","delta":"مثل"}
+
+data: {"type":"delta","delta":" ر"}
+
+data: {"type":"delta","delta":"مال"}
+
+data: {"type":"delta","delta":" الص"}
+
+data: {"type":"delta","delta":"حر"}
+
+data: {"type":"delta","delta":"اء"}
+
+data: {"type":"delta","delta":")"}
+
+data: {"type":"delta","delta":" ي"}
+
+data: {"type":"delta","delta":"برد"}
+
+data: {"type":"delta","delta":" بسرعة"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" في"}
+
+data: {"type":"delta","delta":" حين"}
+
+data: {"type":"delta","delta":" أن"}
+
+data: {"type":"delta","delta":" الس"}
+
+data: {"type":"delta","delta":"طح"}
+
+data: {"type":"delta","delta":" ذو"}
+
+data: {"type":"delta","delta":" الس"}
+
+data: {"type":"delta","delta":"عة"}
+
+data: {"type":"delta","delta":" الحر"}
+
+data: {"type":"delta","delta":"ارية"}
+
+data: {"type":"delta","delta":" العالية"}
+
+data: {"type":"delta","delta":" ("}
+
+data: {"type":"delta","delta":"الم"}
+
+data: {"type":"delta","delta":"اء"}
+
+data: {"type":"delta","delta":")"}
+
+data: {"type":"delta","delta":" يحت"}
+
+data: {"type":"delta","delta":"فظ"}
+
+data: {"type":"delta","delta":" بال"}
+
+data: {"type":"delta","delta":"حر"}
+
+data: {"type":"delta","delta":"ارة"}
+
+data: {"type":"delta","delta":".\n\n"}
+
+data: {"type":"delta","delta":"---\n\n"}
+
+data: {"type":"delta","delta":"##"}
+
+data: {"type":"delta","delta":" خلا"}
+
+data: {"type":"delta","delta":"صة"}
+
+data: {"type":"delta","delta":"\n\n"}
+
+data: {"type":"delta","delta":"-"}
+
+data: {"type":"delta","delta":" **"}
+
+data: {"type":"delta","delta":"ال"}
+
+data: {"type":"delta","delta":"جو"}
+
+data: {"type":"delta","delta":" الب"}
+
+data: {"type":"delta","delta":"ارد"}
+
+data: {"type":"delta","delta":" لي"}
+
+data: {"type":"delta","delta":"لاً"}
+
+data: {"type":"delta","delta":" في الص"}
+
+data: {"type":"delta","delta":"حر"}
+
+data: {"type":"delta","delta":"اء"}
+
+data: {"type":"delta","delta":"**"}
+
+data: {"type":"delta","delta":" هو"}
+
+data: {"type":"delta","delta":" نتيجة"}
+
+data: {"type":"delta","delta":" لت"}
+
+data: {"type":"delta","delta":"ق"}
+
+data: {"type":"delta","delta":"ليل"}
+
+data: {"type":"delta","delta":" الع"}
+
+data: {"type":"delta","delta":"وا"}
+
+data: {"type":"delta","delta":"زل"}
+
+data: {"type":"delta","delta":" الطبيعية"}
+
+data: {"type":"delta","delta":" ("}
+
+data: {"type":"delta","delta":"ر"}
+
+data: {"type":"delta","delta":"ط"}
+
+data: {"type":"delta","delta":"وبة"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" س"}
+
+data: {"type":"delta","delta":"حب"}
+
+data: {"type":"delta","delta":")"}
+
+data: {"type":"delta","delta":" وز"}
+
+data: {"type":"delta","delta":"ي"}
+
+data: {"type":"delta","delta":"ادة"}
+
+data: {"type":"delta","delta":" فقد"}
+
+data: {"type":"delta","delta":"ان"}
+
+data: {"type":"delta","delta":" الحرارة"}
+
+data: {"type":"delta","delta":" عبر"}
+
+data: {"type":"delta","delta":" الإ"}
+
+data: {"type":"delta","delta":"ش"}
+
+data: {"type":"delta","delta":"ع"}
+
+data: {"type":"delta","delta":"اع"}
+
+data: {"type":"delta","delta":"، بالإضافة"}
+
+data: {"type":"delta","delta":" إلى"}
+
+data: {"type":"delta","delta":" خ"}
+
+data: {"type":"delta","delta":"فة"}
+
+data: {"type":"delta","delta":" الس"}
+
+data: {"type":"delta","delta":"عة"}
+
+data: {"type":"delta","delta":" الحر"}
+
+data: {"type":"delta","delta":"ارية"}
+
+data: {"type":"delta","delta":" لل"}
+
+data: {"type":"delta","delta":"سط"}
+
+data: {"type":"delta","delta":"وح"}
+
+data: {"type":"delta","delta":" الصح"}
+
+data: {"type":"delta","delta":"را"}
+
+data: {"type":"delta","delta":"وية"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":"  \n"}
+
+data: {"type":"delta","delta":"-"}
+
+data: {"type":"delta","delta":" هذه"}
+
+data: {"type":"delta","delta":" الع"}
+
+data: {"type":"delta","delta":"وامل"}
+
+data: {"type":"delta","delta":" تجعل"}
+
+data: {"type":"delta","delta":" الص"}
+
+data: {"type":"delta","delta":"حر"}
+
+data: {"type":"delta","delta":"اء"}
+
+data: {"type":"delta","delta":" تُ"}
+
+data: {"type":"delta","delta":"ظهر"}
+
+data: {"type":"delta","delta":" **"}
+
+data: {"type":"delta","delta":"ت"}
+
+data: {"type":"delta","delta":"با"}
+
+data: {"type":"delta","delta":"ين"}
+
+data: {"type":"delta","delta":"ًا"}
+
+data: {"type":"delta","delta":" كبير"}
+
+data: {"type":"delta","delta":"ًا"}
+
+data: {"type":"delta","delta":" بين"}
+
+data: {"type":"delta","delta":" حرارة"}
+
+data: {"type":"delta","delta":" النه"}
+
+data: {"type":"delta","delta":"ار"}
+
+data: {"type":"delta","delta":" الش"}
+
+data: {"type":"delta","delta":"ديدة"}
+
+data: {"type":"delta","delta":" وبر"}
+
+data: {"type":"delta","delta":"ودة"}
+
+data: {"type":"delta","delta":" الليل"}
+
+data: {"type":"delta","delta":" الق"}
+
+data: {"type":"delta","delta":"ار"}
+
+data: {"type":"delta","delta":"سة"}
+
+data: {"type":"delta","delta":"**"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":"  \n\n"}
+
+data: {"type":"delta","delta":"---"}
+
+data: {"type":"delta","delta":" \n\n"}
+
+data: {"type":"delta","delta":"**"}
+
+data: {"type":"delta","delta":"م"}
+
+data: {"type":"delta","delta":"لاح"}
+
+data: {"type":"delta","delta":"ظة"}
+
+data: {"type":"delta","delta":"**"}
+
+data: {"type":"delta","delta":":"}
+
+data: {"type":"delta","delta":" إذا"}
+
+data: {"type":"delta","delta":" ز"}
+
+data: {"type":"delta","delta":"رت"}
+
+data: {"type":"delta","delta":" ص"}
+
+data: {"type":"delta","delta":"حر"}
+
+data: {"type":"delta","delta":"اء"}
+
+data: {"type":"delta","delta":"ً"}
+
+data: {"type":"delta","delta":" في"}
+
+data: {"type":"delta","delta":" فصل"}
+
+data: {"type":"delta","delta":" الصيف"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" لا"}
+
+data: {"type":"delta","delta":" تن"}
+
+data: {"type":"delta","delta":"س"}
+
+data: {"type":"delta","delta":"َ"}
+
+data: {"type":"delta","delta":" إ"}
+
+data: {"type":"delta","delta":"حض"}
+
+data: {"type":"delta","delta":"ار"}
+
+data: {"type":"delta","delta":" مل"}
+
+data: {"type":"delta","delta":"ابس"}
+
+data: {"type":"delta","delta":" د"}
+
+data: {"type":"delta","delta":"اف"}
+
+data: {"type":"delta","delta":"ئة"}
+
+data: {"type":"delta","delta":" ل"}
+
+data: {"type":"delta","delta":"ليل"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" ف"}
+
+data: {"type":"delta","delta":"الف"}
+
+data: {"type":"delta","delta":"ارق"}
+
+data: {"type":"delta","delta":" قد"}
+
+data: {"type":"delta","delta":" يصل"}
+
+data: {"type":"delta","delta":" إلى"}
+
+data: {"type":"delta","delta":" "}
+
+data: {"type":"delta","delta":"30"}
+
+data: {"type":"delta","delta":"–"}
+
+data: {"type":"delta","delta":"40"}
+
+data: {"type":"delta","delta":" درجة"}
+
+data: {"type":"delta","delta":" م"}
+
+data: {"type":"delta","delta":"ئ"}
+
+data: {"type":"delta","delta":"وية"}
+
+data: {"type":"delta","delta":" بين"}
+
+data: {"type":"delta","delta":" النه"}
+
+data: {"type":"delta","delta":"ار"}
+
+data: {"type":"delta","delta":" وال"}
+
+data: {"type":"delta","delta":"ليل"}
+
+data: {"type":"delta","delta":"!"}
+
+data: {"type":"done","reply":{"answer":["## لماذا يصبح الجو بارداً ليلاً في الصحراء؟\n\nتتفاوت درجات الحرارة في الصحراء بين النهار والليل بشكل كبير. يحدث ذلك نتيجة مجموعة من العوامل الفيزيائية والمناخية التي تتفاعل مع بعضها البعض.\n\n---\n\n### 1. انخفاض الرطوبة الجوية\n- **قلة بخار الماء** في الهواء تجعل الهواء يفسر الحرارة بسرعة أكبر.  \n- بخار الماء يعمل كعازل (نظام “البيتز” في الغلاف الجوي)؛ عندما يكون قليلًا، لا يبقى الحرارة محبوسة بل تُفقد إلى الفضاء بسهولة.\n\n### 2. نقص السحب وغطاء السماء الصافي\n- الصحراء غالبًا ما تكون **صافية طوال اليوم**؛ لا توجد سحب تعكس الإشعاع الشمسي إلى الأرض في الليل.  \n- السحب تعمل كغطاء شبه شفاف يعيق فقدان الحرارة إلى الفضاء، فغيابها يزيد من الفقدان الإشعاعي.\n\n### 3. الخواص الحرارية للسطوح الصحراوية\n| خاصية | تأثيرها |\n|------|----------|\n| **المسامية الحرارية (القدرة على التسخين)** | الرمال والصخور تمتص الحرارة بسرعة خلال النهار بسبب سطحها الداكن والامتزاز السريع للطاقة الشمسية. |\n| **السعة الحرارية المنخفضة** | تخزن كمية قليلة من الطاقة مقارنةً بمسطحات أخرى (مثل المياه أو الغابات). لذا عندما تنتهي مدة الشمس، تُفقد الحرارة المخزنة بسرعة. |\n| **التوصيل الحراري السطحي** | سطح الرمل يبرد بسرعة لأن الحرارة تنتقل بسهولة إلى الهواء المحيط. |\n\n### 4. الإشعاع الحراري (Radiative Cooling)\n- بعد غروب الشمس، **تطلق الأرض (والرمال) إشعاعًا تحت الأحمر** إلى الفضاء.  \n- في الصحراء، لا يوجد ما يعيق هذا الإشعاع (لا غيوم، لا رطوبة)، لذا يُفقد حرارة السطح بسرعة كبيرة.\n\n### 5. انخفاض الضغط الجوي والرياح الهادئة\n- كثير من الصحاري تقع على ارتفاعات عالية، حيث **الضغط الجوي أقل**؛ وهذا يجعل الهواء أخف ويفقد الحرارة أسرع.  \n- الرياح الهادئة في الليل لا تُعيد توزيع الحرارة من السطح إلى الطبقات العليا، فتظل السطح باردًا.\n\n---\n\n## مثال عملي بسيط\n\n**تجربة يدوية لتقريب الفكرة**  \n\n1. **الأدوات**: صحن معدني، صحن زجاجي، ماء، ساعة توقيت.  \n2. **الخطوات**:  \n   - ضع صحنًا معدنيًا على الشمس لساعتين (يُمتص حرارة الشمس بسرعة).  \n   - ضع صحنًا زجاجيًا مع ماء في الظل (الماء لديه سعة حرارية عالية).  \n3. **الملاحظة**:  \n   - بعد غروب الشمس، سيتبرد الصحن المعدني بسرعة، بينما سيظل الماء في الصحن الزجاجي دافئًا لفترة أطول.  \n   - هذا يوضح كيف أن السطح ذو السعة الحرارية المنخفضة (مثل رمال الصحراء) يبرد بسرعة، في حين أن السطح ذو السعة الحرارية العالية (الماء) يحتفظ بالحرارة.\n\n---\n\n## خلاصة\n\n- **الجو البارد ليلاً في الصحراء** هو نتيجة لتقليل العوازل الطبيعية (رطوبة، سحب) وزيادة فقدان الحرارة عبر الإشعاع، بالإضافة إلى خفة السعة الحرارية للسطوح الصحراوية.  \n- هذه العوامل تجعل الصحراء تُظهر **تباينًا كبيرًا بين حرارة النهار الشديدة وبرودة الليل القارسة**.  \n\n--- \n\n**ملاحظة**: إذا زرت صحراءً في فصل الصيف، لا تنسَ إحضار ملابس دافئة لليل، فالفارق قد يصل إلى 30–40 درجة مئوية بين النهار والليل!"],"bullets":[],"sources":[],"provider":"nados-v1.1","model":"Nados v1.1 · gpt-oss-120B + مُرتّب مدرّب","variant":"v1.1","nados":{"model":"Nados v1.1","params":245,"features":{"affinity":1,"quality":0.25,"freshness":0.6,"engagement":0.6,"completion":1,"originality":0.8,"local":1,"safety":1,"negative":0.6},"probabilities":{"like":0.751,"save":0.8329,"share":0.8857,"comment":0.9552,"completion":0.9437},"ranking_score":0.8655,"decision":"أجب بإجابة وافية منظمة بعناوين أو نقاط مع مثال عملي قصير.","temperature":0.89,"final_score":0.9716,"final_probabilities":{"like":0.9579,"save":0.953,"share":0.9727,"comment":0.9944,"completion":0.9872}},"teacher":"gpt-oss-120B"}}
+

@@ -24,7 +24,16 @@ loadEnv();
 const CF_TOKEN = process.env.CF_API_TOKEN || "";
 const CF_ACCOUNT = process.env.CF_ACCOUNT_ID || "";
 const CF_MODEL = process.env.CF_AI_MODEL || "@cf/meta/llama-3.1-8b-instruct";
-const AI_BASE = `https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT}/ai/run/${CF_MODEL}`;
+const aiRunUrl = (model) => `https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT}/ai/run/${model}`;
+
+// Teachers chain (research-backed): strongest first, failover on error. Zero local compute.
+const TEACHERS = [
+  { id: "@cf/openai/gpt-oss-120b", label: "gpt-oss-120B", style: "openai" },
+  { id: "@cf/nvidia/nemotron-3-120b-a12b", label: "nemotron-120B", style: "llama" },
+  { id: "@cf/qwen/qwen3.8-27b", label: "qwen3-27B", style: "llama" },
+  { id: "@cf/meta/llama-3.1-8b-instruct", label: "llama-3.1-8B", style: "llama" },
+];
+const PRIMARY_TEACHER = TEACHERS[0];
 
 const PROVIDER = {
   id: "cloudflare",
@@ -235,20 +244,17 @@ function buildMessages({ message, mode, history, systemPrompt, temperature }) {
   return msgs;
 }
 
-async function callWorkersAI(messages, temperature, stream) {
-  const payload = { messages, max_tokens: 3072, stream };
-  if (typeof temperature === "number" && temperature >= 0 && temperature <= 2) {
-    payload.temperature = temperature;
-  }
-  const started = Date.now();
+async function callTeacher(teacher, messages, temperature, stream, extra = {}) {
+  const body = { messages, max_tokens: extra.max_tokens || 3072 };
+  if (typeof temperature === "number" && temperature >= 0 && temperature <= 2) body.temperature = temperature;
+  if (stream) body.stream = true;
+  if (teacher.style === "openai" && extra.reasoning) body.reasoning = extra.reasoning;
   usageStats.totalCalls++;
-  const r = await fetch(AI_BASE, {
+  const started = Date.now();
+  const r = await fetch(aiRunUrl(teacher.id), {
     method: "POST",
-    headers: {
-      Authorization: `Bearer ${CF_TOKEN}`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(payload),
+    headers: { Authorization: `Bearer ${CF_TOKEN}`, "Content-Type": "application/json" },
+    body: JSON.stringify(body),
   });
   if (!r.ok) {
     usageStats.failedCalls++;
@@ -257,17 +263,49 @@ async function callWorkersAI(messages, temperature, stream) {
       const j = await r.json();
       msg = j.errors?.[0]?.message || msg;
     } catch {}
-    throw new Error(msg);
+    throw new Error(`${teacher.label}: ${msg}`);
   }
   usageStats.successCalls++;
   usageStats.totalLatencyMs += Date.now() - started;
   return r;
 }
 
+async function runTeacher(messages, opts = {}) {
+  let lastErr;
+  for (let i = 0; i < TEACHERS.length; i++) {
+    try {
+      const res = await callTeacher(TEACHERS[i], messages, opts.temperature, opts.stream || false, opts);
+      return { teacher: TEACHERS[i], res, teacherIndex: i };
+    } catch (e) {
+      lastErr = e;
+    }
+  }
+  throw lastErr || new Error("all teachers failed");
+}
+
+function parseTeacherJSON(result) {
+  // llama-style: result.response | openai-style: result.choices[0].message.content
+  if (typeof result?.response === "string" && result.response) return { content: result.response };
+  const msg = result?.choices?.[0]?.message;
+  if (msg) return { content: msg.content || "", reasoning: msg.reasoning || msg.reasoning_content || "" };
+  return { content: "" };
+}
+
 async function* iterateSSE(body) {
   const reader = body.getReader();
   const decoder = new TextDecoder();
   let buf = "";
+  const emit = function* (obj) {
+    // normalize llama-style {response} and openai-style {choices[].delta}
+    if (typeof obj.response === "string" && obj.response) yield { content: obj.response };
+    const d = obj.choices?.[0]?.delta;
+    if (d) {
+      const c = d.content;
+      const r = d.reasoning || d.reasoning_content;
+      if (typeof c === "string" && c) yield { content: c };
+      if (typeof r === "string" && r) yield { reasoning: r };
+    }
+  };
   while (true) {
     const { value, done } = await reader.read();
     if (done) break;
@@ -280,7 +318,7 @@ async function* iterateSSE(body) {
       const data = t.slice(5).trim();
       if (!data || data === "[DONE]") continue;
       try {
-        yield JSON.parse(data);
+        yield* emit(JSON.parse(data));
       } catch {}
     }
   }
@@ -288,7 +326,7 @@ async function* iterateSSE(body) {
     const data = buf.trim().slice(5).trim();
     if (data && data !== "[DONE]") {
       try {
-        yield JSON.parse(data);
+        yield* emit(JSON.parse(data));
       } catch {}
     }
   }
@@ -384,21 +422,19 @@ async function handleChatStream(req, res) {
     let styleHint = "";
     let genTemperature = Number.isFinite(temperature) && temperature >= 0 && temperature <= 2 ? temperature : undefined;
 
+    // validators: math needs explicit digits, code needs fenced blocks
+    const wantsCode = /(اكتب|دالة|كود|برمج|سكربت|function|class|def\s|python|javascript|sql)/i.test(message);
+    const isMath = /(احسب|كم يساوي|معادلة|مجموع|ناتج|عمر|ضعف|نسبة|محيط|مساحة)/i.test(message) || /[\d٠-٩]\s*[+\-*/×÷]\s*[\d٠-٩]/.test(message);
+
     if (useV11) {
       sseWrite(res, {
         type: "meta",
         provider: "nados-v1.1",
-        model: `Nados v1.1 · ${NADOS_ENGINE.info().params} معامل`,
+        model: `Nados v1.1 · ${PRIMARY_TEACHER.label} + مُرتّب مدرّب (${NADOS_ENGINE.info().params} معامل)`,
       });
 
-      // (1) draft from the cloud teacher
-      const draftMsgs = buildMessages({ message, mode, history, systemPrompt, temperature: 0.5 });
-      const draftUp = await callWorkersAI(draftMsgs.map((m) => (m.role === "system" ? m : { ...m, content: m.content })), 0.5, false);
-      const draftJson = await draftUp.json();
-      const draft = draftJson.result?.response || "";
-
-      // (2) REAL inference with the trained 245-parameter network
-      const features = extractFeaturesLocal(message, draft, history.length);
+      // REAL inference with the trained 245-parameter network (sub-ms, zero cloud)
+      const features = extractFeaturesLocal(message, message, history.length);
       const prediction = nadosPredict(features);
       const style = styleFromPredictionLocal(prediction);
       nadosDecision = {
@@ -417,38 +453,62 @@ async function handleChatStream(req, res) {
         sseWrite(res, {
           type: "thinking",
           thinking: [
-            `تقييم الشبكة المدرّبة (245 معامل): النتيجة ${prediction.ranking_score}`,
-            `أقوى إشارة: completion=${prediction.probabilities.completion} | save=${prediction.probabilities.save}`,
+            `تحليل الشبكة المدرّبة (245 معامل): النتيجة ${prediction.ranking_score}`,
+            `أقوى إشارات: completion=${prediction.probabilities.completion} | save=${prediction.probabilities.save} | share=${prediction.probabilities.share}`,
             `القرار: ${style.detailHint}`,
           ],
         });
       }
     }
 
-    // (3) final streaming generation guided by the trained model
+    // final generation guided by the trained model + mode-aware prompt engineering
     const messages = buildMessages({ message, mode, history, systemPrompt, temperature: genTemperature });
-    if (useV11 && styleHint) {
-      const sysIdx = messages.findIndex((m) => m.role === "system");
-      if (sysIdx >= 0) messages[sysIdx].content += "\n" + styleHint;
-    }
+    const sysIdx = messages.findIndex((m) => m.role === "system");
+    if (useV11 && styleHint && sysIdx >= 0) messages[sysIdx].content += "\n" + styleHint;
+    if (wantsCode && sysIdx >= 0) messages[sysIdx].content += "\nضع أي كود داخل كتلة ``` كاملة وقابلة للتشغيل دائماً، مع شرح سطر واحد بعدها.";
+    if (isMath && sysIdx >= 0) messages[sysIdx].content += "\nفي المسائل الحسابية: اكتب كل رقم صراحةً بالأرقام، حل خطوة بخطوة، ثم تحقق من الناتج النهائي بجملة واضحة.";
 
     let full = "";
-    const upstream = await callWorkersAI(messages, genTemperature, true);
-    for await (const evt of iterateSSE(upstream.body)) {
-      if (aborted) break;
-      if (typeof evt.response === "string" && evt.response) {
-        full += evt.response;
-        sseWrite(res, { type: "delta", delta: evt.response });
+    let teacherUsed = null;
+
+    const hardMode = isMath || wantsCode;
+    if (hardMode) {
+      // generate → validate → retry once if invalid → stream the final text
+      let attempt = await runTeacher(messages, { temperature: genTemperature ?? 0.3, reasoning: "low" });
+      let parsed = parseTeacherJSON((await attempt.res.json()).result);
+      let text = parsed.content || "";
+      const invalid = (isMath && !/\d/.test(text)) || (wantsCode && !text.includes("```"));
+      if (invalid) {
+        messages[sysIdx >= 0 ? sysIdx : 0].content += isMath
+          ? "\nمطلوب إلزامي: أرقام صريحة في كل خطوة. أعد كتابة الحل كاملاً."
+          : "\nمطلوب إلزامي: كتلة كود ``` كاملة. أعد كتابة الإجابة كاملة.";
+        attempt = await runTeacher(messages, { temperature: 0.3, reasoning: "low" });
+        parsed = parseTeacherJSON((await attempt.res.json()).result);
+        text = parsed.content || text;
+      }
+      teacherUsed = attempt.teacher;
+      full = text;
+      for (let i = 0; i < full.length && !aborted; i += 48) {
+        sseWrite(res, { type: "delta", delta: full.slice(i, i + 48) });
+      }
+    } else {
+      const { teacher, res: upstream } = await runTeacher(messages, { temperature: genTemperature, stream: true, reasoning: thinking ? "medium" : "low" });
+      teacherUsed = teacher;
+      let reasoningBudget = 600;
+      for await (const evt of iterateSSE(upstream.body)) {
+        if (aborted) break;
+        if (evt.reasoning && thinking && reasoningBudget > 0) {
+          sseWrite(res, { type: "thinking", thinking: [evt.reasoning] });
+          reasoningBudget -= evt.reasoning.length;
+        }
+        if (evt.content) {
+          full += evt.content;
+          sseWrite(res, { type: "delta", delta: evt.content });
+        }
       }
     }
-    if (!full) {
-      const up2 = await callWorkersAI(messages, genTemperature, false);
-      const j = await up2.json();
-      full = j.result?.response || j.result?.content || "";
-      if (full) sseWrite(res, { type: "delta", delta: full });
-    }
 
-    // (4) ranker verification on the final answer (trained net, real pass)
+    // ranker verification on the final answer (trained net, real pass)
     let finalNados = nadosDecision;
     if (useV11) {
       const f2 = extractFeaturesLocal(message, full, history.length);
@@ -467,9 +527,10 @@ async function handleChatStream(req, res) {
         bullets: [],
         sources: [],
         provider: useV11 ? "nados-v1.1" : "cloudflare",
-        model: useV11 ? "Nados v1.1 (245B)" : CF_MODEL,
+        model: useV11 ? `Nados v1.1 · ${teacherUsed?.label || PRIMARY_TEACHER.label} + مُرتّب مدرّب` : CF_MODEL,
         variant: variant === "v1.0" ? "v1.0" : "v1.1",
         nados: finalNados,
+        teacher: teacherUsed?.label,
       },
     });
   } catch (e) {
@@ -504,7 +565,8 @@ const server = http.createServer(async (req, res) => {
         orchestration: {
           name: "cloudflare-workers-ai",
           mode: "sequential-failover",
-          activeProviders: 1,
+          activeProviders: TEACHERS.length,
+          chain: TEACHERS.map((t) => t.label),
         },
         providers: [{ id: PROVIDER.id, name: PROVIDER.name, configured: PROVIDER.configured }],
         features: {
@@ -526,10 +588,10 @@ const server = http.createServer(async (req, res) => {
         models: [
           {
             id: "nados-v1.1",
-            label: "Nados v1.1 · 245B (مدرب + معلم سحابي)",
+            label: `Nados v1.1 · ${PRIMARY_TEACHER.label} + مُرتّب مدرّب (${TRAIN_MODEL.params || 245} معامل)`,
             providerId: PROVIDER.id,
             provider: PROVIDER.name,
-            model: `${CF_MODEL} + NadosRanker v1.1`,
+            model: `${TEACHERS.map((t) => t.label).join(" → ")}`,
             webSearch: false,
             vision: false,
             files: false,
@@ -638,9 +700,9 @@ const server = http.createServer(async (req, res) => {
       let generated = 0;
       let accepted = 0;
       try {
-        const r = await callWorkersAI([{ role: "user", content: prompt }], 0.9, false);
+        const { res: r } = await runTeacher([{ role: "user", content: prompt }], { temperature: 0.9 });
         const j = await r.json();
-        const text = j.result?.response || "";
+        const text = parseTeacherJSON(j.result).content || "";
         const lines = [];
         for (const line of text.split(/\r?\n/)) {
           const t = line.trim().replace(/^```(json)?|```$/g, "").trim();
