@@ -65,6 +65,36 @@ const extractFeaturesLocal = (message, draft, historyLen) => nadosExtractFeature
 const nadosPredict = (features) => nadosPredictNet(NADOS_ENGINE.artifact, features);
 const styleFromPredictionLocal = (prediction) => nadosStyleFromPrediction(prediction);
 
+// ---------- Local-exclusive mode: ONLY the trained 245-param model, no cloud LLM ----------
+function synthesizeLocal(message, prediction, mode) {
+  const m = message.trim();
+  const p = prediction.probabilities;
+  const isGreeting = /^(مرحبا|مرحبتين|هلا|اهلا|أهلا|السلام|هاي|hello|hi)\b/i.test(m);
+  const isDef = /(ما هو|ما هي|عرّف|عرف|معنى|وشو)/i.test(m);
+  const isWhy = /^(لماذا|ليش|شلون يصير)/i.test(m);
+  const isHow = /^(كيف|طريقة|شرح)/i.test(m);
+  const isCalc = /(احسب|كم يساوي|\+|\-|\×|\*|\/)/i.test(m);
+  const isWrite = /^(اكتب|أكتب|صمم|لخص)/i.test(m);
+  const top = Object.entries(p).sort((a, b) => b[1] - a[1]).slice(0, 2)
+    .map(([k, v]) => `${k}=${v}`).join("، ");
+
+  const lines = [];
+  if (isGreeting) {
+    lines.push("أهلاً بك! أنا نادوس v1.1 — النسخة المحلية الحصرية، مدربة بأوزان حقيقية (245 معامل) تعمل الآن على جهازك بدون أي خدمة سحابية.");
+    lines.push("اسألني أي سؤال وسأحلل رسالتك بالشبكة المدرّبة وأجيبك بحدود معرفتي المحلية.");
+  } else {
+    lines.push(`**تحليل الشبكة المدرّبة (245 معامل):**`);
+    lines.push(`- نوع الطلب المرصود: ${isDef ? "تعريف" : isWhy ? "سبب" : isHow ? "طريقة/شرح" : isCalc ? "حساب" : isWrite ? "تأليف/كتابة" : "عام"} | الوضع: ${mode}`);
+    lines.push(`- مخرجات الشبكة: ${top} | الدرجة الكلية: ${prediction.ranking_score}`);
+    if (isDef) lines.push(`\n**الإجابة:** هذا سؤال تعريفي. في الوضع المحلي الحصري لا أملك قاعدة معرفية نصية مخزنة، فالنموذج المدرّب (مُرتّب 245 معامل) متخصص في تقييم المحتوى وترتيبه وليس في تخزين الحقائق.`);
+    else if (isCalc) lines.push(`\n**الإجابة:** المسائل الحسابية تحتاج محرك حسابات رمزية — النموذج المدرّب المحلي يقيّم ويصنّف ولا يجري عمليات حسابية معقدة.`);
+    else if (isWhy || isHow) lines.push(`\n**الإجابة:** سؤال ${isWhy ? "سببي" : "إجرائي"} عميق — الإجابة الوافية تتطلب معرفة لغوية واسعة (مليارات المعاملات) غير متوفرة في النسخة المحلية الحصرية.`);
+    else lines.push(`\n**الإجابة:** استلمت رسالتك وحللتها بالشبكة المدرّبة بنجاح. الوضع المحلي الحصري يعمل، لكن قدرات التوليد اللغوي محدودة بطبيعة حجم النموذج (245 معامل).`);
+    lines.push(`\n_هذه الإجابة من نموذجك المدرّب المحلي حصراً — صفر استدعاءات سحابية. للحصول على إجابات وافية فعّل الوضع v1.1 (معلم سحابي + مُرتّب محلي)._`);
+  }
+  return lines.join("\n");
+}
+
 function countArtifactParams() {
   try {
     const a = JSON.parse(fs.readFileSync(ARTIFACT, "utf8"));
@@ -310,6 +340,44 @@ async function handleChatStream(req, res) {
   }
 
   const useV11 = NADOS_ENGINE && variant !== "v1.0";
+  const localOnly = (variant === "local" || String(form.get("model") || "") === "nados-local") && NADOS_ENGINE;
+
+  // ---------- LOCAL-EXCLUSIVE: only the trained 245-param net, zero cloud calls ----------
+  if (localOnly) {
+    sseWrite(res, {
+      type: "meta",
+      provider: "nados-local",
+      model: `Nados v1.1 Local · ${NADOS_ENGINE.info().params} معامل (حصري)`,
+    });
+    const features = extractFeaturesLocal(message, message, history.length);
+    const prediction = nadosPredict(features);
+    if (thinking) {
+      sseWrite(res, {
+        type: "thinking",
+        thinking: [
+          `استدلال حقيقي بالشبكة المدرّبة (245 معامل) — بدون سحابة`,
+          `الدرجة: ${prediction.ranking_score} | التوزيع: ${Object.entries(prediction.probabilities).map(([k, v]) => `${k}=${v}`).join("، ")}`,
+        ],
+      });
+    }
+    const answer = synthesizeLocal(message, prediction, mode);
+    for (let i = 0; i < answer.length && !aborted; i += 48) {
+      sseWrite(res, { type: "delta", delta: answer.slice(i, i + 48) });
+    }
+    sseWrite(res, {
+      type: "done",
+      reply: {
+        answer: [answer],
+        bullets: [],
+        sources: [],
+        provider: "nados-local",
+        model: `Nados v1.1 Local (${NADOS_ENGINE.info().params} معامل)`,
+        variant: "local",
+        nados: { params: NADOS_ENGINE.info().params, probabilities: prediction.probabilities, ranking_score: prediction.ranking_score, cloudCalls: 0 },
+      },
+    });
+    return close();
+  }
 
   try {
     let nadosDecision = null;
@@ -467,6 +535,18 @@ const server = http.createServer(async (req, res) => {
             files: false,
             recommended: true,
             chatDefault: true,
+          },
+          {
+            id: "nados-local",
+            label: `Nados v1.1 · محلي حصري (${TRAIN_MODEL.params || 245} معامل)`,
+            providerId: "local",
+            provider: "Nados Local",
+            model: "NadosRanker v1.1 (no cloud)",
+            webSearch: false,
+            vision: false,
+            files: false,
+            recommended: false,
+            chatDefault: false,
           },
         ],
       });

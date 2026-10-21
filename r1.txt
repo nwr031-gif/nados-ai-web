@@ -1,0 +1,142 @@
+data: {"type":"meta","provider":"nados-v1.1","model":"Nados v1.1 · 245 معامل"}
+
+data: {"type":"delta","delta":"**"}
+
+data: {"type":"delta","delta":"ع"}
+
+data: {"type":"delta","delta":"اص"}
+
+data: {"type":"delta","delta":"مة"}
+
+data: {"type":"delta","delta":" الي"}
+
+data: {"type":"delta","delta":"ابان"}
+
+data: {"type":"delta","delta":":**"}
+
+data: {"type":"delta","delta":" ط"}
+
+data: {"type":"delta","delta":"و"}
+
+data: {"type":"delta","delta":"كي"}
+
+data: {"type":"delta","delta":"و"}
+
+data: {"type":"delta","delta":".\n"}
+
+data: {"type":"delta","delta":"**"}
+
+data: {"type":"delta","delta":"أ"}
+
+data: {"type":"delta","delta":"شهر"}
+
+data: {"type":"delta","delta":" مع"}
+
+data: {"type":"delta","delta":"الم"}
+
+data: {"type":"delta","delta":" فيها"}
+
+data: {"type":"delta","delta":":**"}
+
+data: {"type":"delta","delta":" ط"}
+
+data: {"type":"delta","delta":"و"}
+
+data: {"type":"delta","delta":"كي"}
+
+data: {"type":"delta","delta":"و"}
+
+data: {"type":"delta","delta":" ت"}
+
+data: {"type":"delta","delta":"OWER"}
+
+data: {"type":"delta","delta":" ("}
+
+data: {"type":"delta","delta":"ج"}
+
+data: {"type":"delta","delta":"بل"}
+
+data: {"type":"delta","delta":" الم"}
+
+data: {"type":"delta","delta":"الية"}
+
+data: {"type":"delta","delta":")،"}
+
+data: {"type":"delta","delta":" ح"}
+
+data: {"type":"delta","delta":"دي"}
+
+data: {"type":"delta","delta":"قة"}
+
+data: {"type":"delta","delta":" الس"}
+
+data: {"type":"delta","delta":"ن"}
+
+data: {"type":"delta","delta":" جل"}
+
+data: {"type":"delta","delta":"ون"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" مع"}
+
+data: {"type":"delta","delta":"بد"}
+
+data: {"type":"delta","delta":" آس"}
+
+data: {"type":"delta","delta":"اك"}
+
+data: {"type":"delta","delta":"وس"}
+
+data: {"type":"delta","delta":"ا"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" ج"}
+
+data: {"type":"delta","delta":"سر"}
+
+data: {"type":"delta","delta":" أ"}
+
+data: {"type":"delta","delta":"كي"}
+
+data: {"type":"delta","delta":"اه"}
+
+data: {"type":"delta","delta":"اب"}
+
+data: {"type":"delta","delta":"ا"}
+
+data: {"type":"delta","delta":" ش"}
+
+data: {"type":"delta","delta":"ين"}
+
+data: {"type":"delta","delta":"ين"}
+
+data: {"type":"delta","delta":"و"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" ق"}
+
+data: {"type":"delta","delta":"صر"}
+
+data: {"type":"delta","delta":" إ"}
+
+data: {"type":"delta","delta":"مبر"}
+
+data: {"type":"delta","delta":"اط"}
+
+data: {"type":"delta","delta":"وري"}
+
+data: {"type":"delta","delta":" ط"}
+
+data: {"type":"delta","delta":"و"}
+
+data: {"type":"delta","delta":"كي"}
+
+data: {"type":"delta","delta":"و"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"done","reply":{"answer":["**عاصمة اليابان:** طوكيو.\n**أشهر معالم فيها:** طوكيو تOWER (جبل المالية)، حديقة السن جلون، معبد آساكوسا، جسر أكياهابا شينينو، قصر إمبراطوري طوكيو."],"bullets":[],"sources":[],"provider":"nados-v1.1","model":"Nados v1.1 (245B)","variant":"v1.1","nados":{"model":"Nados v1.1","params":245,"features":{"affinity":0.525,"quality":0.25,"freshness":0.6,"engagement":0.35,"completion":0.563,"originality":0.615,"local":1,"safety":1,"negative":0},"probabilities":{"like":0.8623,"save":0.8787,"share":0.9357,"comment":0.9823,"completion":0.9666},"ranking_score":0.9203,"decision":"أجب بإجابة وافية منظمة بعناوين أو نقاط مع مثال عملي قصير.","temperature":0.92,"final_score":0.9785,"final_probabilities":{"like":0.9603,"save":0.9692,"share":0.9829,"comment":0.995,"completion":0.9918}}}}
+

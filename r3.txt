@@ -1,0 +1,340 @@
+data: {"type":"meta","provider":"nados-v1.1","model":"Nados v1.1 · 245 معامل"}
+
+data: {"type":"delta","delta":"**"}
+
+data: {"type":"delta","delta":"د"}
+
+data: {"type":"delta","delta":"الة"}
+
+data: {"type":"delta","delta":" تع"}
+
+data: {"type":"delta","delta":"كس"}
+
+data: {"type":"delta","delta":" نص"}
+
+data: {"type":"delta","delta":"ًا"}
+
+data: {"type":"delta","delta":" باست"}
+
+data: {"type":"delta","delta":"خدام"}
+
+data: {"type":"delta","delta":" با"}
+
+data: {"type":"delta","delta":"يث"}
+
+data: {"type":"delta","delta":"ون"}
+
+data: {"type":"delta","delta":"**\n"}
+
+data: {"type":"delta","delta":"================================"}
+
+data: {"type":"delta","delta":"====="}
+
+data: {"type":"delta","delta":"\n\n"}
+
+data: {"type":"delta","delta":"يمكن"}
+
+data: {"type":"delta","delta":" استخدام"}
+
+data: {"type":"delta","delta":" الد"}
+
+data: {"type":"delta","delta":"الة"}
+
+data: {"type":"delta","delta":" `"}
+
+data: {"type":"delta","delta":"re"}
+
+data: {"type":"delta","delta":"versed"}
+
+data: {"type":"delta","delta":"()`"}
+
+data: {"type":"delta","delta":" من"}
+
+data: {"type":"delta","delta":" مج"}
+
+data: {"type":"delta","delta":"ال"}
+
+data: {"type":"delta","delta":" `"}
+
+data: {"type":"delta","delta":"re"}
+
+data: {"type":"delta","delta":"versed"}
+
+data: {"type":"delta","delta":"`"}
+
+data: {"type":"delta","delta":" لت"}
+
+data: {"type":"delta","delta":"غ"}
+
+data: {"type":"delta","delta":"يير"}
+
+data: {"type":"delta","delta":" الط"}
+
+data: {"type":"delta","delta":"ريقة"}
+
+data: {"type":"delta","delta":" في"}
+
+data: {"type":"delta","delta":" تر"}
+
+data: {"type":"delta","delta":"تي"}
+
+data: {"type":"delta","delta":"ب"}
+
+data: {"type":"delta","delta":" العن"}
+
+data: {"type":"delta","delta":"اصر"}
+
+data: {"type":"delta","delta":" في"}
+
+data: {"type":"delta","delta":" قائمة"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" أو"}
+
+data: {"type":"delta","delta":" باست"}
+
+data: {"type":"delta","delta":"خدام"}
+
+data: {"type":"delta","delta":" الد"}
+
+data: {"type":"delta","delta":"الة"}
+
+data: {"type":"delta","delta":" `"}
+
+data: {"type":"delta","delta":"join"}
+
+data: {"type":"delta","delta":"()`"}
+
+data: {"type":"delta","delta":" مع"}
+
+data: {"type":"delta","delta":" الاست"}
+
+data: {"type":"delta","delta":"خدام"}
+
+data: {"type":"delta","delta":" المت"}
+
+data: {"type":"delta","delta":"و"}
+
+data: {"type":"delta","delta":"ازي"}
+
+data: {"type":"delta","delta":" لل"}
+
+data: {"type":"delta","delta":"عن"}
+
+data: {"type":"delta","delta":"اصر"}
+
+data: {"type":"delta","delta":" في"}
+
+data: {"type":"delta","delta":" الق"}
+
+data: {"type":"delta","delta":"ائمة"}
+
+data: {"type":"delta","delta":" مع"}
+
+data: {"type":"delta","delta":" فصل"}
+
+data: {"type":"delta","delta":"ها"}
+
+data: {"type":"delta","delta":" بين"}
+
+data: {"type":"delta","delta":" المس"}
+
+data: {"type":"delta","delta":"اف"}
+
+data: {"type":"delta","delta":"ات"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":" \n\n"}
+
+data: {"type":"delta","delta":"```"}
+
+data: {"type":"delta","delta":"python"}
+
+data: {"type":"delta","delta":"\n"}
+
+data: {"type":"delta","delta":"def"}
+
+data: {"type":"delta","delta":" ع"}
+
+data: {"type":"delta","delta":"كس"}
+
+data: {"type":"delta","delta":"_"}
+
+data: {"type":"delta","delta":"ال"}
+
+data: {"type":"delta","delta":"ن"}
+
+data: {"type":"delta","delta":"ص"}
+
+data: {"type":"delta","delta":"("}
+
+data: {"type":"delta","delta":"ال"}
+
+data: {"type":"delta","delta":"ن"}
+
+data: {"type":"delta","delta":"ص"}
+
+data: {"type":"delta","delta":"):\n"}
+
+data: {"type":"delta","delta":"   "}
+
+data: {"type":"delta","delta":" \"\"\""}
+
+data: {"type":"delta","delta":"تع"}
+
+data: {"type":"delta","delta":"كس"}
+
+data: {"type":"delta","delta":" نص"}
+
+data: {"type":"delta","delta":"ًا"}
+
+data: {"type":"delta","delta":" دون"}
+
+data: {"type":"delta","delta":" استخدام"}
+
+data: {"type":"delta","delta":" ["}
+
+data: {"type":"delta","delta":"::-"}
+
+data: {"type":"delta","delta":"]"}
+
+data: {"type":"delta","delta":"\"\"\"\n"}
+
+data: {"type":"delta","delta":"   "}
+
+data: {"type":"delta","delta":" return"}
+
+data: {"type":"delta","delta":" '"}
+
+data: {"type":"delta","delta":" '."}
+
+data: {"type":"delta","delta":"join"}
+
+data: {"type":"delta","delta":"("}
+
+data: {"type":"delta","delta":"ال"}
+
+data: {"type":"delta","delta":"ن"}
+
+data: {"type":"delta","delta":"ص"}
+
+data: {"type":"delta","delta":"[::-"}
+
+data: {"type":"delta","delta":"])\n\n"}
+
+data: {"type":"delta","delta":"#"}
+
+data: {"type":"delta","delta":" مثال"}
+
+data: {"type":"delta","delta":"\n"}
+
+data: {"type":"delta","delta":"print"}
+
+data: {"type":"delta","delta":"("}
+
+data: {"type":"delta","delta":"ع"}
+
+data: {"type":"delta","delta":"كس"}
+
+data: {"type":"delta","delta":"_"}
+
+data: {"type":"delta","delta":"ال"}
+
+data: {"type":"delta","delta":"ن"}
+
+data: {"type":"delta","delta":"ص"}
+
+data: {"type":"delta","delta":"(\""}
+
+data: {"type":"delta","delta":"ه"}
+
+data: {"type":"delta","delta":"ذا"}
+
+data: {"type":"delta","delta":" الن"}
+
+data: {"type":"delta","delta":"ص"}
+
+data: {"type":"delta","delta":" سي"}
+
+data: {"type":"delta","delta":"تم"}
+
+data: {"type":"delta","delta":" ع"}
+
+data: {"type":"delta","delta":"كس"}
+
+data: {"type":"delta","delta":"ه"}
+
+data: {"type":"delta","delta":"\"))\n"}
+
+data: {"type":"delta","delta":"``"}
+
+data: {"type":"delta","delta":"`\n\n"}
+
+data: {"type":"delta","delta":"في"}
+
+data: {"type":"delta","delta":" هذا"}
+
+data: {"type":"delta","delta":" الم"}
+
+data: {"type":"delta","delta":"ثال"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" ن"}
+
+data: {"type":"delta","delta":"ست"}
+
+data: {"type":"delta","delta":"خدم"}
+
+data: {"type":"delta","delta":" `"}
+
+data: {"type":"delta","delta":"[::-"}
+
+data: {"type":"delta","delta":"]"}
+
+data: {"type":"delta","delta":"`"}
+
+data: {"type":"delta","delta":" في"}
+
+data: {"type":"delta","delta":" الد"}
+
+data: {"type":"delta","delta":"الة"}
+
+data: {"type":"delta","delta":" `"}
+
+data: {"type":"delta","delta":"ع"}
+
+data: {"type":"delta","delta":"كس"}
+
+data: {"type":"delta","delta":"_"}
+
+data: {"type":"delta","delta":"ال"}
+
+data: {"type":"delta","delta":"ن"}
+
+data: {"type":"delta","delta":"ص"}
+
+data: {"type":"delta","delta":"()`"}
+
+data: {"type":"delta","delta":" ولكن"}
+
+data: {"type":"delta","delta":" في"}
+
+data: {"type":"delta","delta":" داخل"}
+
+data: {"type":"delta","delta":" الد"}
+
+data: {"type":"delta","delta":"الة"}
+
+data: {"type":"delta","delta":" `"}
+
+data: {"type":"delta","delta":"join"}
+
+data: {"type":"delta","delta":"()"}
+
+data: {"type":"delta","delta":"`."}
+
+data: {"type":"done","reply":{"answer":["**دالة تعكس نصًا باستخدام بايثون**\n=====================================\n\nيمكن استخدام الدالة `reversed()` من مجال `reversed` لتغيير الطريقة في ترتيب العناصر في قائمة، أو باستخدام الدالة `join()` مع الاستخدام المتوازي للعناصر في القائمة مع فصلها بين المسافات. \n\n```python\ndef عكس_النص(النص):\n    \"\"\"تعكس نصًا دون استخدام [::-]\"\"\"\n    return ' '.join(النص[::-])\n\n# مثال\nprint(عكس_النص(\"هذا النص سيتم عكسه\"))\n```\n\nفي هذا المثال، نستخدم `[::-]` في الدالة `عكس_النص()` ولكن في داخل الدالة `join()`."],"bullets":[],"sources":[],"provider":"nados-v1.1","model":"Nados v1.1 (245B)","variant":"v1.1","nados":{"model":"Nados v1.1","params":245,"features":{"affinity":0.14,"quality":0.697,"freshness":0.5,"engagement":0.35,"completion":0.37,"originality":0.702,"local":0.734,"safety":1,"negative":0},"probabilities":{"like":0.7088,"save":0.5292,"share":0.6595,"comment":0.9216,"completion":0.7725},"ranking_score":0.7098,"decision":"أجب بإجابة وافية منظمة بعناوين أو نقاط مع مثال عملي قصير.","temperature":0.78,"final_score":0.9742,"final_probabilities":{"like":0.9662,"save":0.9595,"share":0.9716,"comment":0.9929,"completion":0.9859}}}}
+
