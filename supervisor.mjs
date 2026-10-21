@@ -17,7 +17,11 @@ const log = (m) => {
   const line = `[${stamp()}] ${m}`;
   console.log(line);
   try {
-    fs.appendFileSync(path.join(LOG, "supervisor.log"), line + "\n", "utf8");
+    const f = path.join(LOG, "supervisor.log");
+    if (fs.existsSync(f) && fs.statSync(f).size > 5 * 1024 * 1024) {
+      fs.renameSync(f, path.join(LOG, "supervisor.log.1"));
+    }
+    fs.appendFileSync(f, line + "\n", "utf8");
   } catch {}
 };
 
