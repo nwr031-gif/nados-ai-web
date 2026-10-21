@@ -1,4 +1,0 @@
-data: {"type":"meta","provider":"nados-v1.1","model":"Nados v1.1 · مُرتّب مدرّب (245 معامل) + معلم سحابي"}
-
-data: {"type":"done","reply":{"answer":["لم أستطع توليد إجابة، حاول مجدداً."],"bullets":[],"sources":[],"provider":"nados-v1.1","model":"Nados v1.1 · gpt-oss-120B + مُرتّب مدرّب","variant":"v1.1","nados":{"model":"Nados v1.1","params":245,"features":{"affinity":1,"quality":0.25,"freshness":0.6,"engagement":0.35,"completion":1,"originality":0.8,"local":1,"safety":1,"negative":0},"probabilities":{"like":0.9875,"save":0.9966,"share":0.9966,"comment":0.9967,"completion":0.9985},"ranking_score":0.9948,"decision":"أجب بإجابة وافية منظمة بعناوين أو نقاط مع مثال عملي قصير.","temperature":0.95,"final_score":0.0008,"final_probabilities":{"like":0.0003,"save":0.0006,"share":0.0009,"comment":0.0011,"completion":0.0014}},"teacher":"gpt-oss-120B"}}
-
