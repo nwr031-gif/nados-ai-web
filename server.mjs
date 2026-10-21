@@ -104,6 +104,13 @@ const CF_PRIMARY = BACKENDS.find((b) => b.kind === "cf" && b.label === "gpt-oss-
 // Cost-aware selection: best model whose expected neuron cost fits the remaining daily budget
 // of at least one Cloudflare account (external providers are free of neuron cost).
 function pickTeacher(tag, expectedTokens = 700) {
+  // external providers (Groq / NVIDIA NIM / OpenRouter) have no neuron quota -> prefer them when configured
+  const extBackends = BACKENDS.filter((b) => b.kind === "ext");
+  if (extBackends.length) {
+    const extPreferred = { groq: "groq", "nvidia-nim": "nvidia-nim", openrouter: "openrouter" };
+    for (const t of extBackends) if (extPreferred[t.label]) return t;
+    return extBackends[0];
+  }
   const preferred = {
     math: ["gpt-oss-120B", "gpt-oss-20B", "nemotron-120B(A12B)", "qwen3-27B", "llama-3.1-8B"],
     code: ["gpt-oss-120B", "gpt-oss-20B", "qwen3-27B", "nemotron-120B(A12B)", "llama-3.1-8B"],
@@ -121,7 +128,6 @@ function pickTeacher(tag, expectedTokens = 700) {
     const b = BACKENDS.find((x) => x.label === label && affordable(x));
     if (b) return b;
   }
-  if (ext.length) return ext[0];
   return BACKENDS.filter(affordable)[0] || BACKENDS[BACKENDS.length - 1];
 }
 
@@ -547,6 +553,10 @@ async function handleChatStream(req, res) {
   const systemPrompt = String(form.get("system_prompt") || "");
   const thinking = String(form.get("thinking") || "") === "true";
   const temperature = Number(form.get("temperature"));
+  const requestedMaxTokens = Number(form.get("max_tokens"));
+  const maxTokensCap = Number.isFinite(requestedMaxTokens)
+    ? Math.max(256, Math.min(4096, requestedMaxTokens))
+    : null;
   let history = [];
   try {
     history = JSON.parse(String(form.get("history") || "[]"));
@@ -699,6 +709,7 @@ async function handleChatStream(req, res) {
     if (hardMode) {
       // smart-routed generation → validate → cross-verify (math) → retry if invalid → stream
       const route = routeTask(message, mode);
+      if (maxTokensCap) route.maxTokens = Math.min(route.maxTokens, maxTokensCap);
       const t0 = pickTeacher(route.tag, route.tag === "creative" ? 400 : 1200);
       let attempt;
       try {
@@ -760,6 +771,7 @@ async function handleChatStream(req, res) {
       }
     } else {
       const route = routeTask(message, mode);
+      if (maxTokensCap) route.maxTokens = Math.min(route.maxTokens, maxTokensCap);
       const chosen = pickTeacher(route.tag, route.tag === "creative" ? 400 : 800);
       let teacher, upstream;
       try {
@@ -1118,8 +1130,39 @@ const server = http.createServer(async (req, res) => {
   }
 });
 
+// Probe the real daily quota of each account at startup (1 token) so the local
+// budget tracker reflects reality instead of guesses.
+async function probeQuotas() {
+  for (const acc of CF_ACCOUNTS) {
+    try {
+      const r = await fetch(aiRunUrl(acc, "@cf/meta/llama-3.1-8b-instruct"), {
+        method: "POST",
+        headers: { Authorization: `Bearer ${CF_TOKEN}`, "Content-Type": "application/json" },
+        body: JSON.stringify({ messages: [{ role: "user", content: "hi" }], max_tokens: 1 }),
+      });
+      if (!r.ok) {
+        const j = await r.json().catch(() => ({}));
+        const m = j.errors?.[0]?.message || "";
+        if (/daily free allocation|neurons|quota/i.test(m)) {
+          budgetState[acc] = DAILY_NEURONS;
+          console.log(`[quota] account ${acc.slice(0, 8)}: EXHAUSTED`);
+        }
+      } else {
+        const j = await r.json().catch(() => ({}));
+        const used = j?.result?.usage?.neurons || 0;
+        budgetState[acc] = Math.max(budgetState[acc] || 0, used);
+        console.log(`[quota] account ${acc.slice(0, 8)}: ${Math.round(neuronsRemaining(acc))} neurons left`);
+      }
+    } catch (e) {
+      console.log(`[quota] account ${acc.slice(0, 8)}: probe failed (${e.message})`);
+    }
+  }
+  writeBudget(budgetState);
+}
+
 server.listen(PORT, () => {
   console.log(`Nados AI (local) listening on http://localhost:${PORT}`);
   console.log(`Provider: ${PROVIDER.name} | model: ${CF_MODEL} | configured: ${PROVIDER.configured}`);
   console.log(`Trained model: ${TRAIN_MODEL.name} | params: ${TRAIN_MODEL.params} | loaded: ${TRAIN_MODEL.loaded}`);
+  setTimeout(probeQuotas, 1500);
 });
