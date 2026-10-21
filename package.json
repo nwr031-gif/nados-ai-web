@@ -1,0 +1,26 @@
+{
+  "name": "nados-ai-web",
+  "version": "1.6.0",
+  "private": true,
+  "type": "module",
+  "description": "Nados AI — واجهة محادثة ذكاء اصطناعي عربية + مركز تدريب + معاينة Artifact داخل التطبيق",
+  "main": "server.mjs",
+  "engines": {
+    "node": ">=20.10.0"
+  },
+  "scripts": {
+    "start": "node server.mjs",
+    "dev": "node --watch server.mjs",
+    "test": "node --test \"tests/*.test.mjs\"",
+    "diagnose": "node diagnose.mjs --verbose",
+    "diagnose:deep": "node diagnose.mjs --verbose --deep",
+    "bench": "node benchmark/benchmark.mjs",
+    "bench:once": "node benchmark/benchmark.mjs --once",
+    "supervisor": "node supervisor.mjs",
+    "train": "python training/train.py --data training/data/bootstrap.jsonl --out training/artifacts/nados-v1.1.0.json --epochs 400 --lr 0.05 --seed 7"
+  },
+  "keywords": ["nados", "ai", "chat", "cloudflare", "workers-ai", "arabic"],
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}

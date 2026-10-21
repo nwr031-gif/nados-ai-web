@@ -34,18 +34,24 @@
     overlay = document.createElement("div");
     overlay.id = "nados-pv-overlay";
     var doc = buildDoc(code, lang);
+    // SECURITY: the preview renders AI-generated code. `allow-scripts` WITHOUT
+    // `allow-same-origin` gives the frame an opaque origin, so injected scripts
+    // cannot reach this app's origin (localStorage, cookies, /api/*).
+    var safeDoc = '<!doctype html><html dir="rtl"><head><meta charset="utf-8">' +
+      '<meta http-equiv="Content-Security-Policy" content="default-src \'none\'; img-src data: https:; style-src \'unsafe-inline\' https:; font-src data:; script-src \'unsafe-inline\'; connect-src \'none\'; form-action \'none\'; base-uri \'none\'">' +
+      '<meta name="referrer" content="no-referrer"></head><body>' + bodyOf(doc) + '</body></html>';
     overlay.innerHTML = ""
       + '<div id="nados-pv-panel">'
       + '<div id="nados-pv-head"><span id="nados-pv-title">معاينة داخل التطبيق · ' + (lang || "artifact") + "</span>"
       + '<button data-act="tab">فتح في تبويب</button>'
       + '<button data-act="close">إغلاق</button></div>'
-      + '<iframe id="nados-pv-frame" sandbox="allow-scripts allow-same-origin allow-popups"></iframe></div>';
+      + '<iframe id="nados-pv-frame" sandbox="allow-scripts" referrerpolicy="no-referrer"></iframe></div>';
     document.body.appendChild(overlay);
     var frame = overlay.querySelector("#nados-pv-frame");
-    frame.srcdoc = doc;
+    frame.srcdoc = safeDoc;
     overlay.querySelector('[data-act="close"]').onclick = closePreview;
     overlay.querySelector('[data-act="tab"]').onclick = function () {
-      var blob = new Blob([doc], { type: "text/html;charset=utf-8" });
+      var blob = new Blob([safeDoc], { type: "text/html;charset=utf-8" });
       var url = URL.createObjectURL(blob);
       var w = window.open(url, "_blank", "noopener,noreferrer");
       if (w) w.opener = null;
@@ -55,6 +61,12 @@
     document.addEventListener("keydown", function esc(e) {
       if (e.key === "Escape") { closePreview(); document.removeEventListener("keydown", esc); }
     });
+  }
+
+  // extract the <body> content of a full document (or use it as-is)
+  function bodyOf(doc) {
+    var m = String(doc).match(/<body[^>]*>([\s\S]*)<\/body>/i);
+    return m ? m[1] : String(doc);
   }
 
   function enhance(block) {
@@ -98,6 +110,20 @@
   function scan() {
     var blocks = document.querySelectorAll(".code-block");
     for (var i = 0; i < blocks.length; i++) enhance(blocks[i]);
+    hardenBuiltInPreviews();
+  }
+
+  // The upstream UI renders previews with sandbox="allow-scripts allow-same-origin",
+  // which lets AI-generated scripts run in this app's origin. Force the safe sandbox.
+  function hardenBuiltInPreviews() {
+    var frames = document.querySelectorAll("iframe.code-preview");
+    for (var i = 0; i < frames.length; i++) {
+      var f = frames[i];
+      if (f.getAttribute("sandbox") !== "allow-scripts") {
+        f.setAttribute("sandbox", "allow-scripts");
+        f.setAttribute("referrerpolicy", "no-referrer");
+      }
+    }
   }
 
   var style = document.createElement("style");

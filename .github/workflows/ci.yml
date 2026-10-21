@@ -1,0 +1,42 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Syntax check
+        run: |
+          for f in server.mjs nados-engine.mjs web-search.mjs diagnose.mjs lib/*.mjs benchmark/*.mjs tests/*.mjs; do
+            node --check "$f" || exit 1
+          done
+
+      - name: Unit & integration tests
+        run: npm test
+
+      - name: Training smoke test (python)
+        continue-on-error: true
+        run: |
+          python3 -m pip install --quiet pytest
+          python3 training/train.py --data training/data/bootstrap.jsonl --out /tmp/nados-artifact.json --epochs 5 --lr 0.03 --seed 1
+          python3 -m pytest training/tests/test_model.py -q
+
+      - name: Secret scan (tracked files must not contain tokens)
+        run: |
+          if git grep -nIE "(cfut_[A-Za-z0-9]{16,}|github_pat_[A-Za-z0-9_]{16,}|sk-[A-Za-z0-9]{24,})" -- . ; then
+            echo "::error::a secret was found in a tracked file"
+            exit 1
+          fi
+          echo "no secrets in tracked files"
+
+      - name: Docker build
+        run: docker build -t nados-ai-web:ci .

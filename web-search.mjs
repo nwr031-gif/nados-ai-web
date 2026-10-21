@@ -8,6 +8,21 @@ const WIKI = (lang, q, limit = 3) =>
 const DDG = (q) =>
   `https://api.duckduckgo.com/?q=${encodeURIComponent(q)}&format=json&no_html=1&skip_disambig=1`;
 
+// short-lived cache so repeated questions do not hammer the public APIs
+const CACHE_TTL_MS = 5 * 60 * 1000;
+const cache = new Map();
+
+function cacheGet(key) {
+  const hit = cache.get(key);
+  if (!hit) return null;
+  if (Date.now() - hit.at > CACHE_TTL_MS) { cache.delete(key); return null; }
+  return hit.value;
+}
+function cacheSet(key, value) {
+  cache.set(key, { value, at: Date.now() });
+  if (cache.size > 50) cache.delete(cache.keys().next().value);
+}
+
 function stripHtml(s) {
   return String(s || "")
     .replace(/<[^>]*>/g, "")
@@ -26,6 +41,10 @@ async function jget(url, timeoutMs = 12000) {
 }
 
 export async function webSearch(query, { lang = "ar", limit = 4 } = {}) {
+  const cacheKey = `${lang}|${limit}|${query}`;
+  const cached = cacheGet(cacheKey);
+  if (cached) return cached;
+
   const results = [];
   const errors = [];
 
@@ -83,7 +102,9 @@ export async function webSearch(query, { lang = "ar", limit = 4 } = {}) {
     if (unique.length >= limit) break;
   }
 
-  return { query, results: unique, errors, at: new Date().toISOString() };
+  const out = { query, results: unique, errors, at: new Date().toISOString() };
+  cacheSet(cacheKey, out);
+  return out;
 }
 
 export function buildContext(search, query) {

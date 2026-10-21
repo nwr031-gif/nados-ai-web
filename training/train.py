@@ -29,7 +29,7 @@ def main():
     a=ap.parse_args(); random.seed(a.seed)
     rows=load_rows(a.data); split=max(1,int(len(rows)*0.8)); random.shuffle(rows); train,valid=rows[:split],rows[split:]
     model=NadosRanker(hidden=16,seed=a.seed).fit(train,epochs=a.epochs,lr=a.lr)
-    artifact={'name':'Nados V1.0','version':'1.0.0','task':'social_engagement_ranking','features':model.state_dict()['features'],'targets':TARGETS,'metrics':{'train_bce':evaluate(model,train),'validation_bce':evaluate(model,valid) if valid else None,'train_examples':len(train),'validation_examples':len(valid)},'model':model.state_dict()}
+    artifact={'name':'Nados v1.1','version':'1.1.0','task':'social_engagement_ranking','features':model.state_dict()['features'],'targets':TARGETS,'metrics':{'train_bce':evaluate(model,train),'validation_bce':evaluate(model,valid) if valid else None,'train_examples':len(train),'validation_examples':len(valid)},'model':model.state_dict()}
     os.makedirs(os.path.dirname(os.path.abspath(a.out)),exist_ok=True)
     with open(a.out,'w',encoding='utf-8') as f: json.dump(artifact,f,ensure_ascii=False,separators=(',',':'))
     print(json.dumps(artifact['metrics'],ensure_ascii=False))

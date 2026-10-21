@@ -13,6 +13,20 @@ const texts = JSON.parse(fs.readFileSync(path.join(__dirname, "texts.json"), "ut
 const meta = JSON.parse(fs.readFileSync(path.join(__dirname, "questions.json"), "utf8"));
 const kwById = Object.fromEntries(meta.questions.map((q) => [q.id, q.kw]));
 
+// CLI authentication (x-nados-key) — the key lives in .env
+function apiKey() {
+  if (process.env.NADOS_API_KEY) return process.env.NADOS_API_KEY;
+  try {
+    const raw = fs.readFileSync(path.join(ROOT, ".env"), "utf8");
+    const m = raw.match(/^\s*NADOS_API_KEY\s*=\s*(.+)$/m);
+    return m ? m[1].trim().replace(/^"|"$/g, "") : "";
+  } catch {
+    return "";
+  }
+}
+const KEY = apiKey();
+const HEADERS = KEY ? { "x-nados-key": KEY } : {};
+
 const args = process.argv.slice(2);
 const ONCE = args.includes("--once");
 const LIMIT = Number((args.find((a) => a.startsWith("--limit=")) || "").split("=")[1] || 0);
@@ -42,7 +56,7 @@ function doneIds() {
 
 async function health() {
   try {
-    const r = await fetch(`${BASE}/api/health`, { signal: AbortSignal.timeout(8000) });
+    const r = await fetch(`${BASE}/api/health`, { headers: HEADERS, signal: AbortSignal.timeout(8000) });
     return await r.json();
   } catch {
     return null;
@@ -65,7 +79,7 @@ async function ask(question) {
     `--${boundary}--\r\n`;
   const res = await fetch(`${BASE}/api/chat/stream`, {
     method: "POST",
-    headers: { "Content-Type": `multipart/form-data; boundary=${boundary}` },
+    headers: { "Content-Type": `multipart/form-data; boundary=${boundary}`, ...HEADERS },
     body,
     signal: AbortSignal.timeout(240000),
   });
@@ -233,6 +247,8 @@ async function main() {
   }
   const rep = writeReport();
   console.log(`[bench] finished: ${rep.count}/100, avg=${rep.avg.toFixed(1)} → ${REPORT}`);
+  // AbortSignal.timeout leaves a pending timer that would keep the process alive forever.
+  process.exit(0);
 }
 
 main();
