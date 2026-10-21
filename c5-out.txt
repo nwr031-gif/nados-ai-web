@@ -1,0 +1,138 @@
+data: {"type":"meta","provider":"nados-v1.1","model":"Nados v1.1 · مُرتّب مدرّب (245 معامل) + معلم سحابي"}
+
+data: {"type":"delta","delta":"##"}
+
+data: {"type":"delta","delta":" د"}
+
+data: {"type":"delta","delta":"الة"}
+
+data: {"type":"delta","delta":" Python"}
+
+data: {"type":"delta","delta":" لج"}
+
+data: {"type":"delta","delta":"مع"}
+
+data: {"type":"delta","delta":" كلمات"}
+
+data: {"type":"delta","delta":" النص"}
+
+data: {"type":"delta","delta":" العربي"}
+
+data: {"type":"delta","delta":" وإ"}
+
+data: {"type":"delta","delta":"زالة"}
+
+data: {"type":"delta","delta":" الت"}
+
+data: {"type":"delta","delta":"شك"}
+
+data: {"type":"delta","delta":"يل"}
+
+data: {"type":"delta","delta":"  \n\n"}
+
+data: {"type":"delta","delta":"```"}
+
+data: {"type":"delta","delta":"python"}
+
+data: {"type":"delta","delta":"\n"}
+
+data: {"type":"delta","delta":"import"}
+
+data: {"type":"delta","delta":" re"}
+
+data: {"type":"delta","delta":"\n\n"}
+
+data: {"type":"delta","delta":"def"}
+
+data: {"type":"delta","delta":" join"}
+
+data: {"type":"delta","delta":"_ar"}
+
+data: {"type":"delta","delta":"ab"}
+
+data: {"type":"delta","delta":"ic"}
+
+data: {"type":"delta","delta":"_words"}
+
+data: {"type":"delta","delta":"(text"}
+
+data: {"type":"delta","delta":":"}
+
+data: {"type":"delta","delta":" str"}
+
+data: {"type":"delta","delta":")"}
+
+data: {"type":"delta","delta":" ->"}
+
+data: {"type":"delta","delta":" str"}
+
+data: {"type":"delta","delta":":\n"}
+
+data: {"type":"delta","delta":"   "}
+
+data: {"type":"delta","delta":" \"\"\"\n"}
+
+data: {"type":"delta","delta":"   "}
+
+data: {"type":"delta","delta":" "}
+
+data: {"type":"delta","delta":"1"}
+
+data: {"type":"delta","delta":"️⃣"}
+
+data: {"type":"delta","delta":" ي"}
+
+data: {"type":"delta","delta":"زيل"}
+
+data: {"type":"delta","delta":" جميع"}
+
+data: {"type":"delta","delta":" علامات"}
+
+data: {"type":"delta","delta":" الت"}
+
+data: {"type":"delta","delta":"شك"}
+
+data: {"type":"delta","delta":"يل"}
+
+data: {"type":"delta","delta":" ("}
+
+data: {"type":"delta","delta":"ت"}
+
+data: {"type":"delta","delta":"َ"}
+
+data: {"type":"delta","delta":","}
+
+data: {"type":"delta","delta":" "}
+
+data: {"type":"delta","delta":"ً"}
+
+data: {"type":"delta","delta":","}
+
+data: {"type":"delta","delta":" "}
+
+data: {"type":"delta","delta":"ُ"}
+
+data: {"type":"delta","delta":" …"}
+
+data: {"type":"delta","delta":")"}
+
+data: {"type":"delta","delta":" من"}
+
+data: {"type":"delta","delta":" النص"}
+
+data: {"type":"delta","delta":" العربي"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":"  \n"}
+
+data: {"type":"delta","delta":"## دالة Python لجمع كلمات النص العربي وإزالة الت"}
+
+data: {"type":"delta","delta":"شكيل  \n\n```python\nimport re\n\ndef join_arabic_wor"}
+
+data: {"type":"delta","delta":"ds(text: str) -> str:\n    \"\"\"\n    1️⃣ يزيل جميع "}
+
+data: {"type":"delta","delta":"علامات التشكيل (تَ, ً, ُ …) من النص العربي.  \n"}
+
+data: {"type":"done","reply":{"answer":["## دالة Python لجمع كلمات النص العربي وإزالة التشكيل  \n\n```python\nimport re\n\ndef join_arabic_words(text: str) -> str:\n    \"\"\"\n    1️⃣ يزيل جميع علامات التشكيل (تَ, ً, ُ …) من النص العربي.  \n"],"bullets":[],"sources":[],"provider":"nados-v1.1","model":"Nados v1.1 · gpt-oss-120B + مُرتّب مدرّب","variant":"v1.1","nados":{"model":"Nados v1.1","params":245,"features":{"affinity":1,"quality":0.25,"freshness":0.6,"engagement":0.35,"completion":1,"originality":0.8,"local":1,"safety":1,"negative":0},"probabilities":{"like":0.9875,"save":0.9966,"share":0.9966,"comment":0.9967,"completion":0.9985},"ranking_score":0.9948,"decision":"أجب بإجابة وافية منظمة بعناوين أو نقاط مع مثال عملي قصير.","temperature":0.95,"final_score":0.7157,"final_probabilities":{"like":0.5433,"save":0.572,"share":0.7606,"comment":0.9263,"completion":0.853}},"teacher":"gpt-oss-120B"}}
+

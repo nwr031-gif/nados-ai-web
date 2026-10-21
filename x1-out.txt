@@ -1,0 +1,336 @@
+data: {"type":"meta","provider":"nados-v1.1","model":"Nados v1.1 · مُرتّب مدرّب (245 معامل) + معلم سحابي"}
+
+data: {"type":"delta","delta":"##"}
+
+data: {"type":"delta","delta":" د"}
+
+data: {"type":"delta","delta":"الة"}
+
+data: {"type":"delta","delta":" "}
+
+data: {"type":"delta","delta":"Python"}
+
+data: {"type":"delta","delta":" لج"}
+
+data: {"type":"delta","delta":"مع"}
+
+data: {"type":"delta","delta":" الكلمات"}
+
+data: {"type":"delta","delta":" من"}
+
+data: {"type":"delta","delta":" نص"}
+
+data: {"type":"delta","delta":" عربي"}
+
+data: {"type":"delta","delta":" وإ"}
+
+data: {"type":"delta","delta":"زالة"}
+
+data: {"type":"delta","delta":" الت"}
+
+data: {"type":"delta","delta":"شك"}
+
+data: {"type":"delta","delta":"يل"}
+
+data: {"type":"delta","delta":"  \n\n"}
+
+data: {"type":"delta","delta":"```"}
+
+data: {"type":"delta","delta":"python"}
+
+data: {"type":"delta","delta":"\n"}
+
+data: {"type":"delta","delta":"import"}
+
+data: {"type":"delta","delta":" re"}
+
+data: {"type":"delta","delta":"\n"}
+
+data: {"type":"delta","delta":"from"}
+
+data: {"type":"delta","delta":" typing"}
+
+data: {"type":"delta","delta":" import"}
+
+data: {"type":"delta","delta":" List"}
+
+data: {"type":"delta","delta":"\n\n"}
+
+data: {"type":"delta","delta":"#"}
+
+data: {"type":"delta","delta":" مجموعة"}
+
+data: {"type":"delta","delta":" أح"}
+
+data: {"type":"delta","delta":"رف"}
+
+data: {"type":"delta","delta":" الت"}
+
+data: {"type":"delta","delta":"شك"}
+
+data: {"type":"delta","delta":"يل"}
+
+data: {"type":"delta","delta":" العربية"}
+
+data: {"type":"delta","delta":" ("}
+
+data: {"type":"delta","delta":"ت"}
+
+data: {"type":"delta","delta":"نو"}
+
+data: {"type":"delta","delta":"ين"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" فت"}
+
+data: {"type":"delta","delta":"حة"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" ض"}
+
+data: {"type":"delta","delta":"مة"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" كس"}
+
+data: {"type":"delta","delta":"رة"}
+
+data: {"type":"delta","delta":" …"}
+
+data: {"type":"delta","delta":")\n"}
+
+data: {"type":"delta","delta":"T"}
+
+data: {"type":"delta","delta":"ASH"}
+
+data: {"type":"delta","delta":"KE"}
+
+data: {"type":"delta","delta":"EL"}
+
+data: {"type":"delta","delta":"_PATTERN"}
+
+data: {"type":"delta","delta":" ="}
+
+data: {"type":"delta","delta":" re"}
+
+data: {"type":"delta","delta":".compile"}
+
+data: {"type":"delta","delta":"(r"}
+
+data: {"type":"delta","delta":"'"}
+
+data: {"type":"delta","delta":"[\\"}
+
+data: {"type":"delta","delta":"u"}
+
+data: {"type":"delta","delta":"064"}
+
+data: {"type":"delta","delta":"B"}
+
+data: {"type":"delta","delta":"-\\"}
+
+data: {"type":"delta","delta":"u"}
+
+data: {"type":"delta","delta":"065"}
+
+data: {"type":"delta","delta":"2"}
+
+data: {"type":"delta","delta":"]"}
+
+data: {"type":"delta","delta":"')\n\n"}
+
+data: {"type":"delta","delta":"#"}
+
+data: {"type":"delta","delta":" نم"}
+
+data: {"type":"delta","delta":"ط"}
+
+data: {"type":"delta","delta":" لت"}
+
+data: {"type":"delta","delta":"قس"}
+
+data: {"type":"delta","delta":"يم"}
+
+data: {"type":"delta","delta":" النص"}
+
+data: {"type":"delta","delta":" إلى"}
+
+data: {"type":"delta","delta":" كلمات"}
+
+data: {"type":"delta","delta":" ("}
+
+data: {"type":"delta","delta":"ي"}
+
+data: {"type":"delta","delta":"ست"}
+
+data: {"type":"delta","delta":"ث"}
+
+data: {"type":"delta","delta":"ني"}
+
+data: {"type":"delta","delta":" علامات"}
+
+data: {"type":"delta","delta":" الت"}
+
+data: {"type":"delta","delta":"رق"}
+
+data: {"type":"delta","delta":"يم"}
+
+data: {"type":"delta","delta":" والمس"}
+
+data: {"type":"delta","delta":"افات"}
+
+data: {"type":"delta","delta":")\n"}
+
+data: {"type":"delta","delta":"WORD"}
+
+data: {"type":"delta","delta":"_PATTERN"}
+
+data: {"type":"delta","delta":" ="}
+
+data: {"type":"delta","delta":" re"}
+
+data: {"type":"delta","delta":".compile"}
+
+data: {"type":"delta","delta":"(r"}
+
+data: {"type":"delta","delta":"'"}
+
+data: {"type":"delta","delta":"[\\"}
+
+data: {"type":"delta","delta":"u"}
+
+data: {"type":"delta","delta":"060"}
+
+data: {"type":"delta","delta":"0"}
+
+data: {"type":"delta","delta":"-\\"}
+
+data: {"type":"delta","delta":"u"}
+
+data: {"type":"delta","delta":"06"}
+
+data: {"type":"delta","delta":"FF"}
+
+data: {"type":"delta","delta":"]+"}
+
+data: {"type":"delta","delta":"')"}
+
+data: {"type":"delta","delta":"  "}
+
+data: {"type":"delta","delta":" #"}
+
+data: {"type":"delta","delta":" ي"}
+
+data: {"type":"delta","delta":"ط"}
+
+data: {"type":"delta","delta":"ابق"}
+
+data: {"type":"delta","delta":" أي"}
+
+data: {"type":"delta","delta":" حرف"}
+
+data: {"type":"delta","delta":" عربي"}
+
+data: {"type":"delta","delta":" مت"}
+
+data: {"type":"delta","delta":"صل"}
+
+data: {"type":"delta","delta":"\n\n"}
+
+data: {"type":"delta","delta":"def"}
+
+data: {"type":"delta","delta":" normalize"}
+
+data: {"type":"delta","delta":"_ar"}
+
+data: {"type":"delta","delta":"ab"}
+
+data: {"type":"delta","delta":"ic"}
+
+data: {"type":"delta","delta":"(text"}
+
+data: {"type":"delta","delta":":"}
+
+data: {"type":"delta","delta":" str"}
+
+data: {"type":"delta","delta":")"}
+
+data: {"type":"delta","delta":" ->"}
+
+data: {"type":"delta","delta":" str"}
+
+data: {"type":"delta","delta":":\n"}
+
+data: {"type":"delta","delta":"   "}
+
+data: {"type":"delta","delta":" \"\"\"\n"}
+
+data: {"type":"delta","delta":"   "}
+
+data: {"type":"delta","delta":" ي"}
+
+data: {"type":"delta","delta":"زيل"}
+
+data: {"type":"delta","delta":" الت"}
+
+data: {"type":"delta","delta":"شك"}
+
+data: {"type":"delta","delta":"يل"}
+
+data: {"type":"delta","delta":" من"}
+
+data: {"type":"delta","delta":" النص"}
+
+data: {"type":"delta","delta":" العربي"}
+
+data: {"type":"delta","delta":".\n"}
+
+data: {"type":"delta","delta":"   "}
+
+data: {"type":"delta","delta":" \"\"\"\n"}
+
+data: {"type":"delta","delta":"   "}
+
+data: {"type":"delta","delta":" return"}
+
+data: {"type":"delta","delta":" T"}
+
+data: {"type":"delta","delta":"ASH"}
+
+data: {"type":"delta","delta":"KE"}
+
+data: {"type":"delta","delta":"EL"}
+
+data: {"type":"delta","delta":"_PATTERN"}
+
+data: {"type":"delta","delta":".sub"}
+
+data: {"type":"delta","delta":"('',"}
+
+data: {"type":"delta","delta":" text"}
+
+data: {"type":"delta","delta":")\n\n"}
+
+data: {"type":"delta","delta":"def"}
+
+data: {"type":"delta","delta":" extract"}
+
+data: {"type":"delta","delta":"_words"}
+
+data: {"type":"delta","delta":"(text"}
+
+data: {"type":"delta","delta":":"}
+
+data: {"type":"delta","delta":" str"}
+
+data: {"type":"delta","delta":")"}
+
+data: {"type":"delta","delta":" ->"}
+
+data: {"type":"delta","delta":" List"}
+
+data: {"type":"done","reply":{"answer":["## دالة Python لجمع الكلمات من نص عربي وإزالة التشكيل  \n\n```python\nimport re\nfrom typing import List\n\n# مجموعة أحرف التشكيل العربية (تنوين، فتحة، ضمة، كسرة …)\nTASHKEEL_PATTERN = re.compile(r'[\\u064B-\\u0652]')\n\n# نمط لتقسيم النص إلى كلمات (يستثني علامات الترقيم والمسافات)\nWORD_PATTERN = re.compile(r'[\\u0600-\\u06FF]+')   # يطابق أي حرف عربي متصل\n\ndef normalize_arabic(text: str) -> str:\n    \"\"\"\n    يزيل التشكيل من النص العربي.\n    \"\"\"\n    return TASHKEEL_PATTERN.sub('', text)\n\ndef extract_words(text: str) -> List"],"bullets":[],"sources":[],"provider":"nados-v1.1","model":"Nados v1.1 · gpt-oss-120B + مُرتّب مدرّب","variant":"v1.1","nados":{"model":"Nados v1.1","params":245,"features":{"affinity":1,"quality":0.25,"freshness":0.6,"engagement":0.35,"completion":1,"originality":0.8,"local":1,"safety":1,"negative":0.6},"probabilities":{"like":0.4159,"save":0.677,"share":0.7705,"comment":0.8511,"completion":0.8785},"ranking_score":0.7012,"decision":"أجب بإجابة وافية منظمة بعناوين أو نقاط مع مثال عملي قصير.","temperature":0.84,"final_score":0.9447,"final_probabilities":{"like":0.8792,"save":0.9418,"share":0.9617,"comment":0.9798,"completion":0.9812}},"teacher":"gpt-oss-120B"}}
+

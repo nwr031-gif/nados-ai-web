@@ -1,0 +1,5 @@
+--B
+Content-Disposition: form-data; name="message"
+
+اعملي كود: دالة بايثون تعكس نصاً بدون [::-1]
+--B--

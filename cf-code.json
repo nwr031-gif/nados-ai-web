@@ -1,0 +1,1 @@
+{"messages":[{"role":"system","content":"You are Nados. Answer in Arabic. Put code in a ``` block."},{"role":"user","content":"اعملي كود: دالة بايثون تعكس نصاً بدون [::-1]"}],"max_tokens":800,"stream":true,"reasoning":"low"}

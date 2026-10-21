@@ -1,0 +1,3928 @@
+data: {"type":"meta","provider":"nados-v1.1","model":"Nados v1.1 · مُرتّب مدرّب (245 معامل) + معلم سحابي"}
+
+data: {"type":"delta","delta":"\n\n"}
+
+data: {"type":"delta","delta":"**"}
+
+data: {"type":"delta","delta":"مش"}
+
+data: {"type":"delta","delta":"روع"}
+
+data: {"type":"delta","delta":" ذك"}
+
+data: {"type":"delta","delta":"اء"}
+
+data: {"type":"delta","delta":" اص"}
+
+data: {"type":"delta","delta":"طن"}
+
+data: {"type":"delta","delta":"اعي"}
+
+data: {"type":"delta","delta":" م"}
+
+data: {"type":"delta","delta":"خصص"}
+
+data: {"type":"delta","delta":" لل"}
+
+data: {"type":"delta","delta":"عراق"}
+
+data: {"type":"delta","delta":":"}
+
+data: {"type":"delta","delta":" نظام"}
+
+data: {"type":"delta","delta":" ذ"}
+
+data: {"type":"delta","delta":"كي"}
+
+data: {"type":"delta","delta":" لت"}
+
+data: {"type":"delta","delta":"وقع"}
+
+data: {"type":"delta","delta":" وإ"}
+
+data: {"type":"delta","delta":"دارة"}
+
+data: {"type":"delta","delta":" الفي"}
+
+data: {"type":"delta","delta":"ض"}
+
+data: {"type":"delta","delta":"انات"}
+
+data: {"type":"delta","delta":" في"}
+
+data: {"type":"delta","delta":" الأن"}
+
+data: {"type":"delta","delta":"هار"}
+
+data: {"type":"delta","delta":" العراقية"}
+
+data: {"type":"delta","delta":"**\n\n"}
+
+data: {"type":"delta","delta":"---\n\n"}
+
+data: {"type":"delta","delta":"##"}
+
+data: {"type":"delta","delta":" "}
+
+data: {"type":"delta","delta":"1"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":" الفكرة"}
+
+data: {"type":"delta","delta":" العامة"}
+
+data: {"type":"delta","delta":"\n"}
+
+data: {"type":"delta","delta":"ت"}
+
+data: {"type":"delta","delta":"طوير"}
+
+data: {"type":"delta","delta":" من"}
+
+data: {"type":"delta","delta":"صة"}
+
+data: {"type":"delta","delta":" ذك"}
+
+data: {"type":"delta","delta":"اء"}
+
+data: {"type":"delta","delta":" اص"}
+
+data: {"type":"delta","delta":"طن"}
+
+data: {"type":"delta","delta":"اعي"}
+
+data: {"type":"delta","delta":" تجمع"}
+
+data: {"type":"delta","delta":" بيانات"}
+
+data: {"type":"delta","delta":" الأر"}
+
+data: {"type":"delta","delta":"ص"}
+
+data: {"type":"delta","delta":"اد"}
+
+data: {"type":"delta","delta":" الجوية"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" مستويات"}
+
+data: {"type":"delta","delta":" الأن"}
+
+data: {"type":"delta","delta":"هار"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" واست"}
+
+data: {"type":"delta","delta":"خدام"}
+
+data: {"type":"delta","delta":"ات"}
+
+data: {"type":"delta","delta":" الأراضي"}
+
+data: {"type":"delta","delta":" لت"}
+
+data: {"type":"delta","delta":"وقع"}
+
+data: {"type":"delta","delta":" خطر"}
+
+data: {"type":"delta","delta":" الفي"}
+
+data: {"type":"delta","delta":"ض"}
+
+data: {"type":"delta","delta":"انات"}
+
+data: {"type":"delta","delta":" في"}
+
+data: {"type":"delta","delta":" الوقت"}
+
+data: {"type":"delta","delta":" الفع"}
+
+data: {"type":"delta","delta":"لي"}
+
+data: {"type":"delta","delta":" وت"}
+
+data: {"type":"delta","delta":"قديم"}
+
+data: {"type":"delta","delta":" توص"}
+
+data: {"type":"delta","delta":"يات"}
+
+data: {"type":"delta","delta":" عملية"}
+
+data: {"type":"delta","delta":" لل"}
+
+data: {"type":"delta","delta":"جه"}
+
+data: {"type":"delta","delta":"ات"}
+
+data: {"type":"delta","delta":" المع"}
+
+data: {"type":"delta","delta":"نية"}
+
+data: {"type":"delta","delta":" ("}
+
+data: {"type":"delta","delta":"ال"}
+
+data: {"type":"delta","delta":"بل"}
+
+data: {"type":"delta","delta":"دي"}
+
+data: {"type":"delta","delta":"ات"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" وزارة"}
+
+data: {"type":"delta","delta":" الموارد"}
+
+data: {"type":"delta","delta":" الم"}
+
+data: {"type":"delta","delta":"ائية"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" الدفاع"}
+
+data: {"type":"delta","delta":" المدني"}
+
+data: {"type":"delta","delta":")"}
+
+data: {"type":"delta","delta":" لتق"}
+
+data: {"type":"delta","delta":"ليل"}
+
+data: {"type":"delta","delta":" الأ"}
+
+data: {"type":"delta","delta":"ضرار"}
+
+data: {"type":"delta","delta":" وت"}
+
+data: {"type":"delta","delta":"وجيه"}
+
+data: {"type":"delta","delta":" عمليات"}
+
+data: {"type":"delta","delta":" الإ"}
+
+data: {"type":"delta","delta":"خل"}
+
+data: {"type":"delta","delta":"اء"}
+
+data: {"type":"delta","delta":" والإن"}
+
+data: {"type":"delta","delta":"قاذ"}
+
+data: {"type":"delta","delta":".\n\n"}
+
+data: {"type":"delta","delta":"---\n\n"}
+
+data: {"type":"delta","delta":"##"}
+
+data: {"type":"delta","delta":" "}
+
+data: {"type":"delta","delta":"2"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":" لماذا"}
+
+data: {"type":"delta","delta":" هذا"}
+
+data: {"type":"delta","delta":" المشروع"}
+
+data: {"type":"delta","delta":" مهم"}
+
+data: {"type":"delta","delta":" لل"}
+
+data: {"type":"delta","delta":"عراق"}
+
+data: {"type":"delta","delta":"؟\n"}
+
+data: {"type":"delta","delta":"|"}
+
+data: {"type":"delta","delta":" السبب"}
+
+data: {"type":"delta","delta":" |"}
+
+data: {"type":"delta","delta":" الت"}
+
+data: {"type":"delta","delta":"وض"}
+
+data: {"type":"delta","delta":"يح"}
+
+data: {"type":"delta","delta":" |\n"}
+
+data: {"type":"delta","delta":"|"}
+
+data: {"type":"delta","delta":"--------"}
+
+data: {"type":"delta","delta":"|"}
+
+data: {"type":"delta","delta":"--------"}
+
+data: {"type":"delta","delta":"--"}
+
+data: {"type":"delta","delta":"|\n"}
+
+data: {"type":"delta","delta":"|"}
+
+data: {"type":"delta","delta":" **"}
+
+data: {"type":"delta","delta":"عرض"}
+
+data: {"type":"delta","delta":"ة"}
+
+data: {"type":"delta","delta":" عالية"}
+
+data: {"type":"delta","delta":" لل"}
+
+data: {"type":"delta","delta":"فيض"}
+
+data: {"type":"delta","delta":"انات"}
+
+data: {"type":"delta","delta":"**"}
+
+data: {"type":"delta","delta":" |"}
+
+data: {"type":"delta","delta":" الأن"}
+
+data: {"type":"delta","delta":"هار"}
+
+data: {"type":"delta","delta":" الكبرى"}
+
+data: {"type":"delta","delta":" ("}
+
+data: {"type":"delta","delta":"د"}
+
+data: {"type":"delta","delta":"جلة"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" الف"}
+
+data: {"type":"delta","delta":"رات"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" وش"}
+
+data: {"type":"delta","delta":"ط"}
+
+data: {"type":"delta","delta":" العرب"}
+
+data: {"type":"delta","delta":")"}
+
+data: {"type":"delta","delta":" تت"}
+
+data: {"type":"delta","delta":"عرض"}
+
+data: {"type":"delta","delta":" سنوي"}
+
+data: {"type":"delta","delta":"اً"}
+
+data: {"type":"delta","delta":" ل"}
+
+data: {"type":"delta","delta":"فيض"}
+
+data: {"type":"delta","delta":"انات"}
+
+data: {"type":"delta","delta":" ناج"}
+
+data: {"type":"delta","delta":"مة"}
+
+data: {"type":"delta","delta":" عن"}
+
+data: {"type":"delta","delta":" ذ"}
+
+data: {"type":"delta","delta":"وب"}
+
+data: {"type":"delta","delta":"ان"}
+
+data: {"type":"delta","delta":" الثل"}
+
+data: {"type":"delta","delta":"وج"}
+
+data: {"type":"delta","delta":" في"}
+
+data: {"type":"delta","delta":" الجبال"}
+
+data: {"type":"delta","delta":" أو"}
+
+data: {"type":"delta","delta":" أم"}
+
+data: {"type":"delta","delta":"طار"}
+
+data: {"type":"delta","delta":" غز"}
+
+data: {"type":"delta","delta":"يرة"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":" |\n"}
+
+data: {"type":"delta","delta":"|"}
+
+data: {"type":"delta","delta":" **"}
+
+data: {"type":"delta","delta":"ضع"}
+
+data: {"type":"delta","delta":"ف"}
+
+data: {"type":"delta","delta":" البنية"}
+
+data: {"type":"delta","delta":" التح"}
+
+data: {"type":"delta","delta":"تية"}
+
+data: {"type":"delta","delta":" للم"}
+
+data: {"type":"delta","delta":"راق"}
+
+data: {"type":"delta","delta":"بة"}
+
+data: {"type":"delta","delta":"**"}
+
+data: {"type":"delta","delta":" |"}
+
+data: {"type":"delta","delta":" شبكة"}
+
+data: {"type":"delta","delta":" مح"}
+
+data: {"type":"delta","delta":"طات"}
+
+data: {"type":"delta","delta":" قياس"}
+
+data: {"type":"delta","delta":" مستوى"}
+
+data: {"type":"delta","delta":" المياه"}
+
+data: {"type":"delta","delta":" محدودة"}
+
+data: {"type":"delta","delta":" ولا"}
+
+data: {"type":"delta","delta":" تغط"}
+
+data: {"type":"delta","delta":"ي"}
+
+data: {"type":"delta","delta":" جميع"}
+
+data: {"type":"delta","delta":" الرو"}
+
+data: {"type":"delta","delta":"اف"}
+
+data: {"type":"delta","delta":"د"}
+
+data: {"type":"delta","delta":" الفر"}
+
+data: {"type":"delta","delta":"عية"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":" |\n"}
+
+data: {"type":"delta","delta":"|"}
+
+data: {"type":"delta","delta":" **"}
+
+data: {"type":"delta","delta":"ت"}
+
+data: {"type":"delta","delta":"أثير"}
+
+data: {"type":"delta","delta":" اقتص"}
+
+data: {"type":"delta","delta":"ادي"}
+
+data: {"type":"delta","delta":" و"}
+
+data: {"type":"delta","delta":"اجتماع"}
+
+data: {"type":"delta","delta":"ي"}
+
+data: {"type":"delta","delta":" كبير"}
+
+data: {"type":"delta","delta":"**"}
+
+data: {"type":"delta","delta":" |"}
+
+data: {"type":"delta","delta":" الفي"}
+
+data: {"type":"delta","delta":"ض"}
+
+data: {"type":"delta","delta":"انات"}
+
+data: {"type":"delta","delta":" تسبب"}
+
+data: {"type":"delta","delta":" خس"}
+
+data: {"type":"delta","delta":"ائر"}
+
+data: {"type":"delta","delta":" بالم"}
+
+data: {"type":"delta","delta":"لي"}
+
+data: {"type":"delta","delta":"ارات"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" تش"}
+
+data: {"type":"delta","delta":"ريد"}
+
+data: {"type":"delta","delta":" آلاف"}
+
+data: {"type":"delta","delta":" الأسر"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" وت"}
+
+data: {"type":"delta","delta":"ضر"}
+
+data: {"type":"delta","delta":"ر"}
+
+data: {"type":"delta","delta":" الزراعة"}
+
+data: {"type":"delta","delta":" والب"}
+
+data: {"type":"delta","delta":"نية"}
+
+data: {"type":"delta","delta":" التح"}
+
+data: {"type":"delta","delta":"تية"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":" |\n"}
+
+data: {"type":"delta","delta":"|"}
+
+data: {"type":"delta","delta":" **"}
+
+data: {"type":"delta","delta":"فر"}
+
+data: {"type":"delta","delta":"ص"}
+
+data: {"type":"delta","delta":" للاست"}
+
+data: {"type":"delta","delta":"فادة"}
+
+data: {"type":"delta","delta":" من"}
+
+data: {"type":"delta","delta":" البيانات"}
+
+data: {"type":"delta","delta":" المت"}
+
+data: {"type":"delta","delta":"احة"}
+
+data: {"type":"delta","delta":"**"}
+
+data: {"type":"delta","delta":" |"}
+
+data: {"type":"delta","delta":" بيانات"}
+
+data: {"type":"delta","delta":" الأق"}
+
+data: {"type":"delta","delta":"مار"}
+
+data: {"type":"delta","delta":" الصناعية"}
+
+data: {"type":"delta","delta":" ("}
+
+data: {"type":"delta","delta":"مثل"}
+
+data: {"type":"delta","delta":" S"}
+
+data: {"type":"delta","delta":"entinel"}
+
+data: {"type":"delta","delta":"‑"}
+
+data: {"type":"delta","delta":"1"}
+
+data: {"type":"delta","delta":"/"}
+
+data: {"type":"delta","delta":"2"}
+
+data: {"type":"delta","delta":")،"}
+
+data: {"type":"delta","delta":" مح"}
+
+data: {"type":"delta","delta":"طات"}
+
+data: {"type":"delta","delta":" الأر"}
+
+data: {"type":"delta","delta":"ص"}
+
+data: {"type":"delta","delta":"اد"}
+
+data: {"type":"delta","delta":" الجوية"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" وتق"}
+
+data: {"type":"delta","delta":"ارير"}
+
+data: {"type":"delta","delta":" وزارة"}
+
+data: {"type":"delta","delta":" الموارد"}
+
+data: {"type":"delta","delta":" الم"}
+
+data: {"type":"delta","delta":"ائية"}
+
+data: {"type":"delta","delta":" مت"}
+
+data: {"type":"delta","delta":"وف"}
+
+data: {"type":"delta","delta":"رة"}
+
+data: {"type":"delta","delta":" بشكل"}
+
+data: {"type":"delta","delta":" مفتوح"}
+
+data: {"type":"delta","delta":" أو"}
+
+data: {"type":"delta","delta":" يمكن"}
+
+data: {"type":"delta","delta":" الحصول"}
+
+data: {"type":"delta","delta":" عليها"}
+
+data: {"type":"delta","delta":" عبر"}
+
+data: {"type":"delta","delta":" اتفاق"}
+
+data: {"type":"delta","delta":"يات"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":" |\n\n"}
+
+data: {"type":"delta","delta":"---\n\n"}
+
+data: {"type":"delta","delta":"##"}
+
+data: {"type":"delta","delta":" "}
+
+data: {"type":"delta","delta":"3"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":" مكون"}
+
+data: {"type":"delta","delta":"ات"}
+
+data: {"type":"delta","delta":" النظام"}
+
+data: {"type":"delta","delta":"\n"}
+
+data: {"type":"delta","delta":"1"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":" **"}
+
+data: {"type":"delta","delta":"طب"}
+
+data: {"type":"delta","delta":"قة"}
+
+data: {"type":"delta","delta":" جمع"}
+
+data: {"type":"delta","delta":" البيانات"}
+
+data: {"type":"delta","delta":"**"}
+
+data: {"type":"delta","delta":"  "}
+
+data: {"type":"delta","delta":"\n"}
+
+data: {"type":"delta","delta":"  "}
+
+data: {"type":"delta","delta":" -"}
+
+data: {"type":"delta","delta":" بيانات"}
+
+data: {"type":"delta","delta":" الط"}
+
+data: {"type":"delta","delta":"قس"}
+
+data: {"type":"delta","delta":" ("}
+
+data: {"type":"delta","delta":"ه"}
+
+data: {"type":"delta","delta":"طول"}
+
+data: {"type":"delta","delta":" الأمطار"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" درجة"}
+
+data: {"type":"delta","delta":" الحرارة"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" الر"}
+
+data: {"type":"delta","delta":"ط"}
+
+data: {"type":"delta","delta":"وبة"}
+
+data: {"type":"delta","delta":")"}
+
+data: {"type":"delta","delta":" من"}
+
+data: {"type":"delta","delta":" مح"}
+
+data: {"type":"delta","delta":"طات"}
+
+data: {"type":"delta","delta":" الأر"}
+
+data: {"type":"delta","delta":"ص"}
+
+data: {"type":"delta","delta":"اد"}
+
+data: {"type":"delta","delta":" ومح"}
+
+data: {"type":"delta","delta":"طات"}
+
+data: {"type":"delta","delta":" الط"}
+
+data: {"type":"delta","delta":"قس"}
+
+data: {"type":"delta","delta":" الآ"}
+
+data: {"type":"delta","delta":"لية"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":"  "}
+
+data: {"type":"delta","delta":"\n"}
+
+data: {"type":"delta","delta":"  "}
+
+data: {"type":"delta","delta":" -"}
+
+data: {"type":"delta","delta":" قر"}
+
+data: {"type":"delta","delta":"اءات"}
+
+data: {"type":"delta","delta":" مستوى"}
+
+data: {"type":"delta","delta":" المياه"}
+
+data: {"type":"delta","delta":" من"}
+
+data: {"type":"delta","delta":" مح"}
+
+data: {"type":"delta","delta":"طات"}
+
+data: {"type":"delta","delta":" القي"}
+
+data: {"type":"delta","delta":"اس"}
+
+data: {"type":"delta","delta":" الحالية"}
+
+data: {"type":"delta","delta":" والمست"}
+
+data: {"type":"delta","delta":"شعر"}
+
+data: {"type":"delta","delta":"ات"}
+
+data: {"type":"delta","delta":" Io"}
+
+data: {"type":"delta","delta":"T"}
+
+data: {"type":"delta","delta":" الجديدة"}
+
+data: {"type":"delta","delta":" ("}
+
+data: {"type":"delta","delta":"يمكن"}
+
+data: {"type":"delta","delta":" نشر"}
+
+data: {"type":"delta","delta":"ها"}
+
+data: {"type":"delta","delta":" على"}
+
+data: {"type":"delta","delta":" طول"}
+
+data: {"type":"delta","delta":" الأن"}
+
+data: {"type":"delta","delta":"هار"}
+
+data: {"type":"delta","delta":")."}
+
+data: {"type":"delta","delta":"  "}
+
+data: {"type":"delta","delta":"\n"}
+
+data: {"type":"delta","delta":"  "}
+
+data: {"type":"delta","delta":" -"}
+
+data: {"type":"delta","delta":" صور"}
+
+data: {"type":"delta","delta":" الأق"}
+
+data: {"type":"delta","delta":"مار"}
+
+data: {"type":"delta","delta":" الصناعية"}
+
+data: {"type":"delta","delta":" ("}
+
+data: {"type":"delta","delta":"راد"}
+
+data: {"type":"delta","delta":"ار"}
+
+data: {"type":"delta","delta":" بص"}
+
+data: {"type":"delta","delta":"ري"}
+
+data: {"type":"delta","delta":")"}
+
+data: {"type":"delta","delta":" للك"}
+
+data: {"type":"delta","delta":"شف"}
+
+data: {"type":"delta","delta":" عن"}
+
+data: {"type":"delta","delta":" امتداد"}
+
+data: {"type":"delta","delta":" المياه"}
+
+data: {"type":"delta","delta":" وت"}
+
+data: {"type":"delta","delta":"غيرات"}
+
+data: {"type":"delta","delta":" الغ"}
+
+data: {"type":"delta","delta":"طاء"}
+
+data: {"type":"delta","delta":" النبات"}
+
+data: {"type":"delta","delta":"ي"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":"  "}
+
+data: {"type":"delta","delta":"\n"}
+
+data: {"type":"delta","delta":"  "}
+
+data: {"type":"delta","delta":" -"}
+
+data: {"type":"delta","delta":" بيانات"}
+
+data: {"type":"delta","delta":" استخدام"}
+
+data: {"type":"delta","delta":" الأراضي"}
+
+data: {"type":"delta","delta":" وال"}
+
+data: {"type":"delta","delta":"طب"}
+
+data: {"type":"delta","delta":"و"}
+
+data: {"type":"delta","delta":"غر"}
+
+data: {"type":"delta","delta":"افيا"}
+
+data: {"type":"delta","delta":" ("}
+
+data: {"type":"delta","delta":"DE"}
+
+data: {"type":"delta","delta":"M"}
+
+data: {"type":"delta","delta":")"}
+
+data: {"type":"delta","delta":" من"}
+
+data: {"type":"delta","delta":" مصادر"}
+
+data: {"type":"delta","delta":" مفتوحة"}
+
+data: {"type":"delta","delta":" مثل"}
+
+data: {"type":"delta","delta":" S"}
+
+data: {"type":"delta","delta":"RT"}
+
+data: {"type":"delta","delta":"M"}
+
+data: {"type":"delta","delta":" أو"}
+
+data: {"type":"delta","delta":" AST"}
+
+data: {"type":"delta","delta":"ER"}
+
+data: {"type":"delta","delta":".\n\n"}
+
+data: {"type":"delta","delta":"2"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":" **"}
+
+data: {"type":"delta","delta":"طب"}
+
+data: {"type":"delta","delta":"قة"}
+
+data: {"type":"delta","delta":" المع"}
+
+data: {"type":"delta","delta":"الجة"}
+
+data: {"type":"delta","delta":" والت"}
+
+data: {"type":"delta","delta":"خ"}
+
+data: {"type":"delta","delta":"زين"}
+
+data: {"type":"delta","delta":"**"}
+
+data: {"type":"delta","delta":"  "}
+
+data: {"type":"delta","delta":"\n"}
+
+data: {"type":"delta","delta":"  "}
+
+data: {"type":"delta","delta":" -"}
+
+data: {"type":"delta","delta":" بح"}
+
+data: {"type":"delta","delta":"يرة"}
+
+data: {"type":"delta","delta":" بيانات"}
+
+data: {"type":"delta","delta":" ("}
+
+data: {"type":"delta","delta":"Data"}
+
+data: {"type":"delta","delta":" Lake"}
+
+data: {"type":"delta","delta":")"}
+
+data: {"type":"delta","delta":" على"}
+
+data: {"type":"delta","delta":" الس"}
+
+data: {"type":"delta","delta":"ح"}
+
+data: {"type":"delta","delta":"ابة"}
+
+data: {"type":"delta","delta":" لت"}
+
+data: {"type":"delta","delta":"خ"}
+
+data: {"type":"delta","delta":"زين"}
+
+data: {"type":"delta","delta":" الخام"}
+
+data: {"type":"delta","delta":" والمع"}
+
+data: {"type":"delta","delta":"الجة"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":"  "}
+
+data: {"type":"delta","delta":"\n"}
+
+data: {"type":"delta","delta":"  "}
+
+data: {"type":"delta","delta":" -"}
+
+data: {"type":"delta","delta":" عمليات"}
+
+data: {"type":"delta","delta":" E"}
+
+data: {"type":"delta","delta":"TL"}
+
+data: {"type":"delta","delta":" لتن"}
+
+data: {"type":"delta","delta":"ظيف"}
+
+data: {"type":"delta","delta":" وت"}
+
+data: {"type":"delta","delta":"وحيد"}
+
+data: {"type":"delta","delta":" الو"}
+
+data: {"type":"delta","delta":"حدات"}
+
+data: {"type":"delta","delta":" ("}
+
+data: {"type":"delta","delta":"مم"}
+
+data: {"type":"delta","delta":"/"}
+
+data: {"type":"delta","delta":"س"}
+
+data: {"type":"delta","delta":"اعة"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" متر"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" etc"}
+
+data: {"type":"delta","delta":".).\n\n"}
+
+data: {"type":"delta","delta":"3"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":" **"}
+
+data: {"type":"delta","delta":"نم"}
+
+data: {"type":"delta","delta":"اذج"}
+
+data: {"type":"delta","delta":" الذك"}
+
+data: {"type":"delta","delta":"اء"}
+
+data: {"type":"delta","delta":" الاص"}
+
+data: {"type":"delta","delta":"طن"}
+
+data: {"type":"delta","delta":"اعي"}
+
+data: {"type":"delta","delta":"**"}
+
+data: {"type":"delta","delta":"  "}
+
+data: {"type":"delta","delta":"\n"}
+
+data: {"type":"delta","delta":"  "}
+
+data: {"type":"delta","delta":" -"}
+
+data: {"type":"delta","delta":" **"}
+
+data: {"type":"delta","delta":"نم"}
+
+data: {"type":"delta","delta":"وذج"}
+
+data: {"type":"delta","delta":" ت"}
+
+data: {"type":"delta","delta":"وقع"}
+
+data: {"type":"delta","delta":" ه"}
+
+data: {"type":"delta","delta":"طول"}
+
+data: {"type":"delta","delta":" الأمطار"}
+
+data: {"type":"delta","delta":"**"}
+
+data: {"type":"delta","delta":" ("}
+
+data: {"type":"delta","delta":"سل"}
+
+data: {"type":"delta","delta":"اسل"}
+
+data: {"type":"delta","delta":" زمن"}
+
+data: {"type":"delta","delta":"ية"}
+
+data: {"type":"delta","delta":" أو"}
+
+data: {"type":"delta","delta":" نم"}
+
+data: {"type":"delta","delta":"اذج"}
+
+data: {"type":"delta","delta":"deep"}
+
+data: {"type":"delta","delta":" learning"}
+
+data: {"type":"delta","delta":" مثل"}
+
+data: {"type":"delta","delta":" L"}
+
+data: {"type":"delta","delta":"STM"}
+
+data: {"type":"delta","delta":")"}
+
+data: {"type":"delta","delta":" لت"}
+
+data: {"type":"delta","delta":"وقع"}
+
+data: {"type":"delta","delta":" كم"}
+
+data: {"type":"delta","delta":"يات"}
+
+data: {"type":"delta","delta":" الأمطار"}
+
+data: {"type":"delta","delta":" القادمة"}
+
+data: {"type":"delta","delta":" خلال"}
+
+data: {"type":"delta","delta":" "}
+
+data: {"type":"delta","delta":"2"}
+
+data: {"type":"delta","delta":"4"}
+
+data: {"type":"delta","delta":"‑"}
+
+data: {"type":"delta","delta":"7"}
+
+data: {"type":"delta","delta":"2"}
+
+data: {"type":"delta","delta":" ساعة"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":"  "}
+
+data: {"type":"delta","delta":"\n"}
+
+data: {"type":"delta","delta":"  "}
+
+data: {"type":"delta","delta":" -"}
+
+data: {"type":"delta","delta":" **"}
+
+data: {"type":"delta","delta":"نم"}
+
+data: {"type":"delta","delta":"وذج"}
+
+data: {"type":"delta","delta":" تد"}
+
+data: {"type":"delta","delta":"فق"}
+
+data: {"type":"delta","delta":" المياه"}
+
+data: {"type":"delta","delta":"**"}
+
+data: {"type":"delta","delta":" ("}
+
+data: {"type":"delta","delta":"ه"}
+
+data: {"type":"delta","delta":"يد"}
+
+data: {"type":"delta","delta":"ر"}
+
+data: {"type":"delta","delta":"ولوجي"}
+
+data: {"type":"delta","delta":" ه"}
+
+data: {"type":"delta","delta":"جين"}
+
+data: {"type":"delta","delta":":"}
+
+data: {"type":"delta","delta":" نموذج"}
+
+data: {"type":"delta","delta":" في"}
+
+data: {"type":"delta","delta":"زي"}
+
+data: {"type":"delta","delta":"ائي"}
+
+data: {"type":"delta","delta":" مب"}
+
+data: {"type":"delta","delta":"سط"}
+
+data: {"type":"delta","delta":" +"}
+
+data: {"type":"delta","delta":" شبكة"}
+
+data: {"type":"delta","delta":" عص"}
+
+data: {"type":"delta","delta":"بية"}
+
+data: {"type":"delta","delta":")"}
+
+data: {"type":"delta","delta":" يح"}
+
+data: {"type":"delta","delta":"ول"}
+
+data: {"type":"delta","delta":" توق"}
+
+data: {"type":"delta","delta":"عات"}
+
+data: {"type":"delta","delta":" الأمطار"}
+
+data: {"type":"delta","delta":" إلى"}
+
+data: {"type":"delta","delta":" تد"}
+
+data: {"type":"delta","delta":"فق"}
+
+data: {"type":"delta","delta":" مت"}
+
+data: {"type":"delta","delta":"وقع"}
+
+data: {"type":"delta","delta":" في"}
+
+data: {"type":"delta","delta":" نقاط"}
+
+data: {"type":"delta","delta":" قياس"}
+
+data: {"type":"delta","delta":" رئيسية"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":"  "}
+
+data: {"type":"delta","delta":"\n"}
+
+data: {"type":"delta","delta":"  "}
+
+data: {"type":"delta","delta":" -"}
+
+data: {"type":"delta","delta":" **"}
+
+data: {"type":"delta","delta":"نم"}
+
+data: {"type":"delta","delta":"وذج"}
+
+data: {"type":"delta","delta":" تصنيف"}
+
+data: {"type":"delta","delta":" خطر"}
+
+data: {"type":"delta","delta":" الفي"}
+
+data: {"type":"delta","delta":"ضان"}
+
+data: {"type":"delta","delta":"**"}
+
+data: {"type":"delta","delta":" ("}
+
+data: {"type":"delta","delta":"تص"}
+
+data: {"type":"delta","delta":"نيف"}
+
+data: {"type":"delta","delta":" ث"}
+
+data: {"type":"delta","delta":"نائي"}
+
+data: {"type":"delta","delta":"/"}
+
+data: {"type":"delta","delta":"مت"}
+
+data: {"type":"delta","delta":"عدد"}
+
+data: {"type":"delta","delta":" الف"}
+
+data: {"type":"delta","delta":"ئات"}
+
+data: {"type":"delta","delta":")"}
+
+data: {"type":"delta","delta":" ي"}
+
+data: {"type":"delta","delta":"دم"}
+
+data: {"type":"delta","delta":"ج"}
+
+data: {"type":"delta","delta":" مستوى"}
+
+data: {"type":"delta","delta":" المياه"}
+
+data: {"type":"delta","delta":" المتوقع"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" ميل"}
+
+data: {"type":"delta","delta":" الأرض"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" واست"}
+
+data: {"type":"delta","delta":"خدام"}
+
+data: {"type":"delta","delta":"ات"}
+
+data: {"type":"delta","delta":" الأراضي"}
+
+data: {"type":"delta","delta":" لإ"}
+
+data: {"type":"delta","delta":"ع"}
+
+data: {"type":"delta","delta":"طاء"}
+
+data: {"type":"delta","delta":" درجة"}
+
+data: {"type":"delta","delta":" خطر"}
+
+data: {"type":"delta","delta":" ("}
+
+data: {"type":"delta","delta":"من"}
+
+data: {"type":"delta","delta":"خفض"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" متوسط"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" عالي"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" شديد"}
+
+data: {"type":"delta","delta":")."}
+
+data: {"type":"delta","delta":"  "}
+
+data: {"type":"delta","delta":"\n"}
+
+data: {"type":"delta","delta":"  "}
+
+data: {"type":"delta","delta":" -"}
+
+data: {"type":"delta","delta":" **"}
+
+data: {"type":"delta","delta":"نم"}
+
+data: {"type":"delta","delta":"وذج"}
+
+data: {"type":"delta","delta":" توص"}
+
+data: {"type":"delta","delta":"ية"}
+
+data: {"type":"delta","delta":" الإجراءات"}
+
+data: {"type":"delta","delta":"**"}
+
+data: {"type":"delta","delta":" ("}
+
+data: {"type":"delta","delta":"ن"}
+
+data: {"type":"delta","delta":"ظام"}
+
+data: {"type":"delta","delta":" قواعد"}
+
+data: {"type":"delta","delta":" مب"}
+
+data: {"type":"delta","delta":"ني"}
+
+data: {"type":"delta","delta":" على"}
+
+data: {"type":"delta","delta":" المن"}
+
+data: {"type":"delta","delta":"طق"}
+
+data: {"type":"delta","delta":" الض"}
+
+data: {"type":"delta","delta":"باب"}
+
+data: {"type":"delta","delta":"ي"}
+
+data: {"type":"delta","delta":" أو"}
+
+data: {"type":"delta","delta":" تعلم"}
+
+data: {"type":"delta","delta":" تعزيز"}
+
+data: {"type":"delta","delta":")"}
+
+data: {"type":"delta","delta":" يق"}
+
+data: {"type":"delta","delta":"ترح"}
+
+data: {"type":"delta","delta":" Actions"}
+
+data: {"type":"delta","delta":" مثل"}
+
+data: {"type":"delta","delta":":"}
+
+data: {"type":"delta","delta":" فتح"}
+
+data: {"type":"delta","delta":" الس"}
+
+data: {"type":"delta","delta":"دود"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" إن"}
+
+data: {"type":"delta","delta":"ذار"}
+
+data: {"type":"delta","delta":" السكان"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" تجه"}
+
+data: {"type":"delta","delta":"يز"}
+
+data: {"type":"delta","delta":" فرق"}
+
+data: {"type":"delta","delta":" الإن"}
+
+data: {"type":"delta","delta":"قاذ"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" أو"}
+
+data: {"type":"delta","delta":" توجيه"}
+
+data: {"type":"delta","delta":" المساعد"}
+
+data: {"type":"delta","delta":"ات"}
+
+data: {"type":"delta","delta":".\n\n"}
+
+data: {"type":"delta","delta":"4"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":" **"}
+
+data: {"type":"delta","delta":"طب"}
+
+data: {"type":"delta","delta":"قة"}
+
+data: {"type":"delta","delta":" العرض"}
+
+data: {"type":"delta","delta":" والت"}
+
+data: {"type":"delta","delta":"فاعل"}
+
+data: {"type":"delta","delta":"**"}
+
+data: {"type":"delta","delta":"  "}
+
+data: {"type":"delta","delta":"\n"}
+
+data: {"type":"delta","delta":"  "}
+
+data: {"type":"delta","delta":" -"}
+
+data: {"type":"delta","delta":" لوحة"}
+
+data: {"type":"delta","delta":" تحكم"}
+
+data: {"type":"delta","delta":" وي"}
+
+data: {"type":"delta","delta":"ب"}
+
+data: {"type":"delta","delta":" ت"}
+
+data: {"type":"delta","delta":"فاع"}
+
+data: {"type":"delta","delta":"لية"}
+
+data: {"type":"delta","delta":" ("}
+
+data: {"type":"delta","delta":"مثل"}
+
+data: {"type":"delta","delta":" Graf"}
+
+data: {"type":"delta","delta":"ana"}
+
+data: {"type":"delta","delta":" أو"}
+
+data: {"type":"delta","delta":" Stream"}
+
+data: {"type":"delta","delta":"lit"}
+
+data: {"type":"delta","delta":")"}
+
+data: {"type":"delta","delta":" تُ"}
+
+data: {"type":"delta","delta":"ظهر"}
+
+data: {"type":"delta","delta":" map"}
+
+data: {"type":"delta","delta":" heat"}
+
+data: {"type":"delta","delta":"map"}
+
+data: {"type":"delta","delta":" لخ"}
+
+data: {"type":"delta","delta":"طر"}
+
+data: {"type":"delta","delta":" الفي"}
+
+data: {"type":"delta","delta":"ضان"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" توق"}
+
+data: {"type":"delta","delta":"عات"}
+
+data: {"type":"delta","delta":" مستوى"}
+
+data: {"type":"delta","delta":" المياه"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" والإن"}
+
+data: {"type":"delta","delta":"ذ"}
+
+data: {"type":"delta","delta":"ارات"}
+
+data: {"type":"delta","delta":" الص"}
+
+data: {"type":"delta","delta":"ادرة"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":"  "}
+
+data: {"type":"delta","delta":"\n"}
+
+data: {"type":"delta","delta":"  "}
+
+data: {"type":"delta","delta":" -"}
+
+data: {"type":"delta","delta":" إ"}
+
+data: {"type":"delta","delta":"شع"}
+
+data: {"type":"delta","delta":"ارات"}
+
+data: {"type":"delta","delta":" عبر"}
+
+data: {"type":"delta","delta":" SMS"}
+
+data: {"type":"delta","delta":" وت"}
+
+data: {"type":"delta","delta":"طبي"}
+
+data: {"type":"delta","delta":"قات"}
+
+data: {"type":"delta","delta":" اله"}
+
+data: {"type":"delta","delta":"وات"}
+
+data: {"type":"delta","delta":"ف"}
+
+data: {"type":"delta","delta":" الذ"}
+
+data: {"type":"delta","delta":"كية"}
+
+data: {"type":"delta","delta":" للسل"}
+
+data: {"type":"delta","delta":"طات"}
+
+data: {"type":"delta","delta":" والم"}
+
+data: {"type":"delta","delta":"و"}
+
+data: {"type":"delta","delta":"اطنين"}
+
+data: {"type":"delta","delta":" في"}
+
+data: {"type":"delta","delta":" المناطق"}
+
+data: {"type":"delta","delta":" المع"}
+
+data: {"type":"delta","delta":"رض"}
+
+data: {"type":"delta","delta":"ة"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":"  "}
+
+data: {"type":"delta","delta":"\n"}
+
+data: {"type":"delta","delta":"  "}
+
+data: {"type":"delta","delta":" -"}
+
+data: {"type":"delta","delta":" و"}
+
+data: {"type":"delta","delta":"اجهة"}
+
+data: {"type":"delta","delta":" API"}
+
+data: {"type":"delta","delta":" لت"}
+
+data: {"type":"delta","delta":"ك"}
+
+data: {"type":"delta","delta":"امل"}
+
+data: {"type":"delta","delta":" النظام"}
+
+data: {"type":"delta","delta":" مع"}
+
+data: {"type":"delta","delta":" أنظمة"}
+
+data: {"type":"delta","delta":" الإن"}
+
+data: {"type":"delta","delta":"ذار"}
+
+data: {"type":"delta","delta":" الوطنية"}
+
+data: {"type":"delta","delta":" الحالية"}
+
+data: {"type":"delta","delta":" ("}
+
+data: {"type":"delta","delta":"مثل"}
+
+data: {"type":"delta","delta":" نظام"}
+
+data: {"type":"delta","delta":" الإن"}
+
+data: {"type":"delta","delta":"ذار"}
+
+data: {"type":"delta","delta":" المب"}
+
+data: {"type":"delta","delta":"كر"}
+
+data: {"type":"delta","delta":" للك"}
+
+data: {"type":"delta","delta":"وار"}
+
+data: {"type":"delta","delta":"ث"}
+
+data: {"type":"delta","delta":").\n\n"}
+
+data: {"type":"delta","delta":"5"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":" **"}
+
+data: {"type":"delta","delta":"طب"}
+
+data: {"type":"delta","delta":"قة"}
+
+data: {"type":"delta","delta":" التغ"}
+
+data: {"type":"delta","delta":"ذية"}
+
+data: {"type":"delta","delta":" الر"}
+
+data: {"type":"delta","delta":"اجعة"}
+
+data: {"type":"delta","delta":" والت"}
+
+data: {"type":"delta","delta":"ح"}
+
+data: {"type":"delta","delta":"سين"}
+
+data: {"type":"delta","delta":"**"}
+
+data: {"type":"delta","delta":"  "}
+
+data: {"type":"delta","delta":"\n"}
+
+data: {"type":"delta","delta":"  "}
+
+data: {"type":"delta","delta":" -"}
+
+data: {"type":"delta","delta":" بعد"}
+
+data: {"type":"delta","delta":" كل"}
+
+data: {"type":"delta","delta":" حدث"}
+
+data: {"type":"delta","delta":" في"}
+
+data: {"type":"delta","delta":"ضان"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" تُ"}
+
+data: {"type":"delta","delta":"جمع"}
+
+data: {"type":"delta","delta":" بيانات"}
+
+data: {"type":"delta","delta":" 실제"}
+
+data: {"type":"delta","delta":" ("}
+
+data: {"type":"delta","delta":"م"}
+
+data: {"type":"delta","delta":"ست"}
+
+data: {"type":"delta","delta":"وى"}
+
+data: {"type":"delta","delta":" المياه"}
+
+data: {"type":"delta","delta":" المت"}
+
+data: {"type":"delta","delta":"ص"}
+
+data: {"type":"delta","delta":"الح"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" الأ"}
+
+data: {"type":"delta","delta":"ضرار"}
+
+data: {"type":"delta","delta":")"}
+
+data: {"type":"delta","delta":" لت"}
+
+data: {"type":"delta","delta":"حديث"}
+
+data: {"type":"delta","delta":" وإ"}
+
+data: {"type":"delta","delta":"عادة"}
+
+data: {"type":"delta","delta":" تدريب"}
+
+data: {"type":"delta","delta":" النم"}
+
+data: {"type":"delta","delta":"اذج"}
+
+data: {"type":"delta","delta":" ("}
+
+data: {"type":"delta","delta":"تع"}
+
+data: {"type":"delta","delta":"لم"}
+
+data: {"type":"delta","delta":" مستمر"}
+
+data: {"type":"delta","delta":")."}
+
+data: {"type":"delta","delta":"  "}
+
+data: {"type":"delta","delta":"\n"}
+
+data: {"type":"delta","delta":"  "}
+
+data: {"type":"delta","delta":" -"}
+
+data: {"type":"delta","delta":" تحليل"}
+
+data: {"type":"delta","delta":" ما"}
+
+data: {"type":"delta","delta":" بعد"}
+
+data: {"type":"delta","delta":" الحدث"}
+
+data: {"type":"delta","delta":" لتحديد"}
+
+data: {"type":"delta","delta":" نقاط"}
+
+data: {"type":"delta","delta":" الض"}
+
+data: {"type":"delta","delta":"عف"}
+
+data: {"type":"delta","delta":" في"}
+
+data: {"type":"delta","delta":" الت"}
+
+data: {"type":"delta","delta":"وص"}
+
+data: {"type":"delta","delta":"يات"}
+
+data: {"type":"delta","delta":" وتح"}
+
+data: {"type":"delta","delta":"سين"}
+
+data: {"type":"delta","delta":"ها"}
+
+data: {"type":"delta","delta":".\n\n"}
+
+data: {"type":"delta","delta":"---\n\n"}
+
+data: {"type":"delta","delta":"##"}
+
+data: {"type":"delta","delta":" "}
+
+data: {"type":"delta","delta":"4"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":" مثال"}
+
+data: {"type":"delta","delta":" عملي"}
+
+data: {"type":"delta","delta":" قصير"}
+
+data: {"type":"delta","delta":" ("}
+
+data: {"type":"delta","delta":"سين"}
+
+data: {"type":"delta","delta":"اريو"}
+
+data: {"type":"delta","delta":" استخدام"}
+
+data: {"type":"delta","delta":")\n\n"}
+
+data: {"type":"delta","delta":"**"}
+
+data: {"type":"delta","delta":"ال"}
+
+data: {"type":"delta","delta":"وضع"}
+
+data: {"type":"delta","delta":":**"}
+
+data: {"type":"delta","delta":"  "}
+
+data: {"type":"delta","delta":"\n"}
+
+data: {"type":"delta","delta":"-"}
+
+data: {"type":"delta","delta":" توق"}
+
+data: {"type":"delta","delta":"عات"}
+
+data: {"type":"delta","delta":" نموذج"}
+
+data: {"type":"delta","delta":" ه"}
+
+data: {"type":"delta","delta":"طول"}
+
+data: {"type":"delta","delta":" الأمطار"}
+
+data: {"type":"delta","delta":" تشير"}
+
+data: {"type":"delta","delta":" إلى"}
+
+data: {"type":"delta","delta":" احتمال"}
+
+data: {"type":"delta","delta":" سقوط"}
+
+data: {"type":"delta","delta":" "}
+
+data: {"type":"delta","delta":"1"}
+
+data: {"type":"delta","delta":"5"}
+
+data: {"type":"delta","delta":"0"}
+
+data: {"type":"delta","delta":" "}
+
+data: {"type":"delta","delta":"مم"}
+
+data: {"type":"delta","delta":" من"}
+
+data: {"type":"delta","delta":" الأمطار"}
+
+data: {"type":"delta","delta":" خلال"}
+
+data: {"type":"delta","delta":" الـ"}
+
+data: {"type":"delta","delta":" "}
+
+data: {"type":"delta","delta":"4"}
+
+data: {"type":"delta","delta":"8"}
+
+data: {"type":"delta","delta":" "}
+
+data: {"type":"delta","delta":"س"}
+
+data: {"type":"delta","delta":"اعة"}
+
+data: {"type":"delta","delta":" القادمة"}
+
+data: {"type":"delta","delta":" في"}
+
+data: {"type":"delta","delta":" حوض"}
+
+data: {"type":"delta","delta":" نهر"}
+
+data: {"type":"delta","delta":" د"}
+
+data: {"type":"delta","delta":"جلة"}
+
+data: {"type":"delta","delta":" العلوي"}
+
+data: {"type":"delta","delta":" ("}
+
+data: {"type":"delta","delta":"من"}
+
+data: {"type":"delta","delta":"طقة"}
+
+data: {"type":"delta","delta":" الس"}
+
+data: {"type":"delta","delta":"لي"}
+
+data: {"type":"delta","delta":"مان"}
+
+data: {"type":"delta","delta":"ية"}
+
+data: {"type":"delta","delta":")."}
+
+data: {"type":"delta","delta":"  "}
+
+data: {"type":"delta","delta":"\n"}
+
+data: {"type":"delta","delta":"-"}
+
+data: {"type":"delta","delta":" بيانات"}
+
+data: {"type":"delta","delta":" مستوى"}
+
+data: {"type":"delta","delta":" المياه"}
+
+data: {"type":"delta","delta":" الحالية"}
+
+data: {"type":"delta","delta":" تظهر"}
+
+data: {"type":"delta","delta":" أن"}
+
+data: {"type":"delta","delta":" النهر"}
+
+data: {"type":"delta","delta":" عند"}
+
+data: {"type":"delta","delta":" محطة"}
+
+data: {"type":"delta","delta":" قياس"}
+
+data: {"type":"delta","delta":" “"}
+
+data: {"type":"delta","delta":"ك"}
+
+data: {"type":"delta","delta":"رك"}
+
+data: {"type":"delta","delta":"وك"}
+
+data: {"type":"delta","delta":"”"}
+
+data: {"type":"delta","delta":" يقرأ"}
+
+data: {"type":"delta","delta":" "}
+
+data: {"type":"delta","delta":"3"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":"2"}
+
+data: {"type":"delta","delta":" "}
+
+data: {"type":"delta","delta":"م"}
+
+data: {"type":"delta","delta":" ("}
+
+data: {"type":"delta","delta":"تحت"}
+
+data: {"type":"delta","delta":" مستوى"}
+
+data: {"type":"delta","delta":" الخطر"}
+
+data: {"type":"delta","delta":" البالغ"}
+
+data: {"type":"delta","delta":" "}
+
+data: {"type":"delta","delta":"4"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":"0"}
+
+data: {"type":"delta","delta":" "}
+
+data: {"type":"delta","delta":"م"}
+
+data: {"type":"delta","delta":")."}
+
+data: {"type":"delta","delta":"  "}
+
+data: {"type":"delta","delta":"\n\n"}
+
+data: {"type":"delta","delta":"**"}
+
+data: {"type":"delta","delta":"ما"}
+
+data: {"type":"delta","delta":" يفعل"}
+
+data: {"type":"delta","delta":"ه"}
+
+data: {"type":"delta","delta":" النظام"}
+
+data: {"type":"delta","delta":":**"}
+
+data: {"type":"delta","delta":"  "}
+
+data: {"type":"delta","delta":"\n"}
+
+data: {"type":"delta","delta":"1"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":" **"}
+
+data: {"type":"delta","delta":"تن"}
+
+data: {"type":"delta","delta":"ب"}
+
+data: {"type":"delta","delta":"ؤ"}
+
+data: {"type":"delta","delta":" التد"}
+
+data: {"type":"delta","delta":"فق"}
+
+data: {"type":"delta","delta":":**"}
+
+data: {"type":"delta","delta":" يستخدم"}
+
+data: {"type":"delta","delta":" نموذج"}
+
+data: {"type":"delta","delta":" تد"}
+
+data: {"type":"delta","delta":"فق"}
+
+data: {"type":"delta","delta":" المياه"}
+
+data: {"type":"delta","delta":" لت"}
+
+data: {"type":"delta","delta":"حويل"}
+
+data: {"type":"delta","delta":" ت"}
+
+data: {"type":"delta","delta":"وقع"}
+
+data: {"type":"delta","delta":" الأمطار"}
+
+data: {"type":"delta","delta":" إلى"}
+
+data: {"type":"delta","delta":" زيادة"}
+
+data: {"type":"delta","delta":" مت"}
+
+data: {"type":"delta","delta":"وق"}
+
+data: {"type":"delta","delta":"عة"}
+
+data: {"type":"delta","delta":" في"}
+
+data: {"type":"delta","delta":" مستوى"}
+
+data: {"type":"delta","delta":" النهر"}
+
+data: {"type":"delta","delta":" تبلغ"}
+
+data: {"type":"delta","delta":" +"}
+
+data: {"type":"delta","delta":"0"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":"9"}
+
+data: {"type":"delta","delta":" "}
+
+data: {"type":"delta","delta":"م"}
+
+data: {"type":"delta","delta":" خلال"}
+
+data: {"type":"delta","delta":" الـ"}
+
+data: {"type":"delta","delta":" "}
+
+data: {"type":"delta","delta":"2"}
+
+data: {"type":"delta","delta":"4"}
+
+data: {"type":"delta","delta":" "}
+
+data: {"type":"delta","delta":"س"}
+
+data: {"type":"delta","delta":"اعة"}
+
+data: {"type":"delta","delta":" القادمة"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" مما"}
+
+data: {"type":"delta","delta":" ي"}
+
+data: {"type":"delta","delta":"رفع"}
+
+data: {"type":"delta","delta":" المستوى"}
+
+data: {"type":"delta","delta":" المتوقع"}
+
+data: {"type":"delta","delta":" إلى"}
+
+data: {"type":"delta","delta":" ≈"}
+
+data: {"type":"delta","delta":" "}
+
+data: {"type":"delta","delta":"4"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":"1"}
+
+data: {"type":"delta","delta":" "}
+
+data: {"type":"delta","delta":"م"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":"  "}
+
+data: {"type":"delta","delta":"\n"}
+
+data: {"type":"delta","delta":"2"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":" **"}
+
+data: {"type":"delta","delta":"تص"}
+
+data: {"type":"delta","delta":"نيف"}
+
+data: {"type":"delta","delta":" الخطر"}
+
+data: {"type":"delta","delta":":**"}
+
+data: {"type":"delta","delta":" ي"}
+
+data: {"type":"delta","delta":"دم"}
+
+data: {"type":"delta","delta":"ج"}
+
+data: {"type":"delta","delta":" النموذج"}
+
+data: {"type":"delta","delta":" مستوى"}
+
+data: {"type":"delta","delta":" المياه"}
+
+data: {"type":"delta","delta":" المتوقع"}
+
+data: {"type":"delta","delta":" مع"}
+
+data: {"type":"delta","delta":" ميل"}
+
+data: {"type":"delta","delta":" النهر"}
+
+data: {"type":"delta","delta":" واست"}
+
+data: {"type":"delta","delta":"خدام"}
+
+data: {"type":"delta","delta":"ات"}
+
+data: {"type":"delta","delta":" الأراضي"}
+
+data: {"type":"delta","delta":" ("}
+
+data: {"type":"delta","delta":"من"}
+
+data: {"type":"delta","delta":"اطق"}
+
+data: {"type":"delta","delta":" زر"}
+
+data: {"type":"delta","delta":"اعية"}
+
+data: {"type":"delta","delta":" منخفضة"}
+
+data: {"type":"delta","delta":")"}
+
+data: {"type":"delta","delta":" وي"}
+
+data: {"type":"delta","delta":"ص"}
+
+data: {"type":"delta","delta":"نف"}
+
+data: {"type":"delta","delta":" الخطر"}
+
+data: {"type":"delta","delta":" على"}
+
+data: {"type":"delta","delta":" أنه"}
+
+data: {"type":"delta","delta":" **"}
+
+data: {"type":"delta","delta":"ع"}
+
+data: {"type":"delta","delta":"الي"}
+
+data: {"type":"delta","delta":"**"}
+
+data: {"type":"delta","delta":" في"}
+
+data: {"type":"delta","delta":"segment"}
+
+data: {"type":"delta","delta":" من"}
+
+data: {"type":"delta","delta":" النهر"}
+
+data: {"type":"delta","delta":" بين"}
+
+data: {"type":"delta","delta":" ك"}
+
+data: {"type":"delta","delta":"رك"}
+
+data: {"type":"delta","delta":"وك"}
+
+data: {"type":"delta","delta":" وال"}
+
+data: {"type":"delta","delta":"فل"}
+
+data: {"type":"delta","delta":"وجة"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":"  "}
+
+data: {"type":"delta","delta":"\n"}
+
+data: {"type":"delta","delta":"3"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":" **"}
+
+data: {"type":"delta","delta":"إ"}
+
+data: {"type":"delta","delta":"صدار"}
+
+data: {"type":"delta","delta":" الإن"}
+
+data: {"type":"delta","delta":"ذار"}
+
+data: {"type":"delta","delta":":**"}
+
+data: {"type":"delta","delta":" ير"}
+
+data: {"type":"delta","delta":"سل"}
+
+data: {"type":"delta","delta":" النظام"}
+
+data: {"type":"delta","delta":" إن"}
+
+data: {"type":"delta","delta":"ذار"}
+
+data: {"type":"delta","delta":"ًا"}
+
+data: {"type":"delta","delta":" تلق"}
+
+data: {"type":"delta","delta":"ائي"}
+
+data: {"type":"delta","delta":"ًا"}
+
+data: {"type":"delta","delta":" إلى"}
+
+data: {"type":"delta","delta":":"}
+
+data: {"type":"delta","delta":"  "}
+
+data: {"type":"delta","delta":"\n"}
+
+data: {"type":"delta","delta":"  "}
+
+data: {"type":"delta","delta":" -"}
+
+data: {"type":"delta","delta":" مد"}
+
+data: {"type":"delta","delta":"يرية"}
+
+data: {"type":"delta","delta":" الموارد"}
+
+data: {"type":"delta","delta":" الم"}
+
+data: {"type":"delta","delta":"ائية"}
+
+data: {"type":"delta","delta":" في"}
+
+data: {"type":"delta","delta":" محافظة"}
+
+data: {"type":"delta","delta":" ك"}
+
+data: {"type":"delta","delta":"رك"}
+
+data: {"type":"delta","delta":"وك"}
+
+data: {"type":"delta","delta":" ("}
+
+data: {"type":"delta","delta":"لت"}
+
+data: {"type":"delta","delta":"حض"}
+
+data: {"type":"delta","delta":"ير"}
+
+data: {"type":"delta","delta":" فتح"}
+
+data: {"type":"delta","delta":" الس"}
+
+data: {"type":"delta","delta":"د"}
+
+data: {"type":"delta","delta":" الجز"}
+
+data: {"type":"delta","delta":"ئي"}
+
+data: {"type":"delta","delta":")."}
+
+data: {"type":"delta","delta":"  "}
+
+data: {"type":"delta","delta":"\n"}
+
+data: {"type":"delta","delta":"  "}
+
+data: {"type":"delta","delta":" -"}
+
+data: {"type":"delta","delta":" الدفاع"}
+
+data: {"type":"delta","delta":" المدني"}
+
+data: {"type":"delta","delta":" ("}
+
+data: {"type":"delta","delta":"لت"}
+
+data: {"type":"delta","delta":"جه"}
+
+data: {"type":"delta","delta":"يز"}
+
+data: {"type":"delta","delta":" فرق"}
+
+data: {"type":"delta","delta":" الإ"}
+
+data: {"type":"delta","delta":"خل"}
+
+data: {"type":"delta","delta":"اء"}
+
+data: {"type":"delta","delta":" في"}
+
+data: {"type":"delta","delta":" القرى"}
+
+data: {"type":"delta","delta":" الق"}
+
+data: {"type":"delta","delta":"ريبة"}
+
+data: {"type":"delta","delta":")."}
+
+data: {"type":"delta","delta":"  "}
+
+data: {"type":"delta","delta":"\n"}
+
+data: {"type":"delta","delta":"  "}
+
+data: {"type":"delta","delta":" -"}
+
+data: {"type":"delta","delta":" المواطنين"}
+
+data: {"type":"delta","delta":" عبر"}
+
+data: {"type":"delta","delta":" SMS"}
+
+data: {"type":"delta","delta":" في"}
+
+data: {"type":"delta","delta":" المناطق"}
+
+data: {"type":"delta","delta":" المع"}
+
+data: {"type":"delta","delta":"رض"}
+
+data: {"type":"delta","delta":"ة"}
+
+data: {"type":"delta","delta":" ("}
+
+data: {"type":"delta","delta":"تح"}
+
+data: {"type":"delta","delta":"ذ"}
+
+data: {"type":"delta","delta":"ير"}
+
+data: {"type":"delta","delta":" من"}
+
+data: {"type":"delta","delta":" ارتفاع"}
+
+data: {"type":"delta","delta":" من"}
+
+data: {"type":"delta","delta":"سوب"}
+
+data: {"type":"delta","delta":" المياه"}
+
+data: {"type":"delta","delta":" وإ"}
+
+data: {"type":"delta","delta":"رش"}
+
+data: {"type":"delta","delta":"ادات"}
+
+data: {"type":"delta","delta":" لل"}
+
+data: {"type":"delta","delta":"انت"}
+
+data: {"type":"delta","delta":"قال"}
+
+data: {"type":"delta","delta":" إلى"}
+
+data: {"type":"delta","delta":" أماكن"}
+
+data: {"type":"delta","delta":" أعلى"}
+
+data: {"type":"delta","delta":")."}
+
+data: {"type":"delta","delta":"  "}
+
+data: {"type":"delta","delta":"\n"}
+
+data: {"type":"delta","delta":"4"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":" **"}
+
+data: {"type":"delta","delta":"ت"}
+
+data: {"type":"delta","delta":"وص"}
+
+data: {"type":"delta","delta":"ية"}
+
+data: {"type":"delta","delta":" الإ"}
+
+data: {"type":"delta","delta":"جراء"}
+
+data: {"type":"delta","delta":":**"}
+
+data: {"type":"delta","delta":" يق"}
+
+data: {"type":"delta","delta":"ترح"}
+
+data: {"type":"delta","delta":" نظام"}
+
+data: {"type":"delta","delta":" الت"}
+
+data: {"type":"delta","delta":"وص"}
+
+data: {"type":"delta","delta":"ية"}
+
+data: {"type":"delta","delta":" فتح"}
+
+data: {"type":"delta","delta":" بو"}
+
+data: {"type":"delta","delta":"ابة"}
+
+data: {"type":"delta","delta":" الس"}
+
+data: {"type":"delta","delta":"د"}
+
+data: {"type":"delta","delta":" بنسبة"}
+
+data: {"type":"delta","delta":" "}
+
+data: {"type":"delta","delta":"2"}
+
+data: {"type":"delta","delta":"0"}
+
+data: {"type":"delta","delta":" "}
+
+data: {"type":"delta","delta":"%"}
+
+data: {"type":"delta","delta":" لتق"}
+
+data: {"type":"delta","delta":"ليل"}
+
+data: {"type":"delta","delta":" الذ"}
+
+data: {"type":"delta","delta":"روة"}
+
+data: {"type":"delta","delta":" المت"}
+
+data: {"type":"delta","delta":"وق"}
+
+data: {"type":"delta","delta":"عة"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" وت"}
+
+data: {"type":"delta","delta":"وزيع"}
+
+data: {"type":"delta","delta":" أك"}
+
+data: {"type":"delta","delta":"ي"}
+
+data: {"type":"delta","delta":"اس"}
+
+data: {"type":"delta","delta":" الر"}
+
+data: {"type":"delta","delta":"مل"}
+
+data: {"type":"delta","delta":" على"}
+
+data: {"type":"delta","delta":" نقاط"}
+
+data: {"type":"delta","delta":" الض"}
+
+data: {"type":"delta","delta":"عف"}
+
+data: {"type":"delta","delta":" المعروفة"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":"  "}
+
+data: {"type":"delta","delta":"\n"}
+
+data: {"type":"delta","delta":"5"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":" **"}
+
+data: {"type":"delta","delta":"الم"}
+
+data: {"type":"delta","delta":"تاب"}
+
+data: {"type":"delta","delta":"عة"}
+
+data: {"type":"delta","delta":":**"}
+
+data: {"type":"delta","delta":" بعد"}
+
+data: {"type":"delta","delta":" الحدث"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" يق"}
+
+data: {"type":"delta","delta":"ارن"}
+
+data: {"type":"delta","delta":" النظام"}
+
+data: {"type":"delta","delta":" المستوى"}
+
+data: {"type":"delta","delta":" الفع"}
+
+data: {"type":"delta","delta":"لي"}
+
+data: {"type":"delta","delta":" المق"}
+
+data: {"type":"delta","delta":"اس"}
+
+data: {"type":"delta","delta":" ("}
+
+data: {"type":"delta","delta":"مثل"}
+
+data: {"type":"delta","delta":"اً"}
+
+data: {"type":"delta","delta":" "}
+
+data: {"type":"delta","delta":"4"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":"0"}
+
+data: {"type":"delta","delta":" "}
+
+data: {"type":"delta","delta":"م"}
+
+data: {"type":"delta","delta":")"}
+
+data: {"type":"delta","delta":" بالت"}
+
+data: {"type":"delta","delta":"وقع"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" وي"}
+
+data: {"type":"delta","delta":"عدل"}
+
+data: {"type":"delta","delta":" أو"}
+
+data: {"type":"delta","delta":"زان"}
+
+data: {"type":"delta","delta":" نموذج"}
+
+data: {"type":"delta","delta":" تد"}
+
+data: {"type":"delta","delta":"فق"}
+
+data: {"type":"delta","delta":" المياه"}
+
+data: {"type":"delta","delta":" لتح"}
+
+data: {"type":"delta","delta":"سين"}
+
+data: {"type":"delta","delta":" الد"}
+
+data: {"type":"delta","delta":"قة"}
+
+data: {"type":"delta","delta":" في"}
+
+data: {"type":"delta","delta":" المستقبل"}
+
+data: {"type":"delta","delta":".\n\n"}
+
+data: {"type":"delta","delta":"---\n\n"}
+
+data: {"type":"delta","delta":"##"}
+
+data: {"type":"delta","delta":" "}
+
+data: {"type":"delta","delta":"5"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":" الف"}
+
+data: {"type":"delta","delta":"و"}
+
+data: {"type":"delta","delta":"ائد"}
+
+data: {"type":"delta","delta":" المت"}
+
+data: {"type":"delta","delta":"وق"}
+
+data: {"type":"delta","delta":"عة"}
+
+data: {"type":"delta","delta":"\n"}
+
+data: {"type":"delta","delta":"-"}
+
+data: {"type":"delta","delta":" **"}
+
+data: {"type":"delta","delta":"تق"}
+
+data: {"type":"delta","delta":"ليل"}
+
+data: {"type":"delta","delta":" الخ"}
+
+data: {"type":"delta","delta":"س"}
+
+data: {"type":"delta","delta":"ائر"}
+
+data: {"type":"delta","delta":" البشرية"}
+
+data: {"type":"delta","delta":" والم"}
+
+data: {"type":"delta","delta":"ادية"}
+
+data: {"type":"delta","delta":"**"}
+
+data: {"type":"delta","delta":" عبر"}
+
+data: {"type":"delta","delta":" إن"}
+
+data: {"type":"delta","delta":"ذار"}
+
+data: {"type":"delta","delta":" مبكر"}
+
+data: {"type":"delta","delta":" دقيق"}
+
+data: {"type":"delta","delta":" ("}
+
+data: {"type":"delta","delta":"تح"}
+
+data: {"type":"delta","delta":"سين"}
+
+data: {"type":"delta","delta":" زمن"}
+
+data: {"type":"delta","delta":" الاست"}
+
+data: {"type":"delta","delta":"جابة"}
+
+data: {"type":"delta","delta":" من"}
+
+data: {"type":"delta","delta":" ساعات"}
+
+data: {"type":"delta","delta":" إلى"}
+
+data: {"type":"delta","delta":" أيام"}
+
+data: {"type":"delta","delta":")."}
+
+data: {"type":"delta","delta":"  "}
+
+data: {"type":"delta","delta":"\n"}
+
+data: {"type":"delta","delta":"-"}
+
+data: {"type":"delta","delta":" **"}
+
+data: {"type":"delta","delta":"تح"}
+
+data: {"type":"delta","delta":"سين"}
+
+data: {"type":"delta","delta":" إدارة"}
+
+data: {"type":"delta","delta":" الموارد"}
+
+data: {"type":"delta","delta":" الم"}
+
+data: {"type":"delta","delta":"ائية"}
+
+data: {"type":"delta","delta":"**"}
+
+data: {"type":"delta","delta":" بت"}
+
+data: {"type":"delta","delta":"ح"}
+
+data: {"type":"delta","delta":"سين"}
+
+data: {"type":"delta","delta":" تشغيل"}
+
+data: {"type":"delta","delta":" الس"}
+
+data: {"type":"delta","delta":"دود"}
+
+data: {"type":"delta","delta":" والق"}
+
+data: {"type":"delta","delta":"ن"}
+
+data: {"type":"delta","delta":"وات"}
+
+data: {"type":"delta","delta":" بناءً"}
+
+data: {"type":"delta","delta":" على"}
+
+data: {"type":"delta","delta":" توق"}
+
+data: {"type":"delta","delta":"عات"}
+
+data: {"type":"delta","delta":" حقيقية"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":"  "}
+
+data: {"type":"delta","delta":"\n"}
+
+data: {"type":"delta","delta":"-"}
+
+data: {"type":"delta","delta":" **"}
+
+data: {"type":"delta","delta":"د"}
+
+data: {"type":"delta","delta":"عم"}
+
+data: {"type":"delta","delta":" التخطيط"}
+
+data: {"type":"delta","delta":" العمر"}
+
+data: {"type":"delta","delta":"اني"}
+
+data: {"type":"delta","delta":"**"}
+
+data: {"type":"delta","delta":" من"}
+
+data: {"type":"delta","delta":" خلال"}
+
+data: {"type":"delta","delta":" توفير"}
+
+data: {"type":"delta","delta":" خر"}
+
+data: {"type":"delta","delta":"ائط"}
+
+data: {"type":"delta","delta":" خطر"}
+
+data: {"type":"delta","delta":" الفي"}
+
+data: {"type":"delta","delta":"ضان"}
+
+data: {"type":"delta","delta":" للاست"}
+
+data: {"type":"delta","delta":"خدام"}
+
+data: {"type":"delta","delta":" في"}
+
+data: {"type":"delta","delta":" إصدار"}
+
+data: {"type":"delta","delta":" تر"}
+
+data: {"type":"delta","delta":"اخ"}
+
+data: {"type":"delta","delta":"يص"}
+
+data: {"type":"delta","delta":" البناء"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":"  "}
+
+data: {"type":"delta","delta":"\n"}
+
+data: {"type":"delta","delta":"-"}
+
+data: {"type":"delta","delta":" **"}
+
+data: {"type":"delta","delta":"تع"}
+
+data: {"type":"delta","delta":"زيز"}
+
+data: {"type":"delta","delta":" القدرة"}
+
+data: {"type":"delta","delta":" على"}
+
+data: {"type":"delta","delta":" الص"}
+
+data: {"type":"delta","delta":"م"}
+
+data: {"type":"delta","delta":"ود"}
+
+data: {"type":"delta","delta":" المج"}
+
+data: {"type":"delta","delta":"تم"}
+
+data: {"type":"delta","delta":"عي"}
+
+data: {"type":"delta","delta":"**"}
+
+data: {"type":"delta","delta":" عبر"}
+
+data: {"type":"delta","delta":" إ"}
+
+data: {"type":"delta","delta":"شر"}
+
+data: {"type":"delta","delta":"اك"}
+
+data: {"type":"delta","delta":" المواطنين"}
+
+data: {"type":"delta","delta":" في"}
+
+data: {"type":"delta","delta":" نظام"}
+
+data: {"type":"delta","delta":" الإن"}
+
+data: {"type":"delta","delta":"ذار"}
+
+data: {"type":"delta","delta":" وت"}
+
+data: {"type":"delta","delta":"وفير"}
+
+data: {"type":"delta","delta":" إ"}
+
+data: {"type":"delta","delta":"رش"}
+
+data: {"type":"delta","delta":"ادات"}
+
+data: {"type":"delta","delta":" واضحة"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":"  "}
+
+data: {"type":"delta","delta":"\n"}
+
+data: {"type":"delta","delta":"-"}
+
+data: {"type":"delta","delta":" **"}
+
+data: {"type":"delta","delta":"خلق"}
+
+data: {"type":"delta","delta":" فرص"}
+
+data: {"type":"delta","delta":" عمل"}
+
+data: {"type":"delta","delta":" وتق"}
+
+data: {"type":"delta","delta":"نية"}
+
+data: {"type":"delta","delta":"**"}
+
+data: {"type":"delta","delta":" مح"}
+
+data: {"type":"delta","delta":"لية"}
+
+data: {"type":"delta","delta":" ("}
+
+data: {"type":"delta","delta":"مه"}
+
+data: {"type":"delta","delta":"ند"}
+
+data: {"type":"delta","delta":"سين"}
+
+data: {"type":"delta","delta":" بيانات"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" مت"}
+
+data: {"type":"delta","delta":"خصص"}
+
+data: {"type":"delta","delta":"ين"}
+
+data: {"type":"delta","delta":" في"}
+
+data: {"type":"delta","delta":" الاست"}
+
+data: {"type":"delta","delta":"ش"}
+
+data: {"type":"delta","delta":"عار"}
+
+data: {"type":"delta","delta":" عن"}
+
+data: {"type":"delta","delta":" بعد"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" وف"}
+
+data: {"type":"delta","delta":"نيين"}
+
+data: {"type":"delta","delta":" لص"}
+
+data: {"type":"delta","delta":"يانة"}
+
+data: {"type":"delta","delta":" أجهزة"}
+
+data: {"type":"delta","delta":" Io"}
+
+data: {"type":"delta","delta":"T"}
+
+data: {"type":"delta","delta":").\n\n"}
+
+data: {"type":"delta","delta":"---\n\n"}
+
+data: {"type":"delta","delta":"##"}
+
+data: {"type":"delta","delta":" "}
+
+data: {"type":"delta","delta":"6"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":" خطوات"}
+
+data: {"type":"delta","delta":" التنفيذ"}
+
+data: {"type":"delta","delta":" الأولية"}
+
+data: {"type":"delta","delta":" ("}
+
+data: {"type":"delta","delta":"خ"}
+
+data: {"type":"delta","delta":"طة"}
+
+data: {"type":"delta","delta":" طريق"}
+
+data: {"type":"delta","delta":" أول"}
+
+data: {"type":"delta","delta":"ية"}
+
+data: {"type":"delta","delta":")\n"}
+
+data: {"type":"delta","delta":"|"}
+
+data: {"type":"delta","delta":" المرحلة"}
+
+data: {"type":"delta","delta":" |"}
+
+data: {"type":"delta","delta":" الم"}
+
+data: {"type":"delta","delta":"دة"}
+
+data: {"type":"delta","delta":" التق"}
+
+data: {"type":"delta","delta":"ريبية"}
+
+data: {"type":"delta","delta":" |"}
+
+data: {"type":"delta","delta":" الأنشطة"}
+
+data: {"type":"delta","delta":" الرئيسية"}
+
+data: {"type":"delta","delta":" |\n"}
+
+data: {"type":"delta","delta":"|"}
+
+data: {"type":"delta","delta":"--------"}
+
+data: {"type":"delta","delta":"|"}
+
+data: {"type":"delta","delta":"----------------"}
+
+data: {"type":"delta","delta":"|"}
+
+data: {"type":"delta","delta":"----------------"}
+
+data: {"type":"delta","delta":"---"}
+
+data: {"type":"delta","delta":"|\n"}
+
+data: {"type":"delta","delta":"|"}
+
+data: {"type":"delta","delta":" **"}
+
+data: {"type":"delta","delta":"1"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":" الت"}
+
+data: {"type":"delta","delta":"قييم"}
+
+data: {"type":"delta","delta":" و"}
+
+data: {"type":"delta","delta":"جمع"}
+
+data: {"type":"delta","delta":" المت"}
+
+data: {"type":"delta","delta":"طلبات"}
+
+data: {"type":"delta","delta":"**"}
+
+data: {"type":"delta","delta":" |"}
+
+data: {"type":"delta","delta":" "}
+
+data: {"type":"delta","delta":"1"}
+
+data: {"type":"delta","delta":"‑"}
+
+data: {"type":"delta","delta":"2"}
+
+data: {"type":"delta","delta":" شهر"}
+
+data: {"type":"delta","delta":" |"}
+
+data: {"type":"delta","delta":" اجتماع"}
+
+data: {"type":"delta","delta":" مع"}
+
+data: {"type":"delta","delta":" الجه"}
+
+data: {"type":"delta","delta":"ات"}
+
+data: {"type":"delta","delta":" المع"}
+
+data: {"type":"delta","delta":"نية"}
+
+data: {"type":"delta","delta":" ("}
+
+data: {"type":"delta","delta":"الم"}
+
+data: {"type":"delta","delta":"وارد"}
+
+data: {"type":"delta","delta":" الم"}
+
+data: {"type":"delta","delta":"ائية"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" الدفاع"}
+
+data: {"type":"delta","delta":" المدني"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" البل"}
+
+data: {"type":"delta","delta":"دي"}
+
+data: {"type":"delta","delta":"ات"}
+
+data: {"type":"delta","delta":")،"}
+
+data: {"type":"delta","delta":" تحديد"}
+
+data: {"type":"delta","delta":" نقاط"}
+
+data: {"type":"delta","delta":" قياس"}
+
+data: {"type":"delta","delta":" موجودة"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" تقييم"}
+
+data: {"type":"delta","delta":" الف"}
+
+data: {"type":"delta","delta":"ج"}
+
+data: {"type":"delta","delta":"وات"}
+
+data: {"type":"delta","delta":" في"}
+
+data: {"type":"delta","delta":" البيانات"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":" |\n"}
+
+data: {"type":"delta","delta":"|"}
+
+data: {"type":"delta","delta":" **"}
+
+data: {"type":"delta","delta":"2"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":" نشر"}
+
+data: {"type":"delta","delta":" البنية"}
+
+data: {"type":"delta","delta":" التح"}
+
+data: {"type":"delta","delta":"تية"}
+
+data: {"type":"delta","delta":" لل"}
+
+data: {"type":"delta","delta":"بي"}
+
+data: {"type":"delta","delta":"انات"}
+
+data: {"type":"delta","delta":"**"}
+
+data: {"type":"delta","delta":" |"}
+
+data: {"type":"delta","delta":" "}
+
+data: {"type":"delta","delta":"2"}
+
+data: {"type":"delta","delta":"‑"}
+
+data: {"type":"delta","delta":"3"}
+
+data: {"type":"delta","delta":" شهر"}
+
+data: {"type":"delta","delta":" |"}
+
+data: {"type":"delta","delta":" تركيب"}
+
+data: {"type":"delta","delta":" مح"}
+
+data: {"type":"delta","delta":"طات"}
+
+data: {"type":"delta","delta":" Io"}
+
+data: {"type":"delta","delta":"T"}
+
+data: {"type":"delta","delta":" ل"}
+
+data: {"type":"delta","delta":"قياس"}
+
+data: {"type":"delta","delta":" مستوى"}
+
+data: {"type":"delta","delta":" المياه"}
+
+data: {"type":"delta","delta":" في"}
+
+data: {"type":"delta","delta":" نقاط"}
+
+data: {"type":"delta","delta":" حر"}
+
+data: {"type":"delta","delta":"جة"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" إعداد"}
+
+data: {"type":"delta","delta":" خ"}
+
+data: {"type":"delta","delta":"ادم"}
+
+data: {"type":"delta","delta":" س"}
+
+data: {"type":"delta","delta":"حاب"}
+
+data: {"type":"delta","delta":"ي"}
+
+data: {"type":"delta","delta":" أو"}
+
+data: {"type":"delta","delta":" مح"}
+
+data: {"type":"delta","delta":"لي"}
+
+data: {"type":"delta","delta":" لت"}
+
+data: {"type":"delta","delta":"خ"}
+
+data: {"type":"delta","delta":"زين"}
+
+data: {"type":"delta","delta":" البيانات"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" ربط"}
+
+data: {"type":"delta","delta":" مع"}
+
+data: {"type":"delta","delta":" مصادر"}
+
+data: {"type":"delta","delta":" الأق"}
+
+data: {"type":"delta","delta":"مار"}
+
+data: {"type":"delta","delta":" الصناعية"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":" |\n"}
+
+data: {"type":"delta","delta":"|"}
+
+data: {"type":"delta","delta":" **"}
+
+data: {"type":"delta","delta":"3"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":" تطوير"}
+
+data: {"type":"delta","delta":" النم"}
+
+data: {"type":"delta","delta":"اذج"}
+
+data: {"type":"delta","delta":" الأولية"}
+
+data: {"type":"delta","delta":"**"}
+
+data: {"type":"delta","delta":" |"}
+
+data: {"type":"delta","delta":" "}
+
+data: {"type":"delta","delta":"3"}
+
+data: {"type":"delta","delta":"‑"}
+
+data: {"type":"delta","delta":"4"}
+
+data: {"type":"delta","delta":" شهر"}
+
+data: {"type":"delta","delta":" |"}
+
+data: {"type":"delta","delta":" جمع"}
+
+data: {"type":"delta","delta":" البيانات"}
+
+data: {"type":"delta","delta":" التاريخية"}
+
+data: {"type":"delta","delta":" ("}
+
+data: {"type":"delta","delta":"أم"}
+
+data: {"type":"delta","delta":"طار"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" مستويات"}
+
+data: {"type":"delta","delta":" مياه"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" أحداث"}
+
+data: {"type":"delta","delta":" في"}
+
+data: {"type":"delta","delta":"ضان"}
+
+data: {"type":"delta","delta":" س"}
+
+data: {"type":"delta","delta":"ابقة"}
+
+data: {"type":"delta","delta":")،"}
+
+data: {"type":"delta","delta":" بناء"}
+
+data: {"type":"delta","delta":" وت"}
+
+data: {"type":"delta","delta":"ج"}
+
+data: {"type":"delta","delta":"ربة"}
+
+data: {"type":"delta","delta":" نم"}
+
+data: {"type":"delta","delta":"اذج"}
+
+data: {"type":"delta","delta":" ت"}
+
+data: {"type":"delta","delta":"وقع"}
+
+data: {"type":"delta","delta":" الأمطار"}
+
+data: {"type":"delta","delta":" وتد"}
+
+data: {"type":"delta","delta":"فق"}
+
+data: {"type":"delta","delta":" المياه"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" اختبار"}
+
+data: {"type":"delta","delta":" تصنيف"}
+
+data: {"type":"delta","delta":" الخطر"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":" |\n"}
+
+data: {"type":"delta","delta":"|"}
+
+data: {"type":"delta","delta":" **"}
+
+data: {"type":"delta","delta":"4"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":" بناء"}
+
+data: {"type":"delta","delta":" لوحة"}
+
+data: {"type":"delta","delta":" التحكم"}
+
+data: {"type":"delta","delta":" والإن"}
+
+data: {"type":"delta","delta":"ذ"}
+
+data: {"type":"delta","delta":"ارات"}
+
+data: {"type":"delta","delta":"**"}
+
+data: {"type":"delta","delta":" |"}
+
+data: {"type":"delta","delta":" "}
+
+data: {"type":"delta","delta":"2"}
+
+data: {"type":"delta","delta":"‑"}
+
+data: {"type":"delta","delta":"3"}
+
+data: {"type":"delta","delta":" شهر"}
+
+data: {"type":"delta","delta":" |"}
+
+data: {"type":"delta","delta":" تصميم"}
+
+data: {"type":"delta","delta":" و"}
+
+data: {"type":"delta","delta":"اجهة"}
+
+data: {"type":"delta","delta":" عرض"}
+
+data: {"type":"delta","delta":"/map"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" إعداد"}
+
+data: {"type":"delta","delta":" نظام"}
+
+data: {"type":"delta","delta":" إرسال"}
+
+data: {"type":"delta","delta":" SMS"}
+
+data: {"type":"delta","delta":" وتن"}
+
+data: {"type":"delta","delta":"بيه"}
+
+data: {"type":"delta","delta":"ات"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" وضع"}
+
+data: {"type":"delta","delta":" قواعد"}
+
+data: {"type":"delta","delta":" الت"}
+
+data: {"type":"delta","delta":"وص"}
+
+data: {"type":"delta","delta":"ية"}
+
+data: {"type":"delta","delta":" الأولية"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":" |\n"}
+
+data: {"type":"delta","delta":"|"}
+
+data: {"type":"delta","delta":" **"}
+
+data: {"type":"delta","delta":"5"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":" التج"}
+
+data: {"type":"delta","delta":"ريب"}
+
+data: {"type":"delta","delta":" الم"}
+
+data: {"type":"delta","delta":"يد"}
+
+data: {"type":"delta","delta":"اني"}
+
+data: {"type":"delta","delta":" ("}
+
+data: {"type":"delta","delta":"Pi"}
+
+data: {"type":"delta","delta":"​"}
+
+data: {"type":"delta","delta":"lot"}
+
+data: {"type":"delta","delta":")**"}
+
+data: {"type":"delta","delta":" |"}
+
+data: {"type":"delta","delta":" "}
+
+data: {"type":"delta","delta":"3"}
+
+data: {"type":"delta","delta":"‑"}
+
+data: {"type":"delta","delta":"4"}
+
+data: {"type":"delta","delta":" شهر"}
+
+data: {"type":"delta","delta":" |"}
+
+data: {"type":"delta","delta":" اختيار"}
+
+data: {"type":"delta","delta":" حوض"}
+
+data: {"type":"delta","delta":" فر"}
+
+data: {"type":"delta","delta":"عي"}
+
+data: {"type":"delta","delta":" ("}
+
+data: {"type":"delta","delta":"مثل"}
+
+data: {"type":"delta","delta":"اً"}
+
+data: {"type":"delta","delta":" حوض"}
+
+data: {"type":"delta","delta":" نهر"}
+
+data: {"type":"delta","delta":" د"}
+
+data: {"type":"delta","delta":"جلة"}
+
+data: {"type":"delta","delta":" بين"}
+
+data: {"type":"delta","delta":" الس"}
+
+data: {"type":"delta","delta":"لي"}
+
+data: {"type":"delta","delta":"مان"}
+
+data: {"type":"delta","delta":"ية"}
+
+data: {"type":"delta","delta":" وك"}
+
+data: {"type":"delta","delta":"رك"}
+
+data: {"type":"delta","delta":"وك"}
+
+data: {"type":"delta","delta":")"}
+
+data: {"type":"delta","delta":" لتش"}
+
+data: {"type":"delta","delta":"غيل"}
+
+data: {"type":"delta","delta":" النظام"}
+
+data: {"type":"delta","delta":" في"}
+
+data: {"type":"delta","delta":" وضع"}
+
+data: {"type":"delta","delta":" الاخ"}
+
+data: {"type":"delta","delta":"تبار"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" جمع"}
+
+data: {"type":"delta","delta":" تغ"}
+
+data: {"type":"delta","delta":"ذية"}
+
+data: {"type":"delta","delta":" ر"}
+
+data: {"type":"delta","delta":"اجعة"}
+
+data: {"type":"delta","delta":" من"}
+
+data: {"type":"delta","delta":" المستخدم"}
+
+data: {"type":"delta","delta":"ين"}
+
+data: {"type":"delta","delta":" النهائي"}
+
+data: {"type":"delta","delta":"ين"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":" |\n"}
+
+data: {"type":"delta","delta":"|"}
+
+data: {"type":"delta","delta":" **"}
+
+data: {"type":"delta","delta":"6"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":" التح"}
+
+data: {"type":"delta","delta":"سين"}
+
+data: {"type":"delta","delta":" والن"}
+
+data: {"type":"delta","delta":"شر"}
+
+data: {"type":"delta","delta":" الكامل"}
+
+data: {"type":"delta","delta":"**"}
+
+data: {"type":"delta","delta":" |"}
+
+data: {"type":"delta","delta":" "}
+
+data: {"type":"delta","delta":"2"}
+
+data: {"type":"delta","delta":"‑"}
+
+data: {"type":"delta","delta":"3"}
+
+data: {"type":"delta","delta":" شهر"}
+
+data: {"type":"delta","delta":" |"}
+
+data: {"type":"delta","delta":" تحسين"}
+
+data: {"type":"delta","delta":" النم"}
+
+data: {"type":"delta","delta":"اذج"}
+
+data: {"type":"delta","delta":" بناءً"}
+
+data: {"type":"delta","delta":" على"}
+
+data: {"type":"delta","delta":" نتائج"}
+
+data: {"type":"delta","delta":" الاخ"}
+
+data: {"type":"delta","delta":"تبار"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" توس"}
+
+data: {"type":"delta","delta":"يع"}
+
+data: {"type":"delta","delta":" الت"}
+
+data: {"type":"delta","delta":"غط"}
+
+data: {"type":"delta","delta":"ية"}
+
+data: {"type":"delta","delta":" إلى"}
+
+data: {"type":"delta","delta":" أ"}
+
+data: {"type":"delta","delta":"حو"}
+
+data: {"type":"delta","delta":"اض"}
+
+data: {"type":"delta","delta":" رئيسية"}
+
+data: {"type":"delta","delta":" أخرى"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" تدريب"}
+
+data: {"type":"delta","delta":"operators"}
+
+data: {"type":"delta","delta":" وص"}
+
+data: {"type":"delta","delta":"ي"}
+
+data: {"type":"delta","delta":"اغة"}
+
+data: {"type":"delta","delta":" دليل"}
+
+data: {"type":"delta","delta":" تشغيل"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":" |\n"}
+
+data: {"type":"delta","delta":"|"}
+
+data: {"type":"delta","delta":" **"}
+
+data: {"type":"delta","delta":"7"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":" الت"}
+
+data: {"type":"delta","delta":"قييم"}
+
+data: {"type":"delta","delta":" المستمر"}
+
+data: {"type":"delta","delta":" والت"}
+
+data: {"type":"delta","delta":"طوير"}
+
+data: {"type":"delta","delta":"**"}
+
+data: {"type":"delta","delta":" |"}
+
+data: {"type":"delta","delta":" Ong"}
+
+data: {"type":"delta","delta":"o"}
+
+data: {"type":"delta","delta":"ing"}
+
+data: {"type":"delta","delta":" |"}
+
+data: {"type":"delta","delta":" مراقبة"}
+
+data: {"type":"delta","delta":" الأداء"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" ت"}
+
+data: {"type":"delta","delta":"حديث"}
+
+data: {"type":"delta","delta":" النم"}
+
+data: {"type":"delta","delta":"اذج"}
+
+data: {"type":"delta","delta":" ب"}
+
+data: {"type":"delta","delta":"بي"}
+
+data: {"type":"delta","delta":"انات"}
+
+data: {"type":"delta","delta":" جديدة"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" إضافة"}
+
+data: {"type":"delta","delta":" م"}
+
+data: {"type":"delta","delta":"يزات"}
+
+data: {"type":"delta","delta":" ("}
+
+data: {"type":"delta","delta":"مثل"}
+
+data: {"type":"delta","delta":" توق"}
+
+data: {"type":"delta","delta":"عات"}
+
+data: {"type":"delta","delta":" الج"}
+
+data: {"type":"delta","delta":"فاف"}
+
+data: {"type":"delta","delta":" أو"}
+
+data: {"type":"delta","delta":" الت"}
+
+data: {"type":"delta","delta":"لو"}
+
+data: {"type":"delta","delta":"ث"}
+
+data: {"type":"delta","delta":")."}
+
+data: {"type":"delta","delta":" |\n\n"}
+
+data: {"type":"delta","delta":"---\n\n"}
+
+data: {"type":"delta","delta":"##"}
+
+data: {"type":"delta","delta":" "}
+
+data: {"type":"delta","delta":"7"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":" الت"}
+
+data: {"type":"delta","delta":"حد"}
+
+data: {"type":"delta","delta":"يات"}
+
+data: {"type":"delta","delta":" المح"}
+
+data: {"type":"delta","delta":"تملة"}
+
+data: {"type":"delta","delta":" وكيف"}
+
+data: {"type":"delta","delta":"ية"}
+
+data: {"type":"delta","delta":" مع"}
+
+data: {"type":"delta","delta":"الج"}
+
+data: {"type":"delta","delta":"تها"}
+
+data: {"type":"delta","delta":"\n"}
+
+data: {"type":"delta","delta":"|"}
+
+data: {"type":"delta","delta":" الت"}
+
+data: {"type":"delta","delta":"حد"}
+
+data: {"type":"delta","delta":"ي"}
+
+data: {"type":"delta","delta":" |"}
+
+data: {"type":"delta","delta":" الحل"}
+
+data: {"type":"delta","delta":" المق"}
+
+data: {"type":"delta","delta":"ترح"}
+
+data: {"type":"delta","delta":" |\n"}
+
+data: {"type":"delta","delta":"|"}
+
+data: {"type":"delta","delta":"--------"}
+
+data: {"type":"delta","delta":"|"}
+
+data: {"type":"delta","delta":"------------"}
+
+data: {"type":"delta","delta":"--"}
+
+data: {"type":"delta","delta":"|\n"}
+
+data: {"type":"delta","delta":"|"}
+
+data: {"type":"delta","delta":" **"}
+
+data: {"type":"delta","delta":"ن"}
+
+data: {"type":"delta","delta":"قص"}
+
+data: {"type":"delta","delta":" بيانات"}
+
+data: {"type":"delta","delta":" مستوى"}
+
+data: {"type":"delta","delta":" المياه"}
+
+data: {"type":"delta","delta":" في"}
+
+data: {"type":"delta","delta":" بعض"}
+
+data: {"type":"delta","delta":" الرو"}
+
+data: {"type":"delta","delta":"اف"}
+
+data: {"type":"delta","delta":"د"}
+
+data: {"type":"delta","delta":"**"}
+
+data: {"type":"delta","delta":" |"}
+
+data: {"type":"delta","delta":" نشر"}
+
+data: {"type":"delta","delta":" شبكة"}
+
+data: {"type":"delta","delta":" منخفضة"}
+
+data: {"type":"delta","delta":" الت"}
+
+data: {"type":"delta","delta":"كلفة"}
+
+data: {"type":"delta","delta":" من"}
+
+data: {"type":"delta","delta":" مست"}
+
+data: {"type":"delta","delta":"شعر"}
+
+data: {"type":"delta","delta":"ات"}
+
+data: {"type":"delta","delta":" ultrasonic"}
+
+data: {"type":"delta","delta":" أو"}
+
+data: {"type":"delta","delta":" radar"}
+
+data: {"type":"delta","delta":" مع"}
+
+data: {"type":"delta","delta":" طاقة"}
+
+data: {"type":"delta","delta":" شمس"}
+
+data: {"type":"delta","delta":"ية"}
+
+data: {"type":"delta","delta":"؛"}
+
+data: {"type":"delta","delta":" الاست"}
+
+data: {"type":"delta","delta":"فادة"}
+
+data: {"type":"delta","delta":" من"}
+
+data: {"type":"delta","delta":" بيانات"}
+
+data: {"type":"delta","delta":"crow"}
+
+data: {"type":"delta","delta":"ds"}
+
+data: {"type":"delta","delta":"ourcing"}
+
+data: {"type":"delta","delta":" عبر"}
+
+data: {"type":"delta","delta":" تطبي"}
+
+data: {"type":"delta","delta":"قات"}
+
+data: {"type":"delta","delta":" اله"}
+
+data: {"type":"delta","delta":"وات"}
+
+data: {"type":"delta","delta":"ف"}
+
+data: {"type":"delta","delta":" المح"}
+
+data: {"type":"delta","delta":"م"}
+
+data: {"type":"delta","delta":"ولة"}
+
+data: {"type":"delta","delta":" للم"}
+
+data: {"type":"delta","delta":"و"}
+
+data: {"type":"delta","delta":"اطنين"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":" |\n"}
+
+data: {"type":"delta","delta":"|"}
+
+data: {"type":"delta","delta":" **"}
+
+data: {"type":"delta","delta":"ضع"}
+
+data: {"type":"delta","delta":"ف"}
+
+data: {"type":"delta","delta":" الاتصال"}
+
+data: {"type":"delta","delta":" بال"}
+
+data: {"type":"delta","delta":"إن"}
+
+data: {"type":"delta","delta":"ترنت"}
+
+data: {"type":"delta","delta":" في"}
+
+data: {"type":"delta","delta":" المناطق"}
+
+data: {"type":"delta","delta":" الن"}
+
+data: {"type":"delta","delta":"ائية"}
+
+data: {"type":"delta","delta":"**"}
+
+data: {"type":"delta","delta":" |"}
+
+data: {"type":"delta","delta":" استخدام"}
+
+data: {"type":"delta","delta":" تق"}
+
+data: {"type":"delta","delta":"نيات"}
+
+data: {"type":"delta","delta":" Lo"}
+
+data: {"type":"delta","delta":"Ra"}
+
+data: {"type":"delta","delta":"W"}
+
+data: {"type":"delta","delta":"AN"}
+
+data: {"type":"delta","delta":" أو"}
+
+data: {"type":"delta","delta":" شب"}
+
+data: {"type":"delta","delta":"كات"}
+
+data: {"type":"delta","delta":" خل"}
+
+data: {"type":"delta","delta":"وية"}
+
+data: {"type":"delta","delta":" "}
+
+data: {"type":"delta","delta":"2"}
+
+data: {"type":"delta","delta":"G"}
+
+data: {"type":"delta","delta":"/"}
+
+data: {"type":"delta","delta":"3"}
+
+data: {"type":"delta","delta":"G"}
+
+data: {"type":"delta","delta":" لن"}
+
+data: {"type":"delta","delta":"قل"}
+
+data: {"type":"delta","delta":" البيانات"}
+
+data: {"type":"delta","delta":"؛"}
+
+data: {"type":"delta","delta":" تخ"}
+
+data: {"type":"delta","delta":"زين"}
+
+data: {"type":"delta","delta":" مح"}
+
+data: {"type":"delta","delta":"لي"}
+
+data: {"type":"delta","delta":" مؤقت"}
+
+data: {"type":"delta","delta":" ثم"}
+
+data: {"type":"delta","delta":" رفع"}
+
+data: {"type":"delta","delta":"ه"}
+
+data: {"type":"delta","delta":" عند"}
+
+data: {"type":"delta","delta":" توفر"}
+
+data: {"type":"delta","delta":" الاتصال"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":" |\n"}
+
+data: {"type":"delta","delta":"|"}
+
+data: {"type":"delta","delta":" **"}
+
+data: {"type":"delta","delta":"قب"}
+
+data: {"type":"delta","delta":"ول"}
+
+data: {"type":"delta","delta":" المجتمع"}
+
+data: {"type":"delta","delta":" والث"}
+
+data: {"type":"delta","delta":"قة"}
+
+data: {"type":"delta","delta":" في"}
+
+data: {"type":"delta","delta":" الإن"}
+
+data: {"type":"delta","delta":"ذ"}
+
+data: {"type":"delta","delta":"ارات"}
+
+data: {"type":"delta","delta":"**"}
+
+data: {"type":"delta","delta":" |"}
+
+data: {"type":"delta","delta":" إ"}
+
+data: {"type":"delta","delta":"شر"}
+
+data: {"type":"delta","delta":"اك"}
+
+data: {"type":"delta","delta":" القادة"}
+
+data: {"type":"delta","delta":" المح"}
+
+data: {"type":"done","reply":{"answer":["\n\n**مشروع ذكاء اصطناعي مخصص للعراق: نظام ذكي لتوقع وإدارة الفيضانات في الأنهار العراقية**\n\n---\n\n## 1. الفكرة العامة\nتطوير منصة ذكاء اصطناعي تجمع بيانات الأرصاد الجوية، مستويات الأنهار، واستخدامات الأراضي لتوقع خطر الفيضانات في الوقت الفعلي وتقديم توصيات عملية للجهات المعنية (البلديات، وزارة الموارد المائية، الدفاع المدني) لتقليل الأضرار وتوجيه عمليات الإخلاء والإنقاذ.\n\n---\n\n## 2. لماذا هذا المشروع مهم للعراق؟\n| السبب | التوضيح |\n|--------|----------|\n| **عرضة عالية للفيضانات** | الأنهار الكبرى (دجلة، الفرات، وشط العرب) تتعرض سنوياً لفيضانات ناجمة عن ذوبان الثلوج في الجبال أو أمطار غزيرة. |\n| **ضعف البنية التحتية للمراقبة** | شبكة محطات قياس مستوى المياه محدودة ولا تغطي جميع الروافد الفرعية. |\n| **تأثير اقتصادي واجتماعي كبير** | الفيضانات تسبب خسائر بالمليارات، تشريد آلاف الأسر، وتضرر الزراعة والبنية التحتية. |\n| **فرص للاستفادة من البيانات المتاحة** | بيانات الأقمار الصناعية (مثل Sentinel‑1/2)، محطات الأرصاد الجوية، وتقارير وزارة الموارد المائية متوفرة بشكل مفتوح أو يمكن الحصول عليها عبر اتفاقيات. |\n\n---\n\n## 3. مكونات النظام\n1. **طبقة جمع البيانات**  \n   - بيانات الطقس (هطول الأمطار، درجة الحرارة، الرطوبة) من محطات الأرصاد ومحطات الطقس الآلية.  \n   - قراءات مستوى المياه من محطات القياس الحالية والمستشعرات IoT الجديدة (يمكن نشرها على طول الأنهار).  \n   - صور الأقمار الصناعية (رادار بصري) للكشف عن امتداد المياه وتغيرات الغطاء النباتي.  \n   - بيانات استخدام الأراضي والطبوغرافيا (DEM) من مصادر مفتوحة مثل SRTM أو ASTER.\n\n2. **طبقة المعالجة والتخزين**  \n   - بحيرة بيانات (Data Lake) على السحابة لتخزين الخام والمعالجة.  \n   - عمليات ETL لتنظيف وتوحيد الوحدات (مم/ساعة، متر، etc.).\n\n3. **نماذج الذكاء الاصطناعي**  \n   - **نموذج توقع هطول الأمطار** (سلاسل زمنية أو نماذجdeep learning مثل LSTM) لتوقع كميات الأمطار القادمة خلال 24‑72 ساعة.  \n   - **نموذج تدفق المياه** (هيدرولوجي هجين: نموذج فيزيائي مبسط + شبكة عصبية) يحول توقعات الأمطار إلى تدفق متوقع في نقاط قياس رئيسية.  \n   - **نموذج تصنيف خطر الفيضان** (تصنيف ثنائي/متعدد الفئات) يدمج مستوى المياه المتوقع، ميل الأرض، واستخدامات الأراضي لإعطاء درجة خطر (منخفض، متوسط، عالي، شديد).  \n   - **نموذج توصية الإجراءات** (نظام قواعد مبني على المنطق الضبابي أو تعلم تعزيز) يقترح Actions مثل: فتح السدود، إنذار السكان، تجهيز فرق الإنقاذ، أو توجيه المساعدات.\n\n4. **طبقة العرض والتفاعل**  \n   - لوحة تحكم ويب تفاعلية (مثل Grafana أو Streamlit) تُظهر map heatmap لخطر الفيضان، توقعات مستوى المياه، والإنذارات الصادرة.  \n   - إشعارات عبر SMS وتطبيقات الهواتف الذكية للسلطات والمواطنين في المناطق المعرضة.  \n   - واجهة API لتكامل النظام مع أنظمة الإنذار الوطنية الحالية (مثل نظام الإنذار المبكر للكوارث).\n\n5. **طبقة التغذية الراجعة والتحسين**  \n   - بعد كل حدث فيضان، تُجمع بيانات 실제 (مستوى المياه المتصالح، الأضرار) لتحديث وإعادة تدريب النماذج (تعلم مستمر).  \n   - تحليل ما بعد الحدث لتحديد نقاط الضعف في التوصيات وتحسينها.\n\n---\n\n## 4. مثال عملي قصير (سيناريو استخدام)\n\n**الوضع:**  \n- توقعات نموذج هطول الأمطار تشير إلى احتمال سقوط 150 مم من الأمطار خلال الـ 48 ساعة القادمة في حوض نهر دجلة العلوي (منطقة السليمانية).  \n- بيانات مستوى المياه الحالية تظهر أن النهر عند محطة قياس “كركوك” يقرأ 3.2 م (تحت مستوى الخطر البالغ 4.0 م).  \n\n**ما يفعله النظام:**  \n1. **تنبؤ التدفق:** يستخدم نموذج تدفق المياه لتحويل توقع الأمطار إلى زيادة متوقعة في مستوى النهر تبلغ +0.9 م خلال الـ 24 ساعة القادمة، مما يرفع المستوى المتوقع إلى ≈ 4.1 م.  \n2. **تصنيف الخطر:** يدمج النموذج مستوى المياه المتوقع مع ميل النهر واستخدامات الأراضي (مناطق زراعية منخفضة) ويصنف الخطر على أنه **عالي** فيsegment من النهر بين كركوك والفلوجة.  \n3. **إصدار الإنذار:** يرسل النظام إنذارًا تلقائيًا إلى:  \n   - مديرية الموارد المائية في محافظة كركوك (لتحضير فتح السد الجزئي).  \n   - الدفاع المدني (لتجهيز فرق الإخلاء في القرى القريبة).  \n   - المواطنين عبر SMS في المناطق المعرضة (تحذير من ارتفاع منسوب المياه وإرشادات للانتقال إلى أماكن أعلى).  \n4. **توصية الإجراء:** يقترح نظام التوصية فتح بوابة السد بنسبة 20 % لتقليل الذروة المتوقعة، وتوزيع أكياس الرمل على نقاط الضعف المعروفة.  \n5. **المتابعة:** بعد الحدث، يقارن النظام المستوى الفعلي المقاس (مثلاً 4.0 م) بالتوقع، ويعدل أوزان نموذج تدفق المياه لتحسين الدقة في المستقبل.\n\n---\n\n## 5. الفوائد المتوقعة\n- **تقليل الخسائر البشرية والمادية** عبر إنذار مبكر دقيق (تحسين زمن الاستجابة من ساعات إلى أيام).  \n- **تحسين إدارة الموارد المائية** بتحسين تشغيل السدود والقنوات بناءً على توقعات حقيقية.  \n- **دعم التخطيط العمراني** من خلال توفير خرائط خطر الفيضان للاستخدام في إصدار تراخيص البناء.  \n- **تعزيز القدرة على الصمود المجتمعي** عبر إشراك المواطنين في نظام الإنذار وتوفير إرشادات واضحة.  \n- **خلق فرص عمل وتقنية** محلية (مهندسين بيانات، متخصصين في الاستشعار عن بعد، وفنيين لصيانة أجهزة IoT).\n\n---\n\n## 6. خطوات التنفيذ الأولية (خطة طريق أولية)\n| المرحلة | المدة التقريبية | الأنشطة الرئيسية |\n|--------|----------------|-------------------|\n| **1. التقييم وجمع المتطلبات** | 1‑2 شهر | اجتماع مع الجهات المعنية (الموارد المائية، الدفاع المدني، البلديات)، تحديد نقاط قياس موجودة، تقييم الفجوات في البيانات. |\n| **2. نشر البنية التحتية للبيانات** | 2‑3 شهر | تركيب محطات IoT لقياس مستوى المياه في نقاط حرجة، إعداد خادم سحابي أو محلي لتخزين البيانات، ربط مع مصادر الأقمار الصناعية. |\n| **3. تطوير النماذج الأولية** | 3‑4 شهر | جمع البيانات التاريخية (أمطار، مستويات مياه، أحداث فيضان سابقة)، بناء وتجربة نماذج توقع الأمطار وتدفق المياه، اختبار تصنيف الخطر. |\n| **4. بناء لوحة التحكم والإنذارات** | 2‑3 شهر | تصميم واجهة عرض/map، إعداد نظام إرسال SMS وتنبيهات، وضع قواعد التوصية الأولية. |\n| **5. التجريب الميداني (Pi​lot)** | 3‑4 شهر | اختيار حوض فرعي (مثلاً حوض نهر دجلة بين السليمانية وكركوك) لتشغيل النظام في وضع الاختبار، جمع تغذية راجعة من المستخدمين النهائيين. |\n| **6. التحسين والنشر الكامل** | 2‑3 شهر | تحسين النماذج بناءً على نتائج الاختبار، توسيع التغطية إلى أحواض رئيسية أخرى، تدريبoperators وصياغة دليل تشغيل. |\n| **7. التقييم المستمر والتطوير** | Ongoing | مراقبة الأداء، تحديث النماذج ببيانات جديدة، إضافة ميزات (مثل توقعات الجفاف أو التلوث). |\n\n---\n\n## 7. التحديات المحتملة وكيفية معالجتها\n| التحدي | الحل المقترح |\n|--------|--------------|\n| **نقص بيانات مستوى المياه في بعض الروافد** | نشر شبكة منخفضة التكلفة من مستشعرات ultrasonic أو radar مع طاقة شمسية؛ الاستفادة من بياناتcrowdsourcing عبر تطبيقات الهواتف المحمولة للمواطنين. |\n| **ضعف الاتصال بالإنترنت في المناطق النائية** | استخدام تقنيات LoRaWAN أو شبكات خلوية 2G/3G لنقل البيانات؛ تخزين محلي مؤقت ثم رفعه عند توفر الاتصال. |\n| **قبول المجتمع والثقة في الإنذارات** | إشراك القادة المح"],"bullets":[],"sources":[],"provider":"nados-v1.1","model":"Nados v1.1 · nemotron-120B(A12B) + مُرتّب مدرّب","variant":"v1.1","nados":{"model":"Nados v1.1","params":245,"features":{"affinity":1,"quality":0.25,"freshness":0.6,"engagement":0.35,"completion":1,"originality":0.8,"local":1,"safety":1,"negative":0.6},"probabilities":{"like":0.4159,"save":0.677,"share":0.7705,"comment":0.8511,"completion":0.8785},"ranking_score":0.7012,"decision":"أجب بإجابة وافية منظمة بعناوين أو نقاط مع مثال عملي قصير.","temperature":0.84,"final_score":0.9514,"final_probabilities":{"like":0.9314,"save":0.9149,"share":0.9539,"comment":0.9914,"completion":0.9776}},"teacher":"nemotron-120B(A12B)"}}
+

@@ -1,0 +1,334 @@
+data: {"type":"meta","provider":"nados-v1.1","model":"Nados v1.1 · مُرتّب مدرّب (245 معامل) + معلم سحابي"}
+
+data: {"type":"delta","delta":"##"}
+
+data: {"type":"delta","delta":" ع"}
+
+data: {"type":"delta","delta":"اصمة"}
+
+data: {"type":"delta","delta":" ك"}
+
+data: {"type":"delta","delta":"ندا"}
+
+data: {"type":"delta","delta":"\n\n"}
+
+data: {"type":"delta","delta":"-"}
+
+data: {"type":"delta","delta":" **"}
+
+data: {"type":"delta","delta":"ال"}
+
+data: {"type":"delta","delta":"اسم"}
+
+data: {"type":"delta","delta":" الرسمي"}
+
+data: {"type":"delta","delta":":**"}
+
+data: {"type":"delta","delta":" أو"}
+
+data: {"type":"delta","delta":"تا"}
+
+data: {"type":"delta","delta":"و"}
+
+data: {"type":"delta","delta":"\n"}
+
+data: {"type":"delta","delta":"-"}
+
+data: {"type":"delta","delta":" **"}
+
+data: {"type":"delta","delta":"الم"}
+
+data: {"type":"delta","delta":"وقع"}
+
+data: {"type":"delta","delta":" الج"}
+
+data: {"type":"delta","delta":"غ"}
+
+data: {"type":"delta","delta":"رافي"}
+
+data: {"type":"delta","delta":":**"}
+
+data: {"type":"delta","delta":" تقع"}
+
+data: {"type":"delta","delta":" في"}
+
+data: {"type":"delta","delta":" شرق"}
+
+data: {"type":"delta","delta":" ك"}
+
+data: {"type":"delta","delta":"ندا"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" شمال"}
+
+data: {"type":"delta","delta":" العاصمة"}
+
+data: {"type":"delta","delta":" الأمريكية"}
+
+data: {"type":"delta","delta":" واش"}
+
+data: {"type":"delta","delta":"ن"}
+
+data: {"type":"delta","delta":"طن"}
+
+data: {"type":"delta","delta":" العاصمة"}
+
+data: {"type":"delta","delta":" ب"}
+
+data: {"type":"delta","delta":"مد"}
+
+data: {"type":"delta","delta":"ين"}
+
+data: {"type":"delta","delta":"تين"}
+
+data: {"type":"delta","delta":" أس"}
+
+data: {"type":"delta","delta":"هم"}
+
+data: {"type":"delta","delta":" م"}
+
+data: {"type":"delta","delta":"ائل"}
+
+data: {"type":"delta","delta":"تين"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" داخل"}
+
+data: {"type":"delta","delta":" مق"}
+
+data: {"type":"delta","delta":"اط"}
+
+data: {"type":"delta","delta":"عة"}
+
+data: {"type":"delta","delta":" أو"}
+
+data: {"type":"delta","delta":"تا"}
+
+data: {"type":"delta","delta":"وا"}
+
+data: {"type":"delta","delta":" في"}
+
+data: {"type":"delta","delta":" مق"}
+
+data: {"type":"delta","delta":"اط"}
+
+data: {"type":"delta","delta":"عة"}
+
+data: {"type":"delta","delta":" أ"}
+
+data: {"type":"delta","delta":"ون"}
+
+data: {"type":"delta","delta":"ت"}
+
+data: {"type":"delta","delta":"ار"}
+
+data: {"type":"delta","delta":"يو"}
+
+data: {"type":"delta","delta":".\n"}
+
+data: {"type":"delta","delta":"-"}
+
+data: {"type":"delta","delta":" **"}
+
+data: {"type":"delta","delta":"الأ"}
+
+data: {"type":"delta","delta":"همية"}
+
+data: {"type":"delta","delta":":**"}
+
+data: {"type":"delta","delta":" هي"}
+
+data: {"type":"delta","delta":" مركز"}
+
+data: {"type":"delta","delta":" الحكومة"}
+
+data: {"type":"delta","delta":" الف"}
+
+data: {"type":"delta","delta":"يدر"}
+
+data: {"type":"delta","delta":"الية"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" وت"}
+
+data: {"type":"delta","delta":"ضم"}
+
+data: {"type":"delta","delta":" مب"}
+
+data: {"type":"delta","delta":"اني"}
+
+data: {"type":"delta","delta":" ه"}
+
+data: {"type":"delta","delta":"امة"}
+
+data: {"type":"delta","delta":" مثل"}
+
+data: {"type":"delta","delta":" مب"}
+
+data: {"type":"delta","delta":"نى"}
+
+data: {"type":"delta","delta":" البرلمان"}
+
+data: {"type":"delta","delta":" الك"}
+
+data: {"type":"delta","delta":"ندي"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" وم"}
+
+data: {"type":"delta","delta":"كت"}
+
+data: {"type":"delta","delta":"بة"}
+
+data: {"type":"delta","delta":" الكون"}
+
+data: {"type":"delta","delta":"غ"}
+
+data: {"type":"delta","delta":"رس"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" ومت"}
+
+data: {"type":"delta","delta":"اجر"}
+
+data: {"type":"delta","delta":" س"}
+
+data: {"type":"delta","delta":"ريعة"}
+
+data: {"type":"delta","delta":" الأخبار"}
+
+data: {"type":"delta","delta":".\n\n"}
+
+data: {"type":"delta","delta":">"}
+
+data: {"type":"delta","delta":" **"}
+
+data: {"type":"delta","delta":"م"}
+
+data: {"type":"delta","delta":"لاح"}
+
+data: {"type":"delta","delta":"ظة"}
+
+data: {"type":"delta","delta":" س"}
+
+data: {"type":"delta","delta":"ريعة"}
+
+data: {"type":"delta","delta":":**"}
+
+data: {"type":"delta","delta":" إذا"}
+
+data: {"type":"delta","delta":" كنت"}
+
+data: {"type":"delta","delta":" تخ"}
+
+data: {"type":"delta","delta":"طط"}
+
+data: {"type":"delta","delta":" ل"}
+
+data: {"type":"delta","delta":"زيارة"}
+
+data: {"type":"delta","delta":" ك"}
+
+data: {"type":"delta","delta":"ندا"}
+
+data: {"type":"delta","delta":" وت"}
+
+data: {"type":"delta","delta":"بحث"}
+
+data: {"type":"delta","delta":" عن"}
+
+data: {"type":"delta","delta":" مدينة"}
+
+data: {"type":"delta","delta":" ح"}
+
+data: {"type":"delta","delta":"يوية"}
+
+data: {"type":"delta","delta":" وم"}
+
+data: {"type":"delta","delta":"زي"}
+
+data: {"type":"delta","delta":"ج"}
+
+data: {"type":"delta","delta":" بين"}
+
+data: {"type":"delta","delta":" الثقافة"}
+
+data: {"type":"delta","delta":" وال"}
+
+data: {"type":"delta","delta":"حداث"}
+
+data: {"type":"delta","delta":"ة"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" فإن"}
+
+data: {"type":"delta","delta":" أو"}
+
+data: {"type":"delta","delta":"تا"}
+
+data: {"type":"delta","delta":"و"}
+
+data: {"type":"delta","delta":" هي"}
+
+data: {"type":"delta","delta":" الوجه"}
+
+data: {"type":"delta","delta":"ة"}
+
+data: {"type":"delta","delta":" المر"}
+
+data: {"type":"delta","delta":"غ"}
+
+data: {"type":"delta","delta":"وبة"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" فهي"}
+
+data: {"type":"delta","delta":" مدينة"}
+
+data: {"type":"delta","delta":" ص"}
+
+data: {"type":"delta","delta":"ديقة"}
+
+data: {"type":"delta","delta":" لل"}
+
+data: {"type":"delta","delta":"بي"}
+
+data: {"type":"delta","delta":"ئة"}
+
+data: {"type":"delta","delta":" وت"}
+
+data: {"type":"delta","delta":"وفر"}
+
+data: {"type":"delta","delta":" تجربة"}
+
+data: {"type":"delta","delta":" ب"}
+
+data: {"type":"delta","delta":"ريط"}
+
+data: {"type":"delta","delta":"انية"}
+
+data: {"type":"delta","delta":"-"}
+
+data: {"type":"delta","delta":"أ"}
+
+data: {"type":"delta","delta":"م"}
+
+data: {"type":"delta","delta":"ري"}
+
+data: {"type":"delta","delta":"كية"}
+
+data: {"type":"delta","delta":" ف"}
+
+data: {"type":"delta","delta":"ريدة"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"done","reply":{"answer":["## عاصمة كندا\n\n- **الاسم الرسمي:** أوتاو\n- **الموقع الجغرافي:** تقع في شرق كندا، شمال العاصمة الأمريكية واشنطن العاصمة بمدينتين أسهم مائلتين، داخل مقاطعة أوتاوا في مقاطعة أونتاريو.\n- **الأهمية:** هي مركز الحكومة الفيدرالية، وتضم مباني هامة مثل مبنى البرلمان الكندي، ومكتبة الكونغرس، ومتاجر سريعة الأخبار.\n\n> **ملاحظة سريعة:** إذا كنت تخطط لزيارة كندا وتبحث عن مدينة حيوية ومزيج بين الثقافة والحداثة، فإن أوتاو هي الوجهة المرغوبة، فهي مدينة صديقة للبيئة وتوفر تجربة بريطانية-أمريكية فريدة."],"bullets":[],"sources":[],"provider":"nados-v1.1","model":"Nados v1.1 · pollinations + مُرتّب مدرّب","variant":"v1.1","nados":{"model":"Nados v1.1","params":245,"features":{"affinity":1,"quality":0.25,"freshness":0.6,"engagement":0.35,"completion":1,"originality":0.8,"local":0.264,"safety":1,"negative":0},"probabilities":{"like":0.8714,"save":0.9891,"share":0.9875,"comment":0.9626,"completion":0.9945},"ranking_score":0.9574,"decision":"أجب بإجابة وافية منظمة بعناوين أو نقاط مع مثال عملي قصير.","temperature":0.94,"final_score":0.9518,"final_probabilities":{"like":0.9537,"save":0.8833,"share":0.9576,"comment":0.9964,"completion":0.9767}},"teacher":"pollinations"}}
+

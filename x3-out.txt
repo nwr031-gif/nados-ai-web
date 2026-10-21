@@ -1,0 +1,258 @@
+data: {"type":"meta","provider":"nados-v1.1","model":"Nados v1.1 · مُرتّب مدرّب (245 معامل) + معلم سحابي"}
+
+data: {"type":"delta","delta":"\n\n"}
+
+data: {"type":"delta","delta":"**"}
+
+data: {"type":"delta","delta":"عدد"}
+
+data: {"type":"delta","delta":" عوامل"}
+
+data: {"type":"delta","delta":" العدد"}
+
+data: {"type":"delta","delta":" "}
+
+data: {"type":"delta","delta":"3"}
+
+data: {"type":"delta","delta":"6"}
+
+data: {"type":"delta","delta":"**\n\n"}
+
+data: {"type":"delta","delta":"---\n\n"}
+
+data: {"type":"delta","delta":"###"}
+
+data: {"type":"delta","delta":" "}
+
+data: {"type":"delta","delta":"1"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":" التحليل"}
+
+data: {"type":"delta","delta":" إلى"}
+
+data: {"type":"delta","delta":" عوامل"}
+
+data: {"type":"delta","delta":" أول"}
+
+data: {"type":"delta","delta":"ية"}
+
+data: {"type":"delta","delta":"  "}
+
+data: {"type":"delta","delta":"\n"}
+
+data: {"type":"delta","delta":"\\["}
+
+data: {"type":"delta","delta":"\n"}
+
+data: {"type":"delta","delta":"3"}
+
+data: {"type":"delta","delta":"6"}
+
+data: {"type":"delta","delta":" ="}
+
+data: {"type":"delta","delta":" "}
+
+data: {"type":"delta","delta":"2"}
+
+data: {"type":"delta","delta":"^{"}
+
+data: {"type":"delta","delta":"2"}
+
+data: {"type":"delta","delta":"}\\"}
+
+data: {"type":"delta","delta":"times"}
+
+data: {"type":"delta","delta":" "}
+
+data: {"type":"delta","delta":"3"}
+
+data: {"type":"delta","delta":"^{"}
+
+data: {"type":"delta","delta":"2"}
+
+data: {"type":"delta","delta":"}\n"}
+
+data: {"type":"delta","delta":"\\]\n\n"}
+
+data: {"type":"delta","delta":"###"}
+
+data: {"type":"delta","delta":" "}
+
+data: {"type":"delta","delta":"2"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":" صي"}
+
+data: {"type":"delta","delta":"غة"}
+
+data: {"type":"delta","delta":" عدد"}
+
+data: {"type":"delta","delta":" القو"}
+
+data: {"type":"delta","delta":"اسم"}
+
+data: {"type":"delta","delta":"  "}
+
+data: {"type":"delta","delta":"\n"}
+
+data: {"type":"delta","delta":"إذا"}
+
+data: {"type":"delta","delta":" كان"}
+
+data: {"type":"delta","delta":" عدد"}
+
+data: {"type":"delta","delta":" \\("}
+
+data: {"type":"delta","delta":"n"}
+
+data: {"type":"delta","delta":"\\)"}
+
+data: {"type":"delta","delta":" يُ"}
+
+data: {"type":"delta","delta":"حل"}
+
+data: {"type":"delta","delta":"ل"}
+
+data: {"type":"delta","delta":" على"}
+
+data: {"type":"delta","delta":" الشكل"}
+
+data: {"type":"delta","delta":"  "}
+
+data: {"type":"delta","delta":"\n"}
+
+data: {"type":"delta","delta":"\\["}
+
+data: {"type":"delta","delta":"\n"}
+
+data: {"type":"delta","delta":"n"}
+
+data: {"type":"delta","delta":" ="}
+
+data: {"type":"delta","delta":" p"}
+
+data: {"type":"delta","delta":"_"}
+
+data: {"type":"delta","delta":"1"}
+
+data: {"type":"delta","delta":"^{"}
+
+data: {"type":"delta","delta":"a"}
+
+data: {"type":"delta","delta":"_"}
+
+data: {"type":"delta","delta":"1"}
+
+data: {"type":"delta","delta":"}\\,"}
+
+data: {"type":"delta","delta":"p"}
+
+data: {"type":"delta","delta":"_"}
+
+data: {"type":"delta","delta":"2"}
+
+data: {"type":"delta","delta":"^{"}
+
+data: {"type":"delta","delta":"a"}
+
+data: {"type":"delta","delta":"_"}
+
+data: {"type":"delta","delta":"2"}
+
+data: {"type":"delta","delta":"}\\,\\"}
+
+data: {"type":"delta","delta":"dots"}
+
+data: {"type":"delta","delta":"\\,"}
+
+data: {"type":"delta","delta":"p"}
+
+data: {"type":"delta","delta":"_k"}
+
+data: {"type":"delta","delta":"^{"}
+
+data: {"type":"delta","delta":"a"}
+
+data: {"type":"delta","delta":"_k"}
+
+data: {"type":"delta","delta":"}\n"}
+
+data: {"type":"delta","delta":"\\]"}
+
+data: {"type":"delta","delta":"  "}
+
+data: {"type":"delta","delta":"\n"}
+
+data: {"type":"delta","delta":"ف"}
+
+data: {"type":"delta","delta":"عدد"}
+
+data: {"type":"delta","delta":" القو"}
+
+data: {"type":"delta","delta":"اسم"}
+
+data: {"type":"delta","delta":" الموج"}
+
+data: {"type":"delta","delta":"بة"}
+
+data: {"type":"delta","delta":" لـ"}
+
+data: {"type":"delta","delta":" \\("}
+
+data: {"type":"delta","delta":"n"}
+
+data: {"type":"delta","delta":"\\)"}
+
+data: {"type":"delta","delta":" يس"}
+
+data: {"type":"delta","delta":"اوي"}
+
+data: {"type":"delta","delta":"  "}
+
+data: {"type":"delta","delta":"\n"}
+
+data: {"type":"delta","delta":"\\["}
+
+data: {"type":"delta","delta":"\n"}
+
+data: {"type":"delta","delta":"\\tau"}
+
+data: {"type":"delta","delta":"(n"}
+
+data: {"type":"delta","delta":")="}
+
+data: {"type":"delta","delta":" ("}
+
+data: {"type":"delta","delta":"a"}
+
+data: {"type":"delta","delta":"_"}
+
+data: {"type":"delta","delta":"1"}
+
+data: {"type":"delta","delta":"+"}
+
+data: {"type":"delta","delta":"1"}
+
+data: {"type":"delta","delta":")("}
+
+data: {"type":"delta","delta":"a"}
+
+data: {"type":"delta","delta":"_"}
+
+data: {"type":"delta","delta":"2"}
+
+data: {"type":"delta","delta":"+"}
+
+data: {"type":"delta","delta":"1"}
+
+data: {"type":"delta","delta":")\\"}
+
+data: {"type":"delta","delta":"dots"}
+
+data: {"type":"delta","delta":" ("}
+
+data: {"type":"done","reply":{"answer":["\n\n**عدد عوامل العدد 36**\n\n---\n\n### 1. التحليل إلى عوامل أولية  \n\\[\n36 = 2^{2}\\times 3^{2}\n\\]\n\n### 2. صيغة عدد القواسم  \nإذا كان عدد \\(n\\) يُحلل على الشكل  \n\\[\nn = p_1^{a_1}\\,p_2^{a_2}\\,\\dots\\,p_k^{a_k}\n\\]  \nفعدد القواسم الموجبة لـ \\(n\\) يساوي  \n\\[\n\\tau(n)= (a_1+1)(a_2+1)\\dots ("],"bullets":[],"sources":[],"provider":"nados-v1.1","model":"Nados v1.1 · nemotron-120B(A12B) + مُرتّب مدرّب","variant":"v1.1","nados":{"model":"Nados v1.1","params":245,"features":{"affinity":1,"quality":0.25,"freshness":0.6,"engagement":0.35,"completion":1,"originality":0.8,"local":1,"safety":1,"negative":0.6},"probabilities":{"like":0.4159,"save":0.677,"share":0.7705,"comment":0.8511,"completion":0.8785},"ranking_score":0.7012,"decision":"أجب بإجابة وافية منظمة بعناوين أو نقاط مع مثال عملي قصير.","temperature":0.84,"final_score":0.9448,"final_probabilities":{"like":0.8558,"save":0.9417,"share":0.9759,"comment":0.9892,"completion":0.988}},"teacher":"nemotron-120B(A12B)"}}
+

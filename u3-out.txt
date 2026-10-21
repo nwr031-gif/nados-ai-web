@@ -1,0 +1,390 @@
+data: {"type":"meta","provider":"nados-v1.1","model":"Nados v1.1 · مُرتّب مدرّب (245 معامل) + معلم سحابي"}
+
+data: {"type":"delta","delta":"##"}
+
+data: {"type":"delta","delta":" عدد"}
+
+data: {"type":"delta","delta":" عوامل"}
+
+data: {"type":"delta","delta":" العدد"}
+
+data: {"type":"delta","delta":" "}
+
+data: {"type":"delta","delta":"36"}
+
+data: {"type":"delta","delta":"  \n\n"}
+
+data: {"type":"delta","delta":"###"}
+
+data: {"type":"delta","delta":" "}
+
+data: {"type":"delta","delta":"1."}
+
+data: {"type":"delta","delta":" طريقة"}
+
+data: {"type":"delta","delta":" حساب"}
+
+data: {"type":"delta","delta":" عدد"}
+
+data: {"type":"delta","delta":" الق"}
+
+data: {"type":"delta","delta":"وا"}
+
+data: {"type":"delta","delta":"سم"}
+
+data: {"type":"delta","delta":" ("}
+
+data: {"type":"delta","delta":"الع"}
+
+data: {"type":"delta","delta":"وامل"}
+
+data: {"type":"delta","delta":")"}
+
+data: {"type":"delta","delta":" باستخدام"}
+
+data: {"type":"delta","delta":" التح"}
+
+data: {"type":"delta","delta":"ليل"}
+
+data: {"type":"delta","delta":" إلى"}
+
+data: {"type":"delta","delta":" عوامل"}
+
+data: {"type":"delta","delta":" أول"}
+
+data: {"type":"delta","delta":"ية"}
+
+data: {"type":"delta","delta":"  \n\n"}
+
+data: {"type":"delta","delta":"1"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":" **"}
+
+data: {"type":"delta","delta":"تح"}
+
+data: {"type":"delta","delta":"ليل"}
+
+data: {"type":"delta","delta":" العدد"}
+
+data: {"type":"delta","delta":" إلى"}
+
+data: {"type":"delta","delta":" عوامل"}
+
+data: {"type":"delta","delta":" أول"}
+
+data: {"type":"delta","delta":"ية"}
+
+data: {"type":"delta","delta":"**"}
+
+data: {"type":"delta","delta":"  \n"}
+
+data: {"type":"delta","delta":"\\"}
+
+data: {"type":"delta","delta":"[\n"}
+
+data: {"type":"delta","delta":"36"}
+
+data: {"type":"delta","delta":" ="}
+
+data: {"type":"delta","delta":" "}
+
+data: {"type":"delta","delta":"2"}
+
+data: {"type":"delta","delta":"^{"}
+
+data: {"type":"delta","delta":"2"}
+
+data: {"type":"delta","delta":"}\\"}
+
+data: {"type":"delta","delta":"times"}
+
+data: {"type":"delta","delta":" "}
+
+data: {"type":"delta","delta":"3"}
+
+data: {"type":"delta","delta":"^{"}
+
+data: {"type":"delta","delta":"2"}
+
+data: {"type":"delta","delta":"}\n"}
+
+data: {"type":"delta","delta":"\\"}
+
+data: {"type":"delta","delta":"]\n\n"}
+
+data: {"type":"delta","delta":"2"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":" **ق"}
+
+data: {"type":"delta","delta":"انون"}
+
+data: {"type":"delta","delta":" حساب"}
+
+data: {"type":"delta","delta":" عدد"}
+
+data: {"type":"delta","delta":" الق"}
+
+data: {"type":"delta","delta":"وا"}
+
+data: {"type":"delta","delta":"سم"}
+
+data: {"type":"delta","delta":"**"}
+
+data: {"type":"delta","delta":"  \n"}
+
+data: {"type":"delta","delta":"إذا"}
+
+data: {"type":"delta","delta":" كان"}
+
+data: {"type":"delta","delta":"  \n"}
+
+data: {"type":"delta","delta":"\\"}
+
+data: {"type":"delta","delta":"[\n"}
+
+data: {"type":"delta","delta":"n"}
+
+data: {"type":"delta","delta":" ="}
+
+data: {"type":"delta","delta":" p"}
+
+data: {"type":"delta","delta":"_1"}
+
+data: {"type":"delta","delta":"^{a"}
+
+data: {"type":"delta","delta":"_"}
+
+data: {"type":"delta","delta":"1"}
+
+data: {"type":"delta","delta":"}\\"}
+
+data: {"type":"delta","delta":","}
+
+data: {"type":"delta","delta":" p"}
+
+data: {"type":"delta","delta":"_"}
+
+data: {"type":"delta","delta":"2^{"}
+
+data: {"type":"delta","delta":"a"}
+
+data: {"type":"delta","delta":"_"}
+
+data: {"type":"delta","delta":"2"}
+
+data: {"type":"delta","delta":"}\\,"}
+
+data: {"type":"delta","delta":" \\"}
+
+data: {"type":"delta","delta":"dots"}
+
+data: {"type":"delta","delta":" p"}
+
+data: {"type":"delta","delta":"_k"}
+
+data: {"type":"delta","delta":"^{"}
+
+data: {"type":"delta","delta":"a"}
+
+data: {"type":"delta","delta":"_k"}
+
+data: {"type":"delta","delta":"}\n"}
+
+data: {"type":"delta","delta":"\\"}
+
+data: {"type":"delta","delta":"]"}
+
+data: {"type":"delta","delta":"  \n"}
+
+data: {"type":"delta","delta":"ف"}
+
+data: {"type":"delta","delta":"إن"}
+
+data: {"type":"delta","delta":" عدد"}
+
+data: {"type":"delta","delta":" الق"}
+
+data: {"type":"delta","delta":"وا"}
+
+data: {"type":"delta","delta":"سم"}
+
+data: {"type":"delta","delta":" الم"}
+
+data: {"type":"delta","delta":"وج"}
+
+data: {"type":"delta","delta":"بة"}
+
+data: {"type":"delta","delta":" لل"}
+
+data: {"type":"delta","delta":"عدد"}
+
+data: {"type":"delta","delta":" \\("}
+
+data: {"type":"delta","delta":"n\\"}
+
+data: {"type":"delta","delta":")"}
+
+data: {"type":"delta","delta":" هو"}
+
+data: {"type":"delta","delta":"  \n"}
+
+data: {"type":"delta","delta":"\\"}
+
+data: {"type":"delta","delta":"[\n"}
+
+data: {"type":"delta","delta":"\\t"}
+
+data: {"type":"delta","delta":"au"}
+
+data: {"type":"delta","delta":"(n"}
+
+data: {"type":"delta","delta":")="}
+
+data: {"type":"delta","delta":" ("}
+
+data: {"type":"delta","delta":"a"}
+
+data: {"type":"delta","delta":"_"}
+
+data: {"type":"delta","delta":"1"}
+
+data: {"type":"delta","delta":"+"}
+
+data: {"type":"delta","delta":"1"}
+
+data: {"type":"delta","delta":")("}
+
+data: {"type":"delta","delta":"a"}
+
+data: {"type":"delta","delta":"_"}
+
+data: {"type":"delta","delta":"2"}
+
+data: {"type":"delta","delta":"+"}
+
+data: {"type":"delta","delta":"1"}
+
+data: {"type":"delta","delta":")\\"}
+
+data: {"type":"delta","delta":"dots"}
+
+data: {"type":"delta","delta":" ("}
+
+data: {"type":"delta","delta":"a"}
+
+data: {"type":"delta","delta":"_k"}
+
+data: {"type":"delta","delta":"+"}
+
+data: {"type":"delta","delta":"1"}
+
+data: {"type":"delta","delta":")\n"}
+
+data: {"type":"delta","delta":"\\"}
+
+data: {"type":"delta","delta":"]\n\n"}
+
+data: {"type":"delta","delta":"3"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":" **"}
+
+data: {"type":"delta","delta":"ت"}
+
+data: {"type":"delta","delta":"طبيق"}
+
+data: {"type":"delta","delta":" القانون"}
+
+data: {"type":"delta","delta":" على"}
+
+data: {"type":"delta","delta":" 36"}
+
+data: {"type":"delta","delta":"**  \n\n"}
+
+data: {"type":"delta","delta":"|"}
+
+data: {"type":"delta","delta":" العامل"}
+
+data: {"type":"delta","delta":" الأول"}
+
+data: {"type":"delta","delta":" | الأس"}
+
+data: {"type":"delta","delta":" |"}
+
+data: {"type":"delta","delta":" \\("}
+
+data: {"type":"delta","delta":"a"}
+
+data: {"type":"delta","delta":"_i"}
+
+data: {"type":"delta","delta":"+"}
+
+data: {"type":"delta","delta":"1"}
+
+data: {"type":"delta","delta":"\\"}
+
+data: {"type":"delta","delta":")"}
+
+data: {"type":"delta","delta":" |\n"}
+
+data: {"type":"delta","delta":"|"}
+
+data: {"type":"delta","delta":"-------------"}
+
+data: {"type":"delta","delta":"|"}
+
+data: {"type":"delta","delta":"------"}
+
+data: {"type":"delta","delta":"|"}
+
+data: {"type":"delta","delta":"-----------|\n"}
+
+data: {"type":"delta","delta":"|"}
+
+data: {"type":"delta","delta":" \\("}
+
+data: {"type":"delta","delta":"2"}
+
+data: {"type":"delta","delta":"\\"}
+
+data: {"type":"delta","delta":")"}
+
+data: {"type":"delta","delta":"      "}
+
+data: {"type":"delta","delta":" |"}
+
+data: {"type":"delta","delta":" "}
+
+data: {"type":"delta","delta":"2"}
+
+data: {"type":"delta","delta":"   "}
+
+data: {"type":"delta","delta":" |"}
+
+data: {"type":"delta","delta":" "}
+
+data: {"type":"delta","delta":"3"}
+
+data: {"type":"delta","delta":"        "}
+
+data: {"type":"delta","delta":" |\n"}
+
+data: {"type":"delta","delta":"|"}
+
+data: {"type":"delta","delta":" \\("}
+
+data: {"type":"delta","delta":"3"}
+
+data: {"type":"delta","delta":"\\"}
+
+data: {"type":"delta","delta":")"}
+
+data: {"type":"delta","delta":"      "}
+
+data: {"type":"done","reply":{"answer":["## عدد عوامل العدد 36  \n\n### 1. طريقة حساب عدد القواسم (العوامل) باستخدام التحليل إلى عوامل أولية  \n\n1. **تحليل العدد إلى عوامل أولية**  \n\\[\n36 = 2^{2}\\times 3^{2}\n\\]\n\n2. **قانون حساب عدد القواسم**  \nإذا كان  \n\\[\nn = p_1^{a_1}\\, p_2^{a_2}\\, \\dots p_k^{a_k}\n\\]  \nفإن عدد القواسم الموجبة للعدد \\(n\\) هو  \n\\[\n\\tau(n)= (a_1+1)(a_2+1)\\dots (a_k+1)\n\\]\n\n3. **تطبيق القانون على 36**  \n\n| العامل الأول | الأس | \\(a_i+1\\) |\n|-------------|------|-----------|\n| \\(2\\)       | 2    | 3         |\n| \\(3\\)      "],"bullets":[],"sources":[],"provider":"nados-v1.1","model":"Nados v1.1 · gpt-oss-120B + مُرتّب مدرّب","variant":"v1.1","nados":{"model":"Nados v1.1","params":245,"features":{"affinity":1,"quality":0.25,"freshness":0.6,"engagement":0.35,"completion":1,"originality":0.8,"local":1,"safety":1,"negative":0.6},"probabilities":{"like":0.4159,"save":0.677,"share":0.7705,"comment":0.8511,"completion":0.8785},"ranking_score":0.7012,"decision":"أجب بإجابة وافية منظمة بعناوين أو نقاط مع مثال عملي قصير.","temperature":0.84,"final_score":0.9407,"final_probabilities":{"like":0.8667,"save":0.9427,"share":0.9598,"comment":0.9754,"completion":0.9804}},"teacher":"gpt-oss-120B"}}
+

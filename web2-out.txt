@@ -1,0 +1,418 @@
+data: {"type":"meta","provider":"nados-v1.1","model":"Nados v1.1 · مُرتّب مدرّب (245 معامل) + معلم سحابي"}
+
+data: {"type":"delta","delta":"\n\n"}
+
+data: {"type":"delta","delta":"**"}
+
+data: {"type":"delta","delta":"ع"}
+
+data: {"type":"delta","delta":"اصمة"}
+
+data: {"type":"delta","delta":" كندا"}
+
+data: {"type":"delta","delta":"**\n\n"}
+
+data: {"type":"delta","delta":"-"}
+
+data: {"type":"delta","delta":" العاصمة"}
+
+data: {"type":"delta","delta":" الوطنية"}
+
+data: {"type":"delta","delta":" لك"}
+
+data: {"type":"delta","delta":"ندا"}
+
+data: {"type":"delta","delta":" هي"}
+
+data: {"type":"delta","delta":" **"}
+
+data: {"type":"delta","delta":"أ"}
+
+data: {"type":"delta","delta":"وتا"}
+
+data: {"type":"delta","delta":"وا"}
+
+data: {"type":"delta","delta":"**"}
+
+data: {"type":"delta","delta":" ("}
+
+data: {"type":"delta","delta":"O"}
+
+data: {"type":"delta","delta":"tta"}
+
+data: {"type":"delta","delta":"wa"}
+
+data: {"type":"delta","delta":")."}
+
+data: {"type":"delta","delta":"  "}
+
+data: {"type":"delta","delta":"\n"}
+
+data: {"type":"delta","delta":"-"}
+
+data: {"type":"delta","delta":" تقع"}
+
+data: {"type":"delta","delta":" أ"}
+
+data: {"type":"delta","delta":"وتا"}
+
+data: {"type":"delta","delta":"وا"}
+
+data: {"type":"delta","delta":" في"}
+
+data: {"type":"delta","delta":" مقاطعة"}
+
+data: {"type":"delta","delta":" أ"}
+
+data: {"type":"delta","delta":"ونت"}
+
+data: {"type":"delta","delta":"اريو"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" على"}
+
+data: {"type":"delta","delta":" نهر"}
+
+data: {"type":"delta","delta":" أو"}
+
+data: {"type":"delta","delta":"تا"}
+
+data: {"type":"delta","delta":"وا"}
+
+data: {"type":"delta","delta":" الذي"}
+
+data: {"type":"delta","delta":" يشكل"}
+
+data: {"type":"delta","delta":" جزءاً"}
+
+data: {"type":"delta","delta":" من"}
+
+data: {"type":"delta","delta":" الحدود"}
+
+data: {"type":"delta","delta":" بين"}
+
+data: {"type":"delta","delta":" أ"}
+
+data: {"type":"delta","delta":"ونت"}
+
+data: {"type":"delta","delta":"اريو"}
+
+data: {"type":"delta","delta":" و"}
+
+data: {"type":"delta","delta":"كي"}
+
+data: {"type":"delta","delta":"بي"}
+
+data: {"type":"delta","delta":"ك"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":"  "}
+
+data: {"type":"delta","delta":"\n"}
+
+data: {"type":"delta","delta":"-"}
+
+data: {"type":"delta","delta":" تُ"}
+
+data: {"type":"delta","delta":"عتبر"}
+
+data: {"type":"delta","delta":" أ"}
+
+data: {"type":"delta","delta":"وتا"}
+
+data: {"type":"delta","delta":"وا"}
+
+data: {"type":"delta","delta":" المركز"}
+
+data: {"type":"delta","delta":" السياسي"}
+
+data: {"type":"delta","delta":" لل"}
+
+data: {"type":"delta","delta":"بلاد"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" حيث"}
+
+data: {"type":"delta","delta":" تضم"}
+
+data: {"type":"delta","delta":" البرلمان"}
+
+data: {"type":"delta","delta":" الك"}
+
+data: {"type":"delta","delta":"ندي"}
+
+data: {"type":"delta","delta":" وم"}
+
+data: {"type":"delta","delta":"قر"}
+
+data: {"type":"delta","delta":" إقامة"}
+
+data: {"type":"delta","delta":" الحاكم"}
+
+data: {"type":"delta","delta":" العام"}
+
+data: {"type":"delta","delta":" وم"}
+
+data: {"type":"delta","delta":"كتب"}
+
+data: {"type":"delta","delta":" رئيس"}
+
+data: {"type":"delta","delta":" الوزراء"}
+
+data: {"type":"delta","delta":".\n\n"}
+
+data: {"type":"delta","delta":"**"}
+
+data: {"type":"delta","delta":"م"}
+
+data: {"type":"delta","delta":"صدر"}
+
+data: {"type":"delta","delta":" المعلومات"}
+
+data: {"type":"delta","delta":"**"}
+
+data: {"type":"delta","delta":"  "}
+
+data: {"type":"delta","delta":"\n"}
+
+data: {"type":"delta","delta":"-"}
+
+data: {"type":"delta","delta":" وصف"}
+
+data: {"type":"delta","delta":" كندا"}
+
+data: {"type":"delta","delta":" ك"}
+
+data: {"type":"delta","delta":"د"}
+
+data: {"type":"delta","delta":"ولة"}
+
+data: {"type":"delta","delta":" في"}
+
+data: {"type":"delta","delta":" أمريكا"}
+
+data: {"type":"delta","delta":" الشمالية"}
+
+data: {"type":"delta","delta":" م"}
+
+data: {"type":"delta","delta":"أخ"}
+
+data: {"type":"delta","delta":"وذ"}
+
+data: {"type":"delta","delta":" من"}
+
+data: {"type":"delta","delta":" النتيجة"}
+
+data: {"type":"delta","delta":" البحث"}
+
+data: {"type":"delta","delta":"ية"}
+
+data: {"type":"delta","delta":" ["}
+
+data: {"type":"delta","delta":"1"}
+
+data: {"type":"delta","delta":"]"}
+
+data: {"type":"delta","delta":"【"}
+
+data: {"type":"delta","delta":"1"}
+
+data: {"type":"delta","delta":"†"}
+
+data: {"type":"delta","delta":"L"}
+
+data: {"type":"delta","delta":"1"}
+
+data: {"type":"delta","delta":"-L"}
+
+data: {"type":"delta","delta":"3"}
+
+data: {"type":"delta","delta":"】"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"delta","delta":"  "}
+
+data: {"type":"delta","delta":"\n"}
+
+data: {"type":"delta","delta":"-"}
+
+data: {"type":"delta","delta":" ("}
+
+data: {"type":"delta","delta":"الح"}
+
+data: {"type":"delta","delta":"قيقة"}
+
+data: {"type":"delta","delta":" التي"}
+
+data: {"type":"delta","delta":" تُ"}
+
+data: {"type":"delta","delta":"ع"}
+
+data: {"type":"delta","delta":"َد"}
+
+data: {"type":"delta","delta":"ّ"}
+
+data: {"type":"delta","delta":" عاصمة"}
+
+data: {"type":"delta","delta":" كندا"}
+
+data: {"type":"delta","delta":" هي"}
+
+data: {"type":"delta","delta":" أو"}
+
+data: {"type":"delta","delta":"تا"}
+
+data: {"type":"delta","delta":"وا"}
+
+data: {"type":"delta","delta":" هي"}
+
+data: {"type":"delta","delta":" معرفة"}
+
+data: {"type":"delta","delta":" ثابتة"}
+
+data: {"type":"delta","delta":" وم"}
+
+data: {"type":"delta","delta":"ت"}
+
+data: {"type":"delta","delta":"وف"}
+
+data: {"type":"delta","delta":"رة"}
+
+data: {"type":"delta","delta":" في"}
+
+data: {"type":"delta","delta":" المر"}
+
+data: {"type":"delta","delta":"اجع"}
+
+data: {"type":"delta","delta":" الرسمية"}
+
+data: {"type":"delta","delta":"؛"}
+
+data: {"type":"delta","delta":" تم"}
+
+data: {"type":"delta","delta":" ذكر"}
+
+data: {"type":"delta","delta":"ها"}
+
+data: {"type":"delta","delta":" هنا"}
+
+data: {"type":"delta","delta":" است"}
+
+data: {"type":"delta","delta":"ناد"}
+
+data: {"type":"delta","delta":"اً"}
+
+data: {"type":"delta","delta":" إلى"}
+
+data: {"type":"delta","delta":" المعرفة"}
+
+data: {"type":"delta","delta":" العامة"}
+
+data: {"type":"delta","delta":" المت"}
+
+data: {"type":"delta","delta":"و"}
+
+data: {"type":"delta","delta":"افقة"}
+
+data: {"type":"delta","delta":" مع"}
+
+data: {"type":"delta","delta":" المصادر"}
+
+data: {"type":"delta","delta":" المو"}
+
+data: {"type":"delta","delta":"ث"}
+
+data: {"type":"delta","delta":"وقة"}
+
+data: {"type":"delta","delta":")."}
+
+data: {"type":"delta","delta":"  "}
+
+data: {"type":"delta","delta":"\n\n"}
+
+data: {"type":"delta","delta":">"}
+
+data: {"type":"delta","delta":" **"}
+
+data: {"type":"delta","delta":"مل"}
+
+data: {"type":"delta","delta":"احظة"}
+
+data: {"type":"delta","delta":":**"}
+
+data: {"type":"delta","delta":" النتيجة"}
+
+data: {"type":"delta","delta":" ["}
+
+data: {"type":"delta","delta":"2"}
+
+data: {"type":"delta","delta":"]"}
+
+data: {"type":"delta","delta":" تت"}
+
+data: {"type":"delta","delta":"حدث"}
+
+data: {"type":"delta","delta":" عن"}
+
+data: {"type":"delta","delta":" مفهوم"}
+
+data: {"type":"delta","delta":" الع"}
+
+data: {"type":"delta","delta":"واص"}
+
+data: {"type":"delta","delta":"م"}
+
+data: {"type":"delta","delta":" في"}
+
+data: {"type":"delta","delta":" الأنظمة"}
+
+data: {"type":"delta","delta":" الف"}
+
+data: {"type":"delta","delta":"در"}
+
+data: {"type":"delta","delta":"الية"}
+
+data: {"type":"delta","delta":" ولا"}
+
+data: {"type":"delta","delta":" تن"}
+
+data: {"type":"delta","delta":"طبق"}
+
+data: {"type":"delta","delta":" مباشرة"}
+
+data: {"type":"delta","delta":" على"}
+
+data: {"type":"delta","delta":" حالة"}
+
+data: {"type":"delta","delta":" كندا"}
+
+data: {"type":"delta","delta":"،"}
+
+data: {"type":"delta","delta":" بينما"}
+
+data: {"type":"delta","delta":" النتيجة"}
+
+data: {"type":"delta","delta":" ["}
+
+data: {"type":"delta","delta":"3"}
+
+data: {"type":"delta","delta":"]"}
+
+data: {"type":"delta","delta":" غير"}
+
+data: {"type":"delta","delta":" ذات"}
+
+data: {"type":"delta","delta":" صلة"}
+
+data: {"type":"delta","delta":" بالس"}
+
+data: {"type":"delta","delta":"ؤال"}
+
+data: {"type":"delta","delta":"."}
+
+data: {"type":"done","reply":{"answer":["\n\n**عاصمة كندا**\n\n- العاصمة الوطنية لكندا هي **أوتاوا** (Ottawa).  \n- تقع أوتاوا في مقاطعة أونتاريو، على نهر أوتاوا الذي يشكل جزءاً من الحدود بين أونتاريو وكيبيك.  \n- تُعتبر أوتاوا المركز السياسي للبلاد، حيث تضم البرلمان الكندي ومقر إقامة الحاكم العام ومكتب رئيس الوزراء.\n\n**مصدر المعلومات**  \n- وصف كندا كدولة في أمريكا الشمالية مأخوذ من النتيجة البحثية [1]【1†L1-L3】.  \n- (الحقيقة التي تُعَدّ عاصمة كندا هي أوتاوا هي معرفة ثابتة ومتوفرة في المراجع الرسمية؛ تم ذكرها هنا استناداً إلى المعرفة العامة المتوافقة مع المصادر الموثوقة).  \n\n> **ملاحظة:** النتيجة [2] تتحدث عن مفهوم العواصم في الأنظمة الفدرالية ولا تنطبق مباشرة على حالة كندا، بينما النتيجة [3] غير ذات صلة بالسؤال."],"bullets":[],"sources":[{"title":"كندا","url":"https://ar.wikipedia.org/wiki/%D9%83%D9%86%D8%AF%D8%A7","snippet":"كَنَدَا (بالإنجليزية والفرنسية: Canada)، هي دولة في أمريكا الشمالية تتألف من 10 مقاطعات وثلاثة أقاليم. تقع في القسم الشمالي من القارة وتمتد من المحيط","source":"wikipedia:ar"},{"title":"عاصمة","url":"https://ar.wikipedia.org/wiki/%D8%B9%D8%A7%D8%B5%D9%85%D8%A9","snippet":"الفدرالية، لا توجد عادةً عاصمة وطنية منفصلة، بل تكون عاصمة إحدى الدول المكونة هي أيضًا عاصمة الدولة ككل، مثل لندن، التي هي عاصمة إنجلترا والمملكة المتحدة","source":"wikipedia:ar"},{"title":"عبد المنعم عمايري","url":"https://ar.wikipedia.org/wiki/%D8%B9%D8%A8%D8%AF_%D8%A7%D9%84%D9%85%D9%86%D8%B9%D9%85_%D8%B9%D9%85%D8%A7%D9%8A%D8%B1%D9%8A","snippet":"يرد على مشاهده الحميمة مع كندا حنا- (فيديو)\". القدس العربي. مؤرشف من الأصل في 2022-11-27. اطلع عليه بتاريخ 2025-04-14. \"ما حقيقة تعرض فنان سوري للضرب","source":"wikipedia:ar"}],"provider":"nados-v1.1","model":"Nados v1.1 · nemotron-120B(A12B) + مُرتّب مدرّب","variant":"v1.1","nados":{"model":"Nados v1.1","params":245,"features":{"affinity":1,"quality":0.25,"freshness":0.6,"engagement":0.6,"completion":1,"originality":0.8,"local":1,"safety":1,"negative":0.6},"probabilities":{"like":0.751,"save":0.8329,"share":0.8857,"comment":0.9552,"completion":0.9437},"ranking_score":0.8655,"decision":"أجب بإجابة وافية منظمة بعناوين أو نقاط مع مثال عملي قصير.","temperature":0.89,"final_score":0.9981,"final_probabilities":{"like":0.9958,"save":0.9985,"share":0.9986,"comment":0.999,"completion":0.9994}},"teacher":"nemotron-120B(A12B)"}}
+

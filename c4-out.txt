@@ -1,0 +1,12 @@
+data: {"type":"meta","provider":"nados-v1.1","model":"Nados v1.1 · مُرتّب مدرّب (245 معامل) + معلم سحابي"}
+
+data: {"type":"meta","provider":"nados-v1.1","model":"Nados v1.1 · gpt-oss-120B (من الكاش)"}
+
+data: {"type":"delta","delta":"## دالة حساب عدد الكلمات مع تجاهل علامات الترقيم"}
+
+data: {"type":"delta","delta":"\n\n```javascript\n/**\n * تُعيد عدد الكلمات في النص"}
+
+data: {"type":"delta","delta":" مع است"}
+
+data: {"type":"done","reply":{"answer":["## دالة حساب عدد الكلمات مع تجاهل علامات الترقيم\n\n```javascript\n/**\n * تُعيد عدد الكلمات في النص مع است"],"bullets":[],"sources":[],"provider":"nados-v1.1","model":"Nados v1.1 · gpt-oss-120B (كاش)","variant":"v1.1","nados":{"model":"Nados v1.1","params":245,"features":{"affinity":1,"quality":0.25,"freshness":0.6,"engagement":0.35,"completion":1,"originality":0.8,"local":1,"safety":1,"negative":0},"probabilities":{"like":0.9875,"save":0.9966,"share":0.9966,"comment":0.9967,"completion":0.9985},"ranking_score":0.9948,"decision":"أجب بإجابة وافية منظمة بعناوين أو نقاط مع مثال عملي قصير.","temperature":0.95},"teacher":"gpt-oss-120B","cached":true}}
+

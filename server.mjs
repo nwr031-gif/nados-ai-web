@@ -5,6 +5,7 @@ import crypto from "node:crypto";
 import { spawn } from "node:child_process";
 import { fileURLToPath } from "node:url";
 import { createEngine, extractFeatures as nadosExtractFeatures, predict as nadosPredictNet, styleFromPrediction as nadosStyleFromPrediction } from "./nados-engine.mjs";
+import { webSearch, buildContext } from "./web-search.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PUBLIC = path.join(__dirname, "public");
@@ -57,9 +58,20 @@ const EXT_PROVIDERS = [
     baseUrl: "https://openrouter.ai/api/v1/chat/completions",
     apiKey: process.env.OPENROUTER_API_KEY, model: process.env.OPENROUTER_MODEL || "meta-llama/llama-3.3-70b-instruct:free",
   } : null,
+  // keyless fallback — real LLM, no quota, no signup
+  {
+    kind: "ext", label: "pollinations", style: "openai", cost: 0, keyless: true,
+    baseUrl: "https://text.pollinations.ai/openai",
+    apiKey: "public",
+    model: process.env.POLLINATIONS_MODEL || "gpt-oss-20b",
+  },
 ].filter(Boolean);
 
 const DAILY_NEURONS = Number(process.env.CF_DAILY_NEURONS || 10000);
+// Cloudflare bills "neurons" = (active params × tokens) / ~1.5e9.
+// Calibrated against real usage.neurons reports (gpt-oss-120B: 338 tokens → 19 neurons).
+const NEURON_DIVISOR = Number(process.env.CF_NEURON_DIVISOR || 1500);
+const estimateNeurons = (tokens, activeParams) => (tokens * activeParams) / NEURON_DIVISOR;
 const BUDGET_FILE = path.join(__dirname, ".nados-budget.json");
 const CACHE_FILE = path.join(__dirname, ".nados-cache.json");
 
@@ -77,14 +89,22 @@ function writeBudget(accounts) {
     fs.writeFileSync(BUDGET_FILE, JSON.stringify({ date: today, accounts }), "utf8");
   } catch {}
 }
+// state per account: { used: our estimated consumption, exhausted: Cloudflare told us the quota is gone }
 let budgetState = readBudget();
-const neuronsOf = (accountId) => budgetState[accountId] || 0;
-function addNeurons(accountId, n) {
-  if (!n || !isFinite(n)) return;
-  budgetState[accountId] = (budgetState[accountId] || 0) + n;
+const accState = (id) => (budgetState[id] && typeof budgetState[id] === "object" ? budgetState[id] : { used: 0, exhausted: false });
+const neuronsOf = (id) => accState(id).used;
+const isExhausted = (id) => accState(id).exhausted === true;
+function setAcc(id, patch) {
+  budgetState[id] = { ...accState(id), ...patch };
   writeBudget(budgetState);
 }
-const neuronsRemaining = (accountId) => Math.max(0, DAILY_NEURONS - neuronsOf(accountId));
+function addNeurons(accountId, n) {
+  if (!n || !isFinite(n) || n <= 0) return;
+  const st = accState(accountId);
+  const used = Math.min(DAILY_NEURONS, st.used + n);
+  setAcc(accountId, { used, exhausted: st.exhausted || used >= DAILY_NEURONS });
+}
+const neuronsRemaining = (accountId) => (isExhausted(accountId) ? 0 : Math.max(0, DAILY_NEURONS - neuronsOf(accountId)));
 const isQuotaError = (e) => /daily free allocation|neurons|quota|insufficient|rate limit/i.test(String(e?.message || e));
 
 // Backends list: CF account × model, then external providers.
@@ -104,30 +124,31 @@ const CF_PRIMARY = BACKENDS.find((b) => b.kind === "cf" && b.label === "gpt-oss-
 // Cost-aware selection: best model whose expected neuron cost fits the remaining daily budget
 // of at least one Cloudflare account (external providers are free of neuron cost).
 function pickTeacher(tag, expectedTokens = 700) {
-  // external providers (Groq / NVIDIA NIM / OpenRouter) have no neuron quota -> prefer them when configured
   const extBackends = BACKENDS.filter((b) => b.kind === "ext");
-  if (extBackends.length) {
-    const extPreferred = { groq: "groq", "nvidia-nim": "nvidia-nim", openrouter: "openrouter" };
-    for (const t of extBackends) if (extPreferred[t.label]) return t;
-    return extBackends[0];
-  }
+  const keyed = extBackends.filter((b) => !b.keyless);
+  const keyless = extBackends.filter((b) => b.keyless);
   const preferred = {
-    math: ["gpt-oss-120B", "gpt-oss-20B", "nemotron-120B(A12B)", "qwen3-27B", "llama-3.1-8B"],
-    code: ["gpt-oss-120B", "gpt-oss-20B", "qwen3-27B", "nemotron-120B(A12B)", "llama-3.1-8B"],
+    math: ["nemotron-120B(A12B)", "gpt-oss-120B", "deepseek-r1-32B", "qwen3-27B", "gpt-oss-20B", "llama-3.1-8B"],
+    code: ["nemotron-120B(A12B)", "gpt-oss-120B", "qwen3-27B", "gpt-oss-20B", "llama-3.1-8B"],
     creative: ["nemotron-120B(A12B)", "qwen3-27B", "gpt-oss-20B", "llama-3.1-8B"],
-    deep: ["gpt-oss-120B", "deepseek-r1-32B", "nemotron-120B(A12B)", "qwen3-27B", "llama-3.1-8B"],
-    chat: ["gpt-oss-120B", "nemotron-120B(A12B)", "gpt-oss-20B", "llama-3.1-8B"],
-  }[tag] || ["gpt-oss-120B", "gpt-oss-20B", "llama-3.1-8B"];
+    deep: ["nemotron-120B(A12B)", "deepseek-r1-32B", "gpt-oss-120B", "qwen3-27B", "llama-3.1-8B"],
+    chat: ["nemotron-120B(A12B)", "gpt-oss-120B", "gpt-oss-20B", "llama-3.1-8B"],
+  }[tag] || ["nemotron-120B(A12B)", "gpt-oss-20B", "llama-3.1-8B"];
 
   const affordable = (b) => {
     if (b.kind === "ext") return true;
-    return neuronsRemaining(b.accountId) > b.active * expectedTokens * 0.6;
+    if (isExhausted(b.accountId)) return false;
+    return neuronsRemaining(b.accountId) > estimateNeurons(expectedTokens, b.active) * 1.3;
   };
-  const ext = BACKENDS.filter((b) => b.kind === "ext");
+  // 1) keyed providers (best quality, no neuron limits)
+  if (keyed.length) return keyed[0];
+  // 2) Cloudflare when the daily budget still fits a strong model
   for (const label of preferred) {
     const b = BACKENDS.find((x) => x.label === label && affordable(x));
     if (b) return b;
   }
+  // 3) keyless fallback (always reachable, no quota)
+  if (keyless.length) return keyless[0];
   return BACKENDS.filter(affordable)[0] || BACKENDS[BACKENDS.length - 1];
 }
 
@@ -143,16 +164,15 @@ const cacheState = (() => {
 })();
 function cacheKey(messages, tag) {
   return crypto.createHash("sha1").update(tag + "|" + JSON.stringify(messages)).digest("hex");
-}
-function cacheGet(k) {
+}function cacheGet(k) {
   const e = cacheState[k];
   if (!e) return null;
   const text = e.text ?? e.value;
   if (!text) return null;
-  return { text, teacher: e.teacher || "cloud" };
+  return { text, teacher: e.teacher || "cloud", sources: e.sources || [] };
 }
 function cacheSet(k, value) {
-  cacheState[k] = { text: value.text, teacher: value.teacher, at: Date.now() };
+  cacheState[k] = { text: value.text, teacher: value.teacher, sources: value.sources || [], at: Date.now() };
   const keys = Object.keys(cacheState);
   if (keys.length > 120) for (const old of keys.slice(0, keys.length - 120)) delete cacheState[old];
   try {
@@ -168,11 +188,11 @@ function routeTask(message, mode) {
     (/(اكتب|أنشئ|صمم|صنع|بناء)/.test(message) && /(صفحة|موقع|تطبيق|برنامج|كود|دالة|html|css|واجهة)/i.test(message));
   const isCreative = mode === "create" || /(باللهجة|عراقي|قصيدة|هايكو|قصة|رسالة|تهنئة|شعر|أغنية)/i.test(message);
   const isDeep = mode === "research" || mode === "academic" || /(قارن|حلل|فسر|لماذا|استنتج|أثر)/i.test(message);
-  if (isMath) return { tag: "math", reasoning: "medium", verify: true, maxTokens: 2048 };
-  if (wantsCode) return { tag: "code", reasoning: "medium", verify: false, maxTokens: 2048 };
-  if (isCreative) return { tag: "creative", reasoning: null, verify: false, temperature: 0.85, maxTokens: 2048 };
-  if (isDeep) return { tag: "deep", reasoning: "medium", verify: false, maxTokens: 2048 };
-  return { tag: "chat", reasoning: "low", verify: false, maxTokens: 1536 };
+  if (isMath) return { tag: "math", reasoning: "low", verify: true, maxTokens: 3000 };
+  if (wantsCode) return { tag: "code", reasoning: "low", verify: false, maxTokens: 3000 };
+  if (isCreative) return { tag: "creative", reasoning: null, verify: false, temperature: 0.85, maxTokens: 1500 };
+  if (isDeep) return { tag: "deep", reasoning: "medium", verify: false, maxTokens: 3000 };
+  return { tag: "chat", reasoning: "low", verify: false, maxTokens: 2000 };
 }
 
 function stripThinkTags(t) {
@@ -444,7 +464,15 @@ async function callTeacher(backend, messages, temperature, stream, extra = {}) {
     headers = { Authorization: `Bearer ${CF_TOKEN}`, "Content-Type": "application/json" };
   }
 
-  const r = await fetch(url, { method: "POST", headers, body: JSON.stringify(body) });
+  const r = await fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+    signal: AbortSignal.timeout(Number(process.env.NADOS_PROVIDER_TIMEOUT || 90000)),
+  });
+  if (process.env.NADOS_DEBUG_RAW) {
+    console.log(`[req] ${backend.label} max_tokens=${body.max_tokens} temp=${body.temperature ?? "-"} reasoning=${body.reasoning ?? "-"} msgs=${body.messages.length} sysLen=${(body.messages[0]?.content || "").length}`);
+  }
   if (!r.ok) {
     usageStats.failedCalls++;
     let msg = `HTTP ${r.status}`;
@@ -456,6 +484,13 @@ async function callTeacher(backend, messages, temperature, stream, extra = {}) {
   }
   usageStats.successCalls++;
   usageStats.totalLatencyMs += Date.now() - started;
+  if (stream && process.env.NADOS_DEBUG_RAW) {
+    try {
+      const clone = r.clone();
+      const file = path.join(__dirname, "logs", `raw-${Date.now()}-${backend.label.replace(/[^a-z0-9.-]/gi, "_")}.txt`);
+      clone.text().then((t) => fs.writeFileSync(file, t, "utf8")).catch(() => {});
+    } catch {}
+  }
   if (!stream && backend.kind === "cf") {
     try {
       r.clone().json().then((j) => addNeurons(backend.accountId, j?.result?.usage?.neurons)).catch(() => {});
@@ -475,13 +510,14 @@ async function runTeacher(messages, opts = {}, backends = BACKENDS) {
       lastErr = e;
       if (isQuotaError(e) && b.kind === "cf") {
         // burn this account's remaining budget locally so we stop hitting it
-        budgetState[b.accountId] = DAILY_NEURONS;
-        writeBudget(budgetState);
+        setAcc(b.accountId, { exhausted: true });
       }
       console.error(`[teacher-fallback] ${b.label}@${b.accountId ? b.accountId.slice(0, 8) : b.kind} failed: ${e.message}`);
     }
   }
-  throw lastErr || new Error("all teachers failed");
+  const err = lastErr || new Error("all teachers failed");
+  err.noCapacity = true; // signal: no provider could serve this request
+  throw err;
 }
 
 function parseTeacherJSON(result) {
@@ -496,17 +532,24 @@ async function* iterateSSE(body) {
   const reader = body.getReader();
   const decoder = new TextDecoder();
   let buf = "";
+  let sawDeltaContent = false; // Cloudflare sends BOTH delta chunks and a final aggregated `response`
   const emit = function* (obj) {
-    // normalize llama-style {response} and openai-style {choices[].delta}
-    if (typeof obj.response === "string" && obj.response) yield { content: obj.response };
-    // NOTE: streamed `usage.neurons` may be cumulative per stream -> never sum it here
-    // (streaming cost is estimated from output size after the response completes).
     const d = obj.choices?.[0]?.delta;
     if (d) {
       const c = d.content;
       const r = d.reasoning || d.reasoning_content;
-      if (typeof c === "string" && c) yield { content: c };
+      if (typeof c === "string" && c) {
+        sawDeltaContent = true;
+        yield { content: c };
+      }
       if (typeof r === "string" && r) yield { reasoning: r };
+      return;
+    }
+    // Cloudflare closes some streams with an aggregated `response` field that contains the
+    // FULL text (the delta stream may be cut short). Hand it back so the caller can
+    // append only the missing tail instead of duplicating the text.
+    if (typeof obj.response === "string" && obj.response) {
+      yield { aggregate: obj.response };
     }
   };
   while (true) {
@@ -553,7 +596,8 @@ async function handleChatStream(req, res) {
   const systemPrompt = String(form.get("system_prompt") || "");
   const thinking = String(form.get("thinking") || "") === "true";
   const temperature = Number(form.get("temperature"));
-  const requestedMaxTokens = Number(form.get("max_tokens"));
+  const rawMaxTokens = form.get("max_tokens");
+  const requestedMaxTokens = rawMaxTokens == null || rawMaxTokens === "" ? NaN : Number(rawMaxTokens);
   const maxTokensCap = Number.isFinite(requestedMaxTokens)
     ? Math.max(256, Math.min(4096, requestedMaxTokens))
     : null;
@@ -575,6 +619,7 @@ async function handleChatStream(req, res) {
     } catch {}
   };
   let aborted = false;
+  const startedAt = Date.now();
   req.on("close", () => {
     aborted = true;
   });
@@ -655,6 +700,8 @@ async function handleChatStream(req, res) {
       };
       genTemperature = style.temperature;
       styleHint = style.detailHint;
+      // reasoning models (gpt-oss / nemotron) drift into endless reasoning at higher temperature
+      if (genTemperature > 0.3) genTemperature = 0.3;
 
       if (thinking) {
         sseWrite(res, {
@@ -676,8 +723,24 @@ async function handleChatStream(req, res) {
     if (isMath && sysIdx >= 0) messages[sysIdx].content += "\nفي المسائل الحسابية: اكتب كل رقم صراحةً بالأرقام، حل خطوة بخطوة، ثم تحقق من الناتج النهائي بجملة واضحة.";
     if (routeTask(message, mode).tag === "creative" && sysIdx >= 0) messages[sysIdx].content += "\nممنوع منعاً باتاً ذكر أي كود أو مثال برمجي أو علامات كود (```). أعطِ النص المطلوب فقط (جملة أو رسالة أو قصيدة) وبسطرين كحد أقصى إن لم يُطلب غير ذلك.";
 
+    // live web search for web mode (free, keyless) -> injected as context + cited sources
+    let searchResults = null;
+    if (mode === "web" || /^(web|بحث|search)/i.test(mode)) {
+      try {
+        searchResults = await webSearch(message, { lang: "ar", limit: 4 });
+        if (searchResults.results.length) {
+          const ctx = buildContext(searchResults, message);
+          const userIdx = messages.length - 1;
+          if (userIdx >= 0) messages[userIdx].content += ctx;
+          if (sysIdx >= 0) messages[sysIdx].content += "\nاستخدم نتائج البحث المرفقة في الإجابة، واذكر المصادر بأرقامها [1] [2].";
+        }
+      } catch (e) {
+        console.error("[web-search] failed:", e.message);
+      }
+    }
+
     const route = routeTask(message, mode);
-    const ck = cacheKey(messages, route.tag);
+    const ck = cacheKey(messages, route.tag + "|" + mode);
     const cached = cacheGet(ck);
     if (cached) {
       // serve identical previous answers without spending any quota
@@ -690,7 +753,7 @@ async function handleChatStream(req, res) {
         reply: {
           answer: [cached.text],
           bullets: [],
-          sources: [],
+          sources: cached.sources || [],
           provider: "nados-v1.1",
           model: `Nados v1.1 · ${cached.teacher} (كاش)`,
           variant: "v1.1",
@@ -707,33 +770,93 @@ async function handleChatStream(req, res) {
 
     const hardMode = isMath || wantsCode;
     if (hardMode) {
-      // smart-routed generation → validate → cross-verify (math) → retry if invalid → stream
+      // STREAM first (fast first paint) → validate → corrective pass if invalid → cross-verify math
       const route = routeTask(message, mode);
       if (maxTokensCap) route.maxTokens = Math.min(route.maxTokens, maxTokensCap);
-      const t0 = pickTeacher(route.tag, route.tag === "creative" ? 400 : 1200);
-      let attempt;
+      const t0 = pickTeacher(route.tag, route.tag === "creative" ? 400 : 900);
+      let teacher = t0;
+      let upstream;
       try {
-        attempt = { teacher: t0, res: await callTeacher(t0, messages, genTemperature ?? 0.3, false, { reasoning: route.reasoning, max_tokens: route.maxTokens }) };
+        upstream = await callTeacher(t0, messages, genTemperature ?? 0.3, true, { reasoning: route.reasoning, max_tokens: route.maxTokens });
       } catch (e) {
-        if (isQuotaError(e) && t0.kind === "cf") {
-          budgetState[t0.accountId] = DAILY_NEURONS;
-          writeBudget(budgetState);
-        }
-        attempt = await runTeacher(messages, { temperature: genTemperature ?? 0.3, reasoning: "low" });
+        if (isQuotaError(e) && t0.kind === "cf") setAcc(t0.accountId, { exhausted: true });
+        const fb = await runTeacher(messages, { temperature: genTemperature ?? 0.3, stream: true, reasoning: "low", max_tokens: route.maxTokens });
+        teacher = fb.teacher;
+        upstream = fb.res;
       }
-      let parsed = parseTeacherJSON((await attempt.res.json()).result);
-      let text = stripThinkTags(parsed.content || "");
+      teacherUsed = teacher;
+      let reasoningBudget = 500;
+      let firstContentAt = null;
+      for await (const evt of iterateSSE(upstream.body)) {
+        if (aborted) break;
+        if (evt.reasoning && thinking && reasoningBudget > 0) {
+          sseWrite(res, { type: "thinking", thinking: [evt.reasoning] });
+          reasoningBudget -= evt.reasoning.length;
+        }
+        if (evt.content) {
+          if (!firstContentAt) firstContentAt = Date.now();
+          full += evt.content;
+          sseWrite(res, { type: "delta", delta: evt.content });
+        }
+        if (evt.aggregate && evt.aggregate.length > full.length) {
+          const tail = evt.aggregate.slice(full.length);
+          full += tail;
+          sseWrite(res, { type: "delta", delta: tail });
+        }
+      }
+      console.log(`[chat] ${route.tag} | ${teacherUsed.label} | first=${firstContentAt ? firstContentAt - startedAt : "-"}ms | chars=${full.length} | total=${Date.now() - startedAt}ms`);
+
+      // safety net: reasoning models sometimes emit only the reasoning channel (empty content)
+      // or loop/garbage — detect and failover to the next backend
+      const degenerate = (t) => {
+        if (!t) return true;
+        if (t.length > 200 && t.slice(0, 100) && t.indexOf(t.slice(0, 100), 100) !== -1) return true; // looped prefix
+        const head = t.slice(0, 400).replace(/\s/g, "");
+        if (head.length > 60) {
+          const counts = {};
+          for (const ch of head) counts[ch] = (counts[ch] || 0) + 1;
+          const top = Math.max(...Object.values(counts));
+          if (top / head.length > 0.4) return true; // degenerate repetition
+        }
+        return false;
+      };
+      if (degenerate(full) && !aborted) {
+        console.error(`[chat] ${teacherUsed.label} degenerate output (${full.length} chars) → failover`);
+        full = "";
+        try {
+          const fb = await runTeacher(messages, { temperature: 0.2, stream: true, reasoning: "low", max_tokens: route.maxTokens });
+          teacherUsed = fb.teacher;
+          for await (const evt of iterateSSE(fb.res.body)) {
+            if (aborted) break;
+            if (evt.content) {
+              full += evt.content;
+              sseWrite(res, { type: "delta", delta: evt.content });
+            }
+          }
+        } catch (e) {
+          console.error("[chat] failover failed:", e?.message || e);
+        }
+      }
+
+      // validation → corrective pass (appended as a follow-up block)
+      let text = full;
       const invalid = (isMath && !/\d/.test(text)) || (wantsCode && !text.includes("```"));
-      if (invalid) {
-        messages[sysIdx >= 0 ? sysIdx : 0].content += isMath
-          ? "\nمطلوب إلزامي: أرقام صريحة في كل خطوة. أعد كتابة الحل كاملاً."
-          : "\nمطلوب إلزامي: كتلة كود ``` كاملة. أعد كتابة الإجابة كاملة.";
-        const retry = await runTeacher(messages, { temperature: 0.3, reasoning: "low" });
-        parsed = parseTeacherJSON((await retry.res.json()).result);
-        text = stripThinkTags(parsed.content || text);
-        teacherUsed = retry.teacher;
-      } else {
-        teacherUsed = attempt.teacher;
+      if (invalid && !aborted) {
+        try {
+          messages[sysIdx >= 0 ? sysIdx : 0].content += isMath
+            ? "\nمطلوب إلزامي: أرقام صريحة في كل خطوة. أعد كتابة الحل كاملاً."
+            : "\nمطلوب إلزامي: كتلة كود ``` كاملة. أعدrewrite الإجابة كاملة.";
+          const retry = await runTeacher(messages, { temperature: 0.3, reasoning: "low", max_tokens: route.maxTokens });
+          const parsed = parseTeacherJSON((await retry.res.json()).result);
+          const fixed = stripThinkTags(parsed.content || "");
+          if (fixed && fixed.length > 40) {
+            sseWrite(res, { type: "delta", delta: `\n\n**تصحيح/إكمال:**\n${fixed}` });
+            text += `\n\n**تصحيح/إكمال:**\n${fixed}`;
+            teacherUsed = retry.teacher;
+          }
+        } catch (e) {
+          console.error("[chat] corrective pass failed:", e?.message || e);
+        }
       }
 
       // cross-verification for math: independent check (budget-aware model)
@@ -756,7 +879,11 @@ async function handleChatStream(req, res) {
           const hasArabic = /[\u0600-\u06FF]/.test(vt);
           const looksLikeSolution = /\d/.test(vt) && /(=|سنة|يساوي|الناتج|النتيجة)/.test(vt);
           if (vt && !/^صحيح\.?$/.test(vt.trim()) && hasArabic && arabicRatio > 0.5 && looksLikeSolution && vt.length > 50) {
-            text = vt;
+            // append the independently verified solution (the original was already streamed)
+            const block = `\n\n**تدقيق مستقل (${vTeacher.label}):**\n${vt}`;
+            sseWrite(res, { type: "delta", delta: block });
+            full += block;
+            text = full;
             teacherUsed = vTeacher;
           }
         } catch (e) {
@@ -765,10 +892,8 @@ async function handleChatStream(req, res) {
       }
 
       teacherUsed = teacherUsed || t0;
-      full = text;
-      for (let i = 0; i < full.length && !aborted; i += 48) {
-        sseWrite(res, { type: "delta", delta: full.slice(i, i + 48) });
-      }
+      // NOTE: the answer was already streamed live above — never re-stream it here
+      // (that used to duplicate every answer). The final `answer` field carries the full text.
     } else {
       const route = routeTask(message, mode);
       if (maxTokensCap) route.maxTokens = Math.min(route.maxTokens, maxTokensCap);
@@ -780,8 +905,7 @@ async function handleChatStream(req, res) {
         upstream = r;
       } catch (e) {
         if (isQuotaError(e) && chosen.kind === "cf") {
-          budgetState[chosen.accountId] = DAILY_NEURONS;
-          writeBudget(budgetState);
+          setAcc(chosen.accountId, { exhausted: true });
         }
         console.error(`[teacher] ${chosen.label} failed: ${e.message}`);
         const fb = await runTeacher(messages, { temperature: genTemperature, stream: true, reasoning: thinking ? "medium" : "low", max_tokens: 4096 });
@@ -799,6 +923,11 @@ async function handleChatStream(req, res) {
         if (evt.content) {
           full += evt.content;
           sseWrite(res, { type: "delta", delta: evt.content });
+        }
+        if (evt.aggregate && evt.aggregate.length > full.length) {
+          const tail = evt.aggregate.slice(full.length);
+          full += tail;
+          sseWrite(res, { type: "delta", delta: tail });
         }
       }
       // reasoning-heavy teacher burned all tokens on thinking with no content → fallback
@@ -834,7 +963,7 @@ async function handleChatStream(req, res) {
       reply: {
         answer: [full || "لم أستطع توليد إجابة، حاول مجدداً."],
         bullets: [],
-        sources: [],
+        sources: (searchResults?.results || []).map((r) => ({ title: r.title, url: r.url, snippet: r.snippet, source: r.source })),
         provider: useV11 ? "nados-v1.1" : "cloudflare",
         model: useV11 ? `Nados v1.1 · ${teacherUsed?.label || CF_PRIMARY.label} + مُرتّب مدرّب` : CF_MODEL,
         variant: variant === "v1.0" ? "v1.0" : "v1.1",
@@ -845,24 +974,31 @@ async function handleChatStream(req, res) {
     if (full && !aborted) {
       // streamed responses don't always report neurons -> estimate from output size
       if (teacherUsed?.kind === "cf" && teacherUsed.active) {
-        const est = (full.length / 3.5) * teacherUsed.active;
+        const est = estimateNeurons(full.length / 3.5, teacherUsed.active);
         addNeurons(teacherUsed.accountId, est);
       }
-      cacheSet(ck, { text: full, teacher: teacherUsed?.label || "cloud" });
+      cacheSet(ck, {
+        text: full,
+        teacher: teacherUsed?.label || "cloud",
+        sources: (searchResults?.results || []).map((r) => ({ title: r.title, url: r.url, snippet: r.snippet, source: r.source })),
+      });
     }
   } catch (e) {
     if (!aborted) {
-      if (isQuotaError(e)) {
-        // all cloud capacity exhausted → serve the locally trained model instead of failing
-        for (const acc of CF_ACCOUNTS) {
-          budgetState[acc] = DAILY_NEURONS;
-        }
-        writeBudget(budgetState);
+      const noCapacity = e?.noCapacity || isQuotaError(e);
+      if (noCapacity) {
+        // no provider could serve: burn the cloud budget markers and answer with the trained model
+        for (const acc of CF_ACCOUNTS) setAcc(acc, { exhausted: true });
         if (sendLocalFallback(res, message, mode)) return close();
         sseWrite(res, { type: "error", message: quotaMessage() });
         return close();
       }
-      sseWrite(res, { type: "error", message: String(e.message || e) });
+      // never send a raw error to the UI (it renders a confusing "demo" message):
+      // degrade to the trained local model instead
+      console.error("[chat] unexpected error:", e?.message || e);
+      if (sendLocalFallback(res, message, mode)) return close();
+      sseWrite(res, { type: "error", message: String(e?.message || e) });
+      return close();
     }
   }
   close();
@@ -883,6 +1019,79 @@ const server = http.createServer(async (req, res) => {
   const p = url.pathname;
 
   try {
+    if (p === "/api/diagnostics" && req.method === "GET") {
+      const checks = [];
+      const add = (name, ok, detail, ms, kind) => checks.push({ name, ok, detail, ms, kind: kind || (ok ? "ok" : "error") });
+      const time = async (name, fn) => {
+        const t0 = Date.now();
+        try {
+          const detail = await fn();
+          add(name, true, detail, Date.now() - t0);
+        } catch (e) {
+          const quota = isQuotaError(e);
+          add(name, false, String(e.message || e).slice(0, 120), Date.now() - t0, quota ? "quota" : "error");
+        }
+      };
+
+      await time("server", async () => `up on :${PORT} (pid ${process.pid})`);
+      await time("trained-model", async () => {
+        if (!NADOS_ENGINE) throw new Error("not loaded");
+        const p = nadosPredict(nadosExtractFeatures("اختبار", "اختبار", 0));
+        return `Nados v1.1 loaded — ${NADOS_ENGINE.info().params} params, sample score ${p.ranking_score}`;
+      });
+      for (const b of BACKENDS) {
+        await time(`backend:${b.label}${b.accountId ? `@${b.accountId.slice(0, 8)}` : ""}`, async () => {
+          const r = await callTeacher(b, [{ role: "user", content: "ping" }], 0.1, false, { max_tokens: 4 });
+          if (!r.ok) throw new Error(`HTTP ${r.status}`);
+          return "reachable";
+        });
+      }
+      await time("web-search", async () => {
+        const s = await webSearch("الذكاء الاصطناعي", { lang: "ar", limit: 2 });
+        if (!s.results.length) throw new Error(`no results (${s.errors.join("; ")})`);
+        return `${s.results.length} results (${s.results.map((r) => r.source).join(", ")})`;
+      });
+      await time("cache", async () => `${Object.keys(cacheState).length} cached answers`);
+      await time("preview-asset", async () => {
+        const p = path.join(__dirname, "public", "preview-enhance.js");
+        if (!fs.existsSync(p)) throw new Error("missing");
+        return `preview-enhance.js ${fs.statSync(p).size} bytes`;
+      });
+      await time("spa", async () => {
+        const p = path.join(__dirname, "public", "index.html");
+        if (!fs.existsSync(p)) throw new Error("missing");
+        return "index.html present";
+      });
+      await time("training-engine", async () => `artifact ${TRAIN_MODEL.loaded ? "loaded" : "missing"} — ${TRAIN_MODEL.params} params, cycles ${trainingState.cycles}`);
+
+      const failed = checks.filter((c) => !c.ok && c.kind !== "quota");
+      const quotaBlocked = checks.filter((c) => c.kind === "quota");
+      return json(res, 200, {
+        ok: failed.length === 0,
+        at: new Date().toISOString(),
+        summary: {
+          total: checks.length,
+          ok: checks.length - failed.length - quotaBlocked.length,
+          quotaBlocked: quotaBlocked.length,
+          failed: failed.length,
+        },
+        neurons: CF_ACCOUNTS.map((a) => ({
+          account: a.slice(0, 12),
+          used: Math.round(neuronsOf(a)),
+          remaining: Math.round(neuronsRemaining(a)),
+          daily: DAILY_NEURONS,
+          exhausted: isExhausted(a),
+        })),
+        checks,
+      });
+    }
+
+    if (p === "/api/web/search" && req.method === "GET") {
+      const q = String(url.searchParams.get("q") || "").trim();
+      if (!q) return json(res, 400, { error: "q مطلوب" });
+      return json(res, 200, await webSearch(q, { lang: url.searchParams.get("lang") || "ar", limit: 5 }));
+    }
+
     if (p === "/api/health") {
       return json(res, 200, {
         ok: true,
@@ -905,7 +1114,7 @@ const server = http.createServer(async (req, res) => {
         providers: [{ id: PROVIDER.id, name: PROVIDER.name, configured: PROVIDER.configured }],
         features: {
           chat: true,
-          webSearch: false,
+          webSearch: true,
           files: false,
           vision: false,
           video: false,
@@ -1144,20 +1353,20 @@ async function probeQuotas() {
         const j = await r.json().catch(() => ({}));
         const m = j.errors?.[0]?.message || "";
         if (/daily free allocation|neurons|quota/i.test(m)) {
-          budgetState[acc] = DAILY_NEURONS;
+          setAcc(acc, { exhausted: true });
           console.log(`[quota] account ${acc.slice(0, 8)}: EXHAUSTED`);
+        } else {
+          console.log(`[quota] account ${acc.slice(0, 8)}: probe error (${m.slice(0, 80)})`);
         }
       } else {
-        const j = await r.json().catch(() => ({}));
-        const used = j?.result?.usage?.neurons || 0;
-        budgetState[acc] = Math.max(budgetState[acc] || 0, used);
-        console.log(`[quota] account ${acc.slice(0, 8)}: ${Math.round(neuronsRemaining(acc))} neurons left`);
+        // a successful probe proves the account still has quota -> clear the exhausted flag
+        setAcc(acc, { exhausted: false });
+        console.log(`[quota] account ${acc.slice(0, 8)}: AVAILABLE (est. ${Math.round(neuronsRemaining(acc))} neurons left)`);
       }
     } catch (e) {
       console.log(`[quota] account ${acc.slice(0, 8)}: probe failed (${e.message})`);
     }
   }
-  writeBudget(budgetState);
 }
 
 server.listen(PORT, () => {

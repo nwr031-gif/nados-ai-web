@@ -16,7 +16,9 @@ const kwById = Object.fromEntries(meta.questions.map((q) => [q.id, q.kw]));
 const args = process.argv.slice(2);
 const ONCE = args.includes("--once");
 const LIMIT = Number((args.find((a) => a.startsWith("--limit=")) || "").split("=")[1] || 0);
-const MIN_BUDGET = Number(process.env.NADOS_MIN_BUDGET || 8200); // neurons needed for one ~900-token answer
+// One answer (~900 tokens, 12B active) costs ~7-50 neurons — the daily free tier is 10,000.
+// Keep a small safety margin so we never start a request we cannot finish.
+const MIN_BUDGET = Number(process.env.NADOS_MIN_BUDGET || 250);
 
 // Concise answering style keeps each benchmark answer cheap on the daily neuron quota
 // while still covering the key technical terms we score against.

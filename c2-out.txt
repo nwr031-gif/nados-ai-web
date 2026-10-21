@@ -1,0 +1,18 @@
+data: {"type":"meta","provider":"nados-v1.1","model":"Nados v1.1 · مُرتّب مدرّب (245 معامل) + معلم سحابي"}
+
+data: {"type":"meta","provider":"nados-v1.1","model":"Nados v1.1 · gpt-oss-120B (من الكاش)"}
+
+data: {"type":"delta","delta":"## دالة بايثون تعكس نصاً دون استعمال تقطيع `[::-"}
+
+data: {"type":"delta","delta":"1]`\n\n```python\ndef reverse_string(text: str) -> "}
+
+data: {"type":"delta","delta":"str:\n    \"\"\"\n    تعكس السلسلة `text` وتعيد النتي"}
+
+data: {"type":"delta","delta":"جة.\n    لا تُستعمل فيها طريقة التقطيع [::-1].\n  "}
+
+data: {"type":"delta","delta":"  \"\"\"\n    # نُنشئ قائمة فارغة لتخزين الأحرف بالع"}
+
+data: {"type":"delta","delta":"كس\n    reversed_chars = []"}
+
+data: {"type":"done","reply":{"answer":["## دالة بايثون تعكس نصاً دون استعمال تقطيع `[::-1]`\n\n```python\ndef reverse_string(text: str) -> str:\n    \"\"\"\n    تعكس السلسلة `text` وتعيد النتيجة.\n    لا تُستعمل فيها طريقة التقطيع [::-1].\n    \"\"\"\n    # نُنشئ قائمة فارغة لتخزين الأحرف بالعكس\n    reversed_chars = []"],"bullets":[],"sources":[],"provider":"nados-v1.1","model":"Nados v1.1 · gpt-oss-120B (كاش)","variant":"v1.1","nados":{"model":"Nados v1.1","params":245,"features":{"affinity":1,"quality":0.25,"freshness":0.6,"engagement":0.35,"completion":1,"originality":0.8,"local":0.886,"safety":1,"negative":0.6},"probabilities":{"like":0.311,"save":0.625,"share":0.7165,"comment":0.7741,"completion":0.8448},"ranking_score":0.6358,"decision":"أجب بإجابة وافية منظمة بعناوين أو نقاط مع مثال عملي قصير.","temperature":0.81},"teacher":"gpt-oss-120B","cached":true}}
+

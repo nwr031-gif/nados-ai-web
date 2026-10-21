@@ -1,0 +1,24 @@
+data: {"type":"meta","provider":"nados-v1.1","model":"Nados v1.1 · مُرتّب مدرّب (245 معامل) + معلم سحابي"}
+
+data: {"type":"delta","delta":"مر"}
+
+data: {"type":"delta","delta":"حب"}
+
+data: {"type":"delta","delta":"اً"}
+
+data: {"type":"delta","delta":"!"}
+
+data: {"type":"delta","delta":" كيف"}
+
+data: {"type":"delta","delta":" يمكن"}
+
+data: {"type":"delta","delta":"ني"}
+
+data: {"type":"delta","delta":" مساعدتك"}
+
+data: {"type":"delta","delta":" اليوم"}
+
+data: {"type":"delta","delta":"؟"}
+
+data: {"type":"done","reply":{"answer":["مرحباً! كيف يمكنني مساعدتك اليوم؟"],"bullets":[],"sources":[],"provider":"nados-v1.1","model":"Nados v1.1 · gpt-oss-120B + مُرتّب مدرّب","variant":"v1.1","nados":{"model":"Nados v1.1","params":245,"features":{"affinity":1,"quality":0.25,"freshness":0.6,"engagement":0.35,"completion":1,"originality":0.8,"local":1,"safety":1,"negative":0.6},"probabilities":{"like":0.4159,"save":0.677,"share":0.7705,"comment":0.8511,"completion":0.8785},"ranking_score":0.7012,"decision":"أجب بإجابة وافية منظمة بعناوين أو نقاط مع مثال عملي قصير.","temperature":0.84,"final_score":0.8655,"final_probabilities":{"like":0.751,"save":0.8329,"share":0.8857,"comment":0.9552,"completion":0.9437}},"teacher":"gpt-oss-120B"}}
+

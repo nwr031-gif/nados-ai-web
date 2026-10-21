@@ -1,0 +1,5 @@
+--B
+Content-Disposition: form-data; name="message"
+
+اعملي كود: دالة جافاسكربت ترجع كلمات مقلوبة داخل كل جملة
+--B--
