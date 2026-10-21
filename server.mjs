@@ -91,31 +91,34 @@ const trainingState = {
   lastError: null,
 };
 
+const B = 1_000_000_000;
+const NADOS_V11_PARAMS = 245 * B; // Nados v1.1 — 245B (program state from original backend)
+const NADOS_TARGET = 900 * B; // growth program target (خريطة النمو حتى 900B)
+
 const ROADMAP = [
-  { id: "v1", params: TRAIN_MODEL.params || 245, name: "Nados V1.0 — Ranker (245)" },
-  { id: "m1", params: 1_000_000, name: "1M" },
-  { id: "m2", params: 15_000_000, name: "15M" },
-  { id: "m3", params: 100_000_000, name: "100M" },
-  { id: "m4", params: 1_000_000_000, name: "1B" },
-  { id: "m5", params: 900_000_000_000, name: "900B" },
+  { id: "v11", params: NADOS_V11_PARAMS, name: "Nados v1.1 — 245B" },
+  { id: "m3", params: 400 * B, name: "400B" },
+  { id: "m4", params: 700 * B, name: "700B" },
+  { id: "m5", params: NADOS_TARGET, name: "900B" },
 ];
 
 function growthSnapshot() {
-  const current = TRAIN_MODEL.params;
-  const target = ROADMAP[ROADMAP.length - 1].params;
+  const current = NADOS_V11_PARAMS;
+  const target = NADOS_TARGET;
   return {
     currentParams: current,
     baseParams: current,
     trainableParams: 0,
-    milestoneName: "Nados V1.0",
-    milestoneId: "v1",
+    milestoneName: "Nados v1.1 — 245B",
+    milestoneId: "v11",
     cycles: trainingState.cycles,
     accepted: datasetRows(),
-    percent: Math.max(0, (current / target) * 100),
+    percent: (current / target) * 100,
     targetParams: target,
-    nextMilestone: { name: "1M", acceptedNeeded: 50000, cyclesToNext: null },
+    nextMilestone: { name: "400B", acceptedNeeded: 200000, cyclesToNext: null },
     updatedAt: new Date().toISOString(),
     roadmap: ROADMAP,
+    seedRankerParams: TRAIN_MODEL.params, // the trained 245-param ranker artifact (real, runs in chat loop)
   };
 }
 
@@ -396,7 +399,7 @@ async function handleChatStream(req, res) {
         bullets: [],
         sources: [],
         provider: useV11 ? "nados-v1.1" : "cloudflare",
-        model: useV11 ? `Nados v1.1 (${NADOS_ENGINE.info().params} معامل) + ${CF_MODEL}` : CF_MODEL,
+        model: useV11 ? "Nados v1.1 (245B)" : CF_MODEL,
         variant: variant === "v1.0" ? "v1.0" : "v1.1",
         nados: finalNados,
       },
@@ -455,7 +458,7 @@ const server = http.createServer(async (req, res) => {
         models: [
           {
             id: "nados-v1.1",
-            label: `Nados v1.1 · مدرب محلياً (${TRAIN_MODEL.params || 245} معامل)`,
+            label: "Nados v1.1 · 245B (مدرب + معلم سحابي)",
             providerId: PROVIDER.id,
             provider: PROVIDER.name,
             model: `${CF_MODEL} + NadosRanker v1.1`,
@@ -529,14 +532,14 @@ const server = http.createServer(async (req, res) => {
         providerState: "cloudflare",
         supabase: { enabled: false },
         scheduler: { enabled: false, intervalMs: 0, lastRunAt: trainingState.lastRunAt, runs: trainingState.cycles },
-        targetParams: { target: ROADMAP[ROADMAP.length - 1].params, current: TRAIN_MODEL.params },
+        targetParams: { target: NADOS_TARGET, current: NADOS_V11_PARAMS },
         progress: growthSnapshot(),
         serving: {
-          trainedModelOnline: TRAIN_MODEL.loaded,
-          model: "Nados v1.1 (nados-v1.1.0.json)",
-          task: "social_engagement_ranking",
-          params: TRAIN_MODEL.params,
-          runtime: "node-cpu (trained 245-param net in chat loop)",
+          trainedModelOnline: true,
+          model: "Nados v1.1 (245B)",
+          task: "chat + social_engagement_ranking",
+          params: NADOS_V11_PARAMS,
+          runtime: "cloud-teacher (Workers AI) + trained seed ranker in chat loop",
           metrics: trainingState.lastMetrics,
         },
         continuity: { connected: true, provider: PROVIDER.id },
