@@ -157,6 +157,64 @@ test("chat stream emits meta → delta → done and never duplicates text", asyn
   }
 });
 
+test("meta questions never trigger a web search", async () => {
+  const { isMetaQuestion, sanitizeQuery, isRelevant } = await import("../web-search.mjs");
+  assert.equal(isMetaQuestion("من أنا؟"), true);
+  assert.equal(isMetaQuestion("من انت"), true);
+  assert.equal(isMetaQuestion("شكون انت"), true);
+  assert.equal(isMetaQuestion("who are you"), true);
+  assert.equal(isMetaQuestion("ما هي عاصمة كندا؟"), false);
+});
+
+test("search queries are sanitised into keywords", async () => {
+  const { sanitizeQuery } = await import("../web-search.mjs");
+  assert.equal(sanitizeQuery("ما هي عاصمة كندا؟"), "عاصمة كندا");
+  assert.equal(sanitizeQuery("من هو بايروت؟"), "بايروت");
+  assert.ok(sanitizeQuery("اشرح لي مفهوم الـ concurrency control").length > 5);
+});
+
+test("irrelevant search results are rejected by the relevance gate", async () => {
+  const { isRelevant } = await import("../web-search.mjs");
+  const offTopic = [
+    { title: "مسلسل أنت من أحببت", snippet: "مسلسل تلفزيوني" },
+    { title: "أزياء", snippet: "أزياء عصرية" },
+  ];
+  assert.equal(isRelevant("عاصمة كندا", offTopic), false);
+  const onTopic = [{ title: "كندا", snippet: "عاصمة كندا هي أوتاوا" }];
+  assert.equal(isRelevant("عاصمة كندا", onTopic), true);
+});
+
+test("the chat answers an identity question without inventing sources", async () => {
+  const realFetch = globalThis.fetch;
+  const payload = "أنا نادوس، مساعد ذكاء اصطناعي عربي.";
+  globalThis.fetch = async (url, opts) => {
+    if (String(url).includes("/ai/run/") || String(url).includes("pollinations")) {
+      const sse =
+        `data: ${JSON.stringify({ choices: [{ delta: { content: payload } }] })}\n\n` +
+        `data: ${JSON.stringify({ response: payload })}\n\n` +
+        `data: [DONE]\n\n`;
+      return new Response(sse, { status: 200, headers: { "Content-Type": "text/event-stream" } });
+    }
+    return realFetch(url, opts);
+  };
+  try {
+    const boundary = "--B";
+    const body = `--${boundary}\r\nContent-Disposition: form-data; name="message"\r\n\r\nمن أنا؟\r\n--${boundary}\r\nContent-Disposition: form-data; name="mode"\r\n\r\nweb\r\n--${boundary}--\r\n`;
+    const r = await fetch(`${base}/api/chat/stream`, {
+      method: "POST",
+      headers: { "Content-Type": `multipart/form-data; boundary=${boundary}`, ...AUTH },
+      body,
+    });
+    const text = await r.text();
+    const events = text.split("\n\n").filter((l) => l.startsWith("data: ")).map((l) => JSON.parse(l.slice(6)));
+    const done = events.find((e) => e.type === "done");
+    assert.ok(done, "a done event must be produced");
+    assert.equal(done.reply.sources.length, 0, "identity question must not attach web sources");
+  } finally {
+    globalThis.fetch = realFetch;
+  }
+});
+
 test("rate limiting kicks in for a flood from one client", async () => {
   // temporarily tighten the limiter
   const { config: cfg } = await import("../lib/config.mjs");

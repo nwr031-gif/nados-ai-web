@@ -40,6 +40,53 @@ async function jget(url, timeoutMs = 12000) {
   return res.json();
 }
 
+/** Questions about the assistant itself — must never trigger a web search. */
+const META_PATTERNS =
+  /^\s*(?:من\s*أن[اأ]?\s*ا?|من\s*انت|شكون\s*[اأ]ن?ت|مين\s*[اأ]ن?ت|عرّف\s*نفسك|عرف\s*نفسك|introduce\s+yourself|who\s+are\s+you|what\s+are\s+you)\s*[؟?!.،,؛;\s]*$/i;
+
+export function isMetaQuestion(q) {
+  return META_PATTERNS.test(String(q || "").trim());
+}
+
+/**
+ * Turns a conversational question into a better search query:
+ * "ما هي عاصمة كندا؟" -> "عاصمة كندا"
+ */
+export function sanitizeQuery(q) {
+  let s = String(q || "").trim();
+  s = s.replace(/[؟?!.،,؛;:"'`]+$/g, "").trim();
+  s = s.replace(/^(ما\s*هو|ما\s*هي|ما\s*ه[وإ]?\s|من\s*هو|من\s*هي|كيف|لماذا|ليش|اشرح\s+لي|عرف|عرّف|explain|what\s+is|who\s+is|define)\s+/i, "");
+  s = s.replace(/^(لي|لنا|نحن|أنت|بخصوص)\s+/, "");
+  return s.trim() || String(q || "").trim();
+}
+
+const STOP_TOKENS = new Set([
+  "من", "في", "على", "عن", "إلى", "الى", "ما", "هو", "هي", "هذا", "هذه", "هل", "كيف", "لماذا",
+  "ليش", "ماهو", "ماهي", "اشرح", "عرف", "هل", "و", "the", "a", "an", "of", "and", "to", "is", "are",
+  "what", "who", "how", "why", "explain", "define",
+]);
+
+function tokenizeForMatch(t) {
+  return String(t || "")
+    .toLowerCase()
+    .split(/[^\p{L}\p{N}]+/u)
+    .filter((w) => w.length > 2 && !STOP_TOKENS.has(w));
+}
+
+/**
+ * Guards against irrelevant search results: a result must share at least one
+ * meaningful token with the query, otherwise the search is discarded entirely.
+ */
+export function isRelevant(query, results) {
+  const tokens = tokenizeForMatch(query);
+  if (!tokens.length) return false;
+  if (!results?.length) return false;
+  return results.some((r) => {
+    const hay = `${r.title || ""} ${r.snippet || ""}`.toLowerCase();
+    return tokens.some((t) => hay.includes(t));
+  });
+}
+
 export async function webSearch(query, { lang = "ar", limit = 4 } = {}) {
   const cacheKey = `${lang}|${limit}|${query}`;
   const cached = cacheGet(cacheKey);
